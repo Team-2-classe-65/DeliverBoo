@@ -84,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel <i class="fa-solid fa-house"></i>
+                    <i class="fa-solid fa-check"></i> Laravel <i class="fa-solid fa-house"></i>
                 </div>
 
                 <div class="links">
