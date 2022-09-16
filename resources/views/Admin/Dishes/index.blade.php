@@ -32,7 +32,7 @@
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-info btn-sm"
-                                        href="{{ route('admin.dish.show', ['post' => $dish->slug]) }}">
+                                        href="{{ route('admin.dishes.show', ['dish' => $dish->slug]) }}">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
@@ -41,7 +41,7 @@
                                         </svg>
                                     </a>
                                     <a class="btn btn-warning btn-sm"
-                                        href="{{ route('admin.dish.edit', ['post' => $dish->slug]) }}">
+                                        href="{{ route('admin.dishes.edit', ['dish' => $dish->slug]) }}">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
@@ -50,7 +50,7 @@
                                         </svg>
                                     </a>
                                     <form class="d-inline-block"
-                                        action="{{ route('admin.dish.destroy', ['post' => $dish->slug]) }}" method="post">
+                                        action="{{ route('admin.dishes.destroy', ['dish' => $dish->slug]) }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">
