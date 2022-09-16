@@ -1,34 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container p-3">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1>Tutti i posts</h1>
+                <h1>Tutti i piatti</h1>
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <a href="{{ route('admin.dishes.create') }}" class="btn btn-success">
-                        Crea nuovo post
+                        Crea nuovo piatto
                     </a>
                     <a href="{{ route('admin.home') }}"><i class="fa-solid fa-3x fa-circle-arrow-left btn-back"></i></a>
                 </div>
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Titolo</th>
+                            <th>Nome</th>
                             <th>Slug</th>
-                            <th>Autore</th>
-                            <th>Categoria</th>
+                            <th>Descrizione</th>
+                            <th>Prezzo</th>
                             <th class="text-center">Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($dishes as $dish)
                             <tr>
-                                <td>{{ $dish->title }}</td>
+                                <td>{{ $dish->name }}</td>
                                 <td>{{ $dish->slug }}</td>
-                                <td>{{ $dish->user ? $dish->user->name : '' }}</td>
-                                <td>
-                                    <div>{{ $dish->category ? $dish->category->name : '' }}</div>
+                                <td>{{ $dish->description }}</td>
+                                <td>{{ $dish->price . '€'}}
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-info btn-sm"
