@@ -11,7 +11,7 @@ class RestaurantTableSeeder extends Seeder
      */
     public function run()
     {
-        $restaurantCategorie = [
+        $restaurantCategories = [
             [
                 "name" => "Cinese",
                 "img" => "cucina-cinese.jpg",
