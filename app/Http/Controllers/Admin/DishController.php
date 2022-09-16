@@ -55,8 +55,9 @@ class DishController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view("admin.dishes.create", compact("categories"));
+        $dishes = Dish::all();
+
+        return view("admin.dishes.create", compact('dishes'));
     }
 
     /**
@@ -99,7 +100,7 @@ class DishController extends Controller
     public function show($slug)
     {
         $dish = Dish::where('slug', $slug)->first();
-        return view("admin.dishes.show", compact("dishes"));
+        return view("admin.dishes.show", compact("dish"));
     }
 
     /**

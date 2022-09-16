@@ -2,6 +2,6 @@
 
 @section('content')
 <div>
-    ciao
+    ciao bubala la buba
 </div>
 @endsection

@@ -26,10 +26,6 @@ Route::middleware("auth")
 ->prefix("admin")
 ->group(function() {
     Route::get('/', "HomeController@index")->name("home");
-    Route::get("/dishes", "DishController@index")->name("dishes.index");
-    Route::get("/dishes/{dish}", "DishController@update")->name("dishes.update");
-    Route::get("/dishes/{dish}/edit", "DishController@edit")->name("dishes.edit");
-    Route::get("/categories/{category}/dishes", "CategoryController@dishes")->name("categories.dishes");
     Route::resource("dishes", "DishController");
 });
 
