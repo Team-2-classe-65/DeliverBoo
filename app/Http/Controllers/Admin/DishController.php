@@ -43,13 +43,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        $order = Auth::order();
-
-        if($order->role === "admin"){
-            $dishes = Dish::orderBy("created_at", "desc")->paginate(10);
-        } else {
-            $dishes = $order->dishes;
-        }
+        $dishes = Dish::all();
         
         return view("admin.dishes.index", compact("dishes"));
     }
