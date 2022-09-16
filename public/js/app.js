@@ -40245,8 +40245,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> 69f27f57e0fa0bcc62dc95c3e8815f120436f550
 
 
 /***/ })
