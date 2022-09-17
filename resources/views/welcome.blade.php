@@ -88,15 +88,16 @@
 
                     {{-- sticker here --}}
                     <div>
-                        <span>
-                            <i class="fa-solid fa-person-digging"></i>
+                        <span >
+                            <i class="fa-solid fa-person-digging person-digger"></i>
                         </span>
                     </div>
                     
-                    <div class="container">
+                    <div class="container mb-5">
                         <h4 class="text-danger">
                             <span class="text-success">... WOR</span>K IN PROGRESS..
                         </h4>
+
                         <div class="d-flex justify-content-center">
                             
                             <div class="">
@@ -111,7 +112,7 @@
                     
                     
                     
-                    <i class="fa-solid fa-check"></i>
+                    
                      Deliveboo
                      <h6 class="text-black">
                         Il miglior servizio di consegna...

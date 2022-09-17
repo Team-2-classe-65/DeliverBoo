@@ -7,6 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+//FontAwesome
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
 .main-container {
     display: flex;
 
@@ -68,4 +71,10 @@
         left: 50%;
         transform: translate(-50%,-50%);
     }
+}
+.person-digger{ 
+    background: -webkit-linear-gradient(-45deg, rgb(2, 175, 25) 5%, rgb(255, 255, 255) 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     
 }
