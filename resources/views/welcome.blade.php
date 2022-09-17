@@ -85,6 +85,32 @@
 
             <div class="content text-white">
                 <div class="title m-b-md">
+
+                    {{-- sticker here --}}
+                    <div>
+                        <span>
+                            <i class="fa-solid fa-person-digging"></i>
+                        </span>
+                    </div>
+                    
+                    <div class="container">
+                        <h4 class="text-danger">
+                            <span class="text-success">... WOR</span>K IN PROGRESS..
+                        </h4>
+                        <div class="d-flex justify-content-center">
+                            
+                            <div class="">
+                                <h6 class="border text-white bg-success" style="width: 74px">10%</h6>
+                            </div>
+                            <div class="">
+                                <h6 class="border text-white bg-danger" style="width: 200px">90%</h6>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
                     <i class="fa-solid fa-check"></i>
                      Deliveboo
                      <h6 class="text-black">

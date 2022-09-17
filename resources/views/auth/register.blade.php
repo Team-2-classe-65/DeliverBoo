@@ -4,17 +4,19 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Register') }}</div>
+                <div class="card " style="background-color: cadetblue">
+                    <div class="card-header" style="background-color: aqua">{{ __('Register') }}</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
+                            {{-- Restaurant-name --}}
+
                             <div class="form-group row mb-3">
                                 <label for="name"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Restaurant Name') }} <span
-                                        class="ms-2"><i class="fa-solid fa-pizza-slice"></i></span> </label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Restaurant Name') }} <span 
+                                    class="ms-2 text-danger"><i class="fa-solid fa-pizza-slice"></i></span> </label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"
@@ -29,10 +31,12 @@
                                 </div>
                             </div>
 
+                            {{-- email --}}
+
                             <div class="form-group row mb-3">
                                 <label for="email"
                                     class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }} <span
-                                        class="ms-2"><i class="fa-solid fa-envelope"></i></span></label>
+                                        class="ms-2 text-muted"><i class="fa-solid fa-envelope"></i></span></label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
@@ -47,9 +51,11 @@
                                 </div>
                             </div>
 
+                            {{-- password --}}
+
                             <div class="form-group row mb-3">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}
-                                    <span class="ms-2"><i class="fa-solid fa-key"></i></span> </label>
+                                    <span class="ms-2 text-success"><i class="fa-solid fa-key"></i></span> </label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
@@ -64,10 +70,12 @@
                                 </div>
                             </div>
 
+                            {{-- confirm password --}}
+
                             <div class="form-group row mb-3">
                                 <label for="password-confirm"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }} <span
-                                        class="ms-2"><i class="fa-solid fa-key"></i></span> </label>
+                                        class="ms-2 text-success"><i class="fa-solid fa-key"></i></span> </label>
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
@@ -75,10 +83,12 @@
                                 </div>
                             </div>
 
+                            {{-- address --}}
+
                             <div class="form-group row mb-3">
                                 <label for="address"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Address') }} <span
-                                        class="ms-2"><i class="fa-solid fa-building"></i></span> </label>
+                                        class="ms-2 text-dark"><i class="fa-solid fa-building"></i></span> </label>
 
                                 <div class="col-md-6">
                                     <input id="address" type="text"
@@ -93,10 +103,13 @@
                                 </div>
                             </div>
 
+
+                            {{-- vat --}}
+
                             <div class="form-group row mb-3">
                                 <label for="vat"
                                     class="col-md-4 col-form-label text-md-right">{{ __('VAT') }} <span
-                                        class="ms-2"><i class="fa-solid fa-percent"></i></span> </label>
+                                        class="ms-2 text-warning"><i class="fa-solid fa-percent"></i></span> </label>
 
                                 <div class="col-md-6">
                                     <input id="vat" type="text"
@@ -110,6 +123,14 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            {{-- categories --}}
+
+
+
+
+
+
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
