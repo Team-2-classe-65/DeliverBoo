@@ -12682,6 +12682,9 @@ fieldset:disabled .btn {
 
 .x img {
   position: absolute;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -10;
 }
 
