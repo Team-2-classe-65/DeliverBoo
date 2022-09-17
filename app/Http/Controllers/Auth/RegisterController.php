@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -54,7 +55,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'address' => ['required', 'string', 'min:5'],
-            'vat' => ['required', 'digits:11']
+            'vat' => ['required', 'digits:11'],
         ]);
     }
 
@@ -66,12 +67,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'address' => $data['address'],
-            'vat' => $data['vat']
+            'vat' => $data['vat'],
         ]);
+
+        $user->categories()->attach($data['categories']);
+        return $user;
+    }
+
+    public function showRegistrationForm()
+    {
+        $categories = Category::all();
+        return view('auth.register', compact('categories'));
     }
 }
