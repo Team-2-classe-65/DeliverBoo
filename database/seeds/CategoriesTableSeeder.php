@@ -3,7 +3,7 @@
 use App\Category;
 use Illuminate\Database\Seeder;
 
-class RestaurantTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class RestaurantTableSeeder extends Seeder
      */
     public function run()
     {
-        $restaurantCategories = [
+        $categories = [
             [
                 "name" => "Cinese",
                 "img" => "cucina-cinese.jpg",
@@ -61,8 +61,8 @@ class RestaurantTableSeeder extends Seeder
             ]
         ];
 
-        foreach ($restaurantCategories as $Category) {
-            Category::create($Category);
+        foreach ($categories as $category) {
+            Category::create($category);
         }
     }
 }
