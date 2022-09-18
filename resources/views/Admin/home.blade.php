@@ -29,7 +29,8 @@
             </div>
             <div class="col">
                 <a href="" class="text-uppercase">
-                    <div class="card position-relative h-100">
+                    <div class="card position-realtive h-100 x overflow-hidden">
+                        <img src="{{ asset('img/orders.jpg') }}" alt="" class="w-100 rounded">
                         <h2>
                             Ordini
                         </h2>

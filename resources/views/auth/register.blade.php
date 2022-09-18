@@ -4,11 +4,11 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card " style="background-color: cadetblue">
-                    <div class="card-header" style="background-color: aqua">{{ __('Register') }}</div>
+                <div class="card bg_primary">
+                    <div class="card-header bg_secondary">{{ __('Register') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                             @csrf
 
                             {{-- Restaurant-name --}}
@@ -121,10 +121,30 @@
                                 </div>
                             </div>
 
+                            {{-- image --}}
+                            <div class="form-group row mb-3">
+                                <label for="restaurant_img_file" class="col-md-4 col-form-label text-md-right">{{ __('Restaurant Image') }}
+                                    <span class="ms-2 text_secondary"><i class="fa-solid fa-image"></i></span> </label>
+                                </label>
+                                
+                                <div class="col-md-6">
+                                    <input type="file" name="restaurant_img"
+                                        class="form-control @error('restaurant_img') is-invalid @enderror" id="restaurant_img_file"
+                                        value="{{ old('restaurant_img') }}">
+                                </div>
+                                @error('restaurant_img')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                             {{-- categories --}}
 
-                            <div class="form-group margin">
-                                <div class="text-center">
+                            <div class="form-group margin row mb-3">
+                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}
+                                    <span class="ms-2 text-info"><i class="fa-solid fa-cat"></i></span> </label>
+                                </label>
+
+                                <div class="border border-2 rounded border-light text-center py-3 col-md-6">
                                     @foreach ($categories as $category)
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input"

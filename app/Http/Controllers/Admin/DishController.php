@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Storage;
 
 class DishController extends Controller
 {
+    private function findBySlug($slug)
+    {
+        $dish = Dish::where("slug", $slug)->first();
+
+        if (!$dish) {
+            abort(404);
+        }
+
+        return $dish;
+    }
+
     private function generateSlug($text)
     {
         $toReturn = null;
@@ -25,7 +36,7 @@ class DishController extends Controller
             if ($counter > 0) {
                 $slug .= "-" . $counter;
             }
-            $slug_exist = DIsh::where("slug", $slug)->first();
+            $slug_exist = Dish::where("slug", $slug)->first();
             if ($slug_exist) {
                 $counter++;
             } else {
@@ -99,7 +110,7 @@ class DishController extends Controller
      */
     public function show($slug)
     {
-        $dish = Dish::where('slug', $slug)->first();
+        $dish = $this->findBySlug($slug);
         return view("admin.dishes.show", compact("dish"));
     }
 
