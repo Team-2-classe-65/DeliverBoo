@@ -34,7 +34,7 @@
     }
 
     .nav-link.active {
-        background: linear-gradient(to right, #D0EB99, #00CCBC);
+        background: linear-gradient(to right, $color-primary, $color-secondary);
         color: black;
     }
 
@@ -44,10 +44,10 @@
 }
 
 .btn-back {
-    color: #D0EB99;
+    color: $color-primary;
 
     &:hover {
-        color: #00CCBC;
+        color: $color-secondary;
     }
 }
 
@@ -77,6 +77,21 @@
 .person-digger{ 
     background: -webkit-linear-gradient(-45deg, rgb(2, 175, 25) 5%, rgb(255, 255, 255) 95%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-     
+    -webkit-text-fill-color: transparent;     
+}
+
+.bg_primary {
+    background-color: $color-primary;
+}
+
+.text_primary {
+    color: $color-primary;
+}
+
+.bg_secondary {
+    background-color: $color-secondary;
+}
+
+.text_secondary {
+    color: $color-secondary;
 }
