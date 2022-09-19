@@ -95,16 +95,16 @@
                     
                     <div class="container mb-5">
                         <h4 class="text-danger">
-                            <span class="text-success">... WOR</span>K IN PROGRESS..
+                            <span class="text-success">... WORK</span> IN PROGRESS..
                         </h4>
 
                         <div class="d-flex justify-content-center">
                             
                             <div class="">
-                                <h6 class="border-top border-bottom border-start text-white bg-success" style="width: 74px">10%</h6>
+                                <h6 class="border-top border-bottom border-start text-white bg-success" style="width: 100px">20%</h6>
                             </div>
                             <div class="">
-                                <h6 class="border-top border-bottom border-end text-white bg-danger" style="width: 200px">90%</h6>
+                                <h6 class="border-top border-bottom border-end text-white bg-danger" style="width: 160px">80%</h6>
                             </div>
                         </div>
                         
