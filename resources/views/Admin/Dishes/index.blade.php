@@ -17,7 +17,7 @@
                         <div class="col-4 g-3">
                             <a href="{{ route('admin.dishes.show', ['dish' => $dish->slug]) }}" class="text-uppercase">
                                 <div class="card position-realtive x overflow-hidden" style="height: 150px">
-                                    <img src="{{ asset('img/' . $dish->dish_img) }}" alt="" class="w-100 rounded">
+                                    <img src="{{ asset('storage/' . $dish->dish_img) }}" alt="" class="w-100 rounded">
                                     <h2>
                                         {{ $dish->name }}
                                     </h2>
