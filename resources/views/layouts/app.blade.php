@@ -97,7 +97,9 @@
         </nav>
 
         <div class="main-container flex-grow-1 overflow-hidden">
-            @include('partials.sidebar')
+            @auth
+                @include('partials.sidebar')
+            @endauth
             <main class="position-relative overflow-auto">
                 @yield('content')
                 <svg xmlns="http://www.w3.org/2000/svg" class="fixed-bottom" style="z-index: -100"
