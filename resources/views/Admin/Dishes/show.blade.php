@@ -19,10 +19,10 @@
                 <div class="row mb-3">
                     <div class="col">
                         @if ($dish->dish_img)
-                            <img class="img-fluid rounded" src="{{ asset('img/' . $dish->dish_img) }}">
+                            <img class="img-fluid rounded" src="{{ asset('storage/' . $dish->dish_img) }}">
                         @else
                             <img class="img-fluid rounded"
-                                src="https://www.idmore.it/wp-content/uploads/2016/12/ef3-placeholder-image.jpg"
+                                src="{{ asset('img/placeholder.jpg') }}"
                                 alt="">
                         @endif
 

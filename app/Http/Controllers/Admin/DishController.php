@@ -66,9 +66,7 @@ class DishController extends Controller
      */
     public function create()
     {
-        $dishes = Dish::all();
-
-        return view("admin.dishes.create", compact('dishes'));
+        return view("admin.dishes.create");
     }
 
     /**
@@ -82,24 +80,20 @@ class DishController extends Controller
         $validatedData = $request->validate([
             "name" => "required|min:1",
             "description" => "required|min:10",
-            "category_id" => "nullable|exists:categories,id",
-            "availability" => "required|true",
-            "price',5,2" => "required|min:3.2",
+            "price" => "required",
             "dish_img" => "required|image",
         ]);
 
-        $order = new Dish();
-        $order->fill($validatedData);
-        $order->user_id = Auth::order()->id;
-        
-        $dishImg = Storage::put("/dish_img", $validatedData["dish_img"]);
-        $order->dish_img = $dishImg;
+        $dish = new Dish();
+        $dish->fill($validatedData);
+        $dish->user_id = Auth::user()->id;
+        $dish->slug = $this->generateSlug($dish->name);
+        $dishImg = Storage::put("/dish_images", $validatedData["dish_img"]);
+        $dish->dish_img = $dishImg;
 
-        $order->slug = $this->generateSlug($order->title);
+        $dish->save();
 
-        $order->save();
-
-        return redirect()->route("admin.dishes.index");
+        return redirect()->route("admin.dishes.show", $dish->slug);
     }
 
     /**
