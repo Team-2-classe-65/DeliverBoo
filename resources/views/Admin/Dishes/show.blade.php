@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@if ($dish->user->id === Auth::user()->id)
     <div class="container p-4">
+
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="d-flex justify-content-between align-items-center">
@@ -48,7 +50,6 @@
                     </div>
                 </div>
 
-                @if ($dish->user->id === Auth::user()->id)
                     <a href="{{ route('admin.dishes.edit', ['dish' => $dish->slug]) }}" class="btn btn-warning">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -73,8 +74,23 @@
                             </svg> Elimina
                         </button>
                     </form>
-                @endif
             </div>
         </div>
+    </div> 
+    @else 
+
+    <div class="container">
+{{-- 
+        <h1 class="text-center text-danger px-5">
+           NON SI SCRIVE ITALIA IN VANO VICHINGO 
+        </h1> --}}
+
+        <span class="d-flex justify-content-center pt-5 w-100">
+            <img src="https://c.tenor.com/J7ZL_Cryy-0AAAAd/checco-zalone-checco.gif" alt="">
+        </span>
+        
     </div>
+    
+        
+    @endif
 @endsection
