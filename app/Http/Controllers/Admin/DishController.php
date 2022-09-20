@@ -169,6 +169,7 @@ class DishController extends Controller
     public function destroy($slug)
     {
         $dish = $this->findBySlug($slug);
+        Storage::delete($dish->dish_img);
         $dish->delete();
         return redirect()->route("admin.dishes.index")->with('deleted', 'Piatto ' . $dish->name . ' eliminato correttamente');
     }

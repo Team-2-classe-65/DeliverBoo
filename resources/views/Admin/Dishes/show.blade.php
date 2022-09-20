@@ -6,7 +6,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
                         <h1 class="fw-bold text-uppercase"> {{ $dish->name }}</h1>
                         <a href="{{ route('admin.dishes.index') }}" class="btn btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -14,17 +14,17 @@
                                 stroke-linejoin="round" class="feather feather-activity">
                                 <line x1="20" y1="12" x2="4" y2="12"></line>
                                 <polyline points="10 18 4 12 10 6"></polyline>
-                            </svg> Torna ai piatti
+                            </svg> <span class="d-none d-md-inline">Torna ai piatti</span>
                         </a>
                     </div>
 
                     @if (session()->get('message'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success mb-3">
                             {{ session()->get('message') }}
                         </div>
                     @endif
-                        <div class="row mb-3">
-                            <div class="col">
+                        <div class="row mb-3 g-3">
+                            <div class="col-12 col-md">
                                 @if ($dish->dish_img)
                                     <img class="img-fluid rounded w-100" src="{{ asset('storage/' . $dish->dish_img) }}"
                                         style="height: 450px;object-fit: cover">
@@ -33,7 +33,7 @@
                                 @endif
 
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md">
                                 <dl>
                                     <dt>Nome piatto</dt>
                                     <dd>{{ $dish->name }}</dd>

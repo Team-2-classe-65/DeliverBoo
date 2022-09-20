@@ -1,10 +1,10 @@
-<div class="d-flex flex-column flex-shrink-0 h-100 p-3 text-bg-dark" style="width: 280px;">
+<div class="d-flex flex-column flex-shrink-0 h-100 p-3 text-bg-dark sidebar">
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item h4">
             <a href="{{ route('admin.home') }}"
                 class="nav-link {{ Request::route()->getName() === 'admin.home' ? 'active' : '' }}" aria-current="page">
                 <i class="fa-solid fa-home"></i>
-                Home
+                <span class="d-none d-md-inline">Home</span>
             </a>
         </li>
 
@@ -12,7 +12,7 @@
             <a href="{{ route('admin.dishes.index') }}"
                 class="nav-link {{ Request::route()->getName() === 'admin.dishes.index' ? 'active' : '' }}" aria-current="page">
                 <i class="fa-solid fa-pizza-slice"></i>
-                Dishes
+                <span class="d-none d-md-inline">Dishes</span>
             </a>
         </li>
 
