@@ -5,19 +5,19 @@
         <h1 class="mb-5">
             Benvenuto <strong>{{ Auth::user()->name }}</strong>
 
-            <span class="ms-5">
+            <div class="my-3">
                 @foreach (Auth::user()->categories as $category)
                     {{ $category->name }}
                     @if (!$loop->last)
                         <span class="mx-1">-</span>
                     @endif
                 @endforeach
-            </span>
+            </div>
 
         </h1>
 
-        <div class="row h-75">
-            <div class="col">
+        <div class="row h-75 g-3">
+            <div class="col-12 col-sm-6">
                 <a href="{{ route('admin.dishes.index') }}" class="text-uppercase">
                     <div class="card position-realtive h-100 x overflow-hidden">
                         <img src="{{ asset('img/dishes.jpg') }}" alt="" class="w-100 rounded">
@@ -27,7 +27,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col">
+            <div class="col-12 col-sm-6">
                 <a href="" class="text-uppercase">
                     <div class="card position-realtive h-100 x overflow-hidden">
                         <img src="{{ asset('img/orders.jpg') }}" alt="" class="w-100 rounded">

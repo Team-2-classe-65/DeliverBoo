@@ -12,7 +12,7 @@
                             class="feather feather-activity">
                             <line x1="20" y1="12" x2="4" y2="12"></line>
                             <polyline points="10 18 4 12 10 6"></polyline>
-                        </svg> Tutti i piatti
+                        </svg> <span class="d-none d-md-inline">Torna ai piatti</span>
                     </a>
                 </div>
 

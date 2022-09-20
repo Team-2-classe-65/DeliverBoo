@@ -13,7 +13,7 @@
                 </div>
 
                 @if (session()->get('deleted'))
-                <div class="alert alert-danger">
+                <div class="alert alert-danger my-3">
                     {{ session()->get('deleted') }}
                 </div>
                 @endif
@@ -21,7 +21,7 @@
                 <div class="row">
                     @foreach ($dishes as $dish)
                         @if ($dish->user->id === Auth::user()->id)
-                            <div class="col-4 g-3">
+                            <div class="col-6 col-sm-4 g-3">
                                 <a href="{{ route('admin.dishes.show', ['dish' => $dish->slug]) }}" class="text-uppercase">
                                     <div class="card position-realtive x overflow-hidden" style="height: 150px">
                                         <img src="{{ asset('storage/' . $dish->dish_img) }}" alt=""

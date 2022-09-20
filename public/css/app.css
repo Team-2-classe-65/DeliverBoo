@@ -12720,3 +12720,14 @@ fieldset:disabled .btn {
   color: #00CCBC;
 }
 
+.sidebar {
+  width: 280px;
+  transition: all 0.4s;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 90px;
+  }
+}
+
