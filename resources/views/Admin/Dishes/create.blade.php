@@ -18,7 +18,7 @@
 
                 <form action="{{ route('admin.dishes.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
-
+                    {{-- nome piatto --}}
                     <div class="mb-3">
                         <label class="form-label">Nome piatto</label>
                         <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
@@ -27,7 +27,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-
+                    {{-- immagine piatto --}}
                     <div class="mb-3">
                         <label for="dish_img" class="form-label">Immagine piatto</label>
                         <div class="d-flex">
@@ -39,7 +39,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-
+                    {{-- prezzo piatto --}}
                     <div class="mb-3">
                         <label class="form-label">Prezzo piatto</label>
                         <input type="number" step="0.01" name="price" class="form-control @error('price') is-invalid @enderror"
@@ -48,7 +48,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-
+                    {{-- descrizione piatto --}}
                     <div class="mb-3">
                         <label class="form-label">Descrizione piatto</label>
                         <textarea name="description" class="form-control @error('description') is-invalid @enderror" rows="10"
