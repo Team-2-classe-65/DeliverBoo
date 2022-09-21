@@ -12666,6 +12666,7 @@ fieldset:disabled .btn {
 
 .btn-back {
   color: #D0EB99;
+  transition: color 0.4s;
 }
 
 .btn-back:hover {
@@ -12674,6 +12675,7 @@ fieldset:disabled .btn {
 
 .x {
   background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.4s;
 }
 
 .x:hover {

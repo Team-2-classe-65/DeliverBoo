@@ -45,6 +45,7 @@
 
 .btn-back {
     color: $color-primary;
+    transition: color 0.4s;
 
     &:hover {
         color: $color-secondary;
@@ -53,6 +54,7 @@
 
 .x {
     background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.4s;
 
     &:hover {
         background-color: lighten($color: rgba(0, 0, 0, 0.5), $amount: 30);
