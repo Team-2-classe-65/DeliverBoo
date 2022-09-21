@@ -1,26 +1,8 @@
 <template>
     <div>
-        <header>
-            <!-- thenavbar -->
-        </header>
-        
-
-        <main>
-
-            <!-- the categories -->
-
-            <!-- the restaurant -->
-
-
-            <!-- plateinfo -->
-        </main>
-        
-
-        <footer>
-            <!-- the footer -->
-            
-        </footer>
-
+      <h1>
+        AUGURI DEBORAAAAAAAA
+      </h1> 
         
     </div>
 </template>
