@@ -8,7 +8,7 @@
       <main>
         <router-view></router-view>
       </main>
-        <PlateInfo></PlateInfo>
+        
       <footer>
         <TheFooter></TheFooter>
       </footer>
@@ -16,10 +16,9 @@
 </template>
 
 <script>
-import PlateInfo from '../components/PlateInfo.vue';
 import TheFooter from '../components/TheFooter.vue';
 import TheNavbar from '../components/TheNavbar.vue';
     export default{
-    components: { PlateInfo, TheFooter, TheNavbar }
+    components: {  TheFooter, TheNavbar }
 }
 </script>
