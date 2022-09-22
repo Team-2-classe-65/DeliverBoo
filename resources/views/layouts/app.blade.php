@@ -32,7 +32,7 @@
             style="background: linear-gradient(to right, #00CCBC, #D0EB99)">
             <div class="container-fluid">
                 <a class="navbar-brand text-uppercase ms-4 fw-bold" href="{{ route('home') }}">
-                    home pubblica
+                    Accedi alla Home <span ><i class="fa-solid fa-house"></i></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
