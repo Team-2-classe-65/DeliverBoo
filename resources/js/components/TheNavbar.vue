@@ -11,8 +11,9 @@
                 </a>
                 <div class="d-flex">
                     <button type="button" class="btn btn-light mx-3">Registrati o accedi</button>
+                    
                     <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-light dropdown-bs-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Menu
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
