@@ -486,24 +486,45 @@ var staticRenderFns = [function () {
     }
   }), _vm._v(" "), _c("span", {
     staticClass: "fw-bold text-white"
-  }, [_vm._v("deliveBoo")])]), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "btn btn-light",
+  }, [_vm._v("deliveBoo")])]), _vm._v(" "), _c("div", {
+    staticClass: "d-flex"
+  }, [_c("button", {
+    staticClass: "btn btn-light mx-3",
     attrs: {
       type: "button"
     }
-  }, [_vm._v("Registrati o accedi")]), _vm._v(" "), _c("button", {
-    staticClass: "navbar-toggler bg-white",
+  }, [_vm._v("Registrati o accedi")]), _vm._v(" "), _c("div", {
+    staticClass: "dropdown"
+  }, [_c("button", {
+    staticClass: "btn btn-light dropdown-toggle",
     attrs: {
       type: "button",
-      "data-toggle": "collapse",
-      "data-target": "#navbarToggleExternalContent",
-      "aria-controls": "navbarToggleExternalContent",
-      "aria-expanded": "false",
-      "aria-label": "Toggle navigation"
+      id: "dropdownMenuButton",
+      "data-toggle": "dropdown",
+      "aria-haspopup": "true",
+      "aria-expanded": "false"
     }
-  }, [_c("span", {
-    staticClass: "navbar-toggler-icon"
-  }), _vm._v(" "), _c("span", [_vm._v("Menu")])])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                        Menu\n                    ")]), _vm._v(" "), _c("div", {
+    staticClass: "dropdown-menu",
+    attrs: {
+      "aria-labelledby": "dropdownMenuButton"
+    }
+  }, [_c("a", {
+    staticClass: "dropdown-item",
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Action")]), _vm._v(" "), _c("a", {
+    staticClass: "dropdown-item",
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Another action")]), _vm._v(" "), _c("a", {
+    staticClass: "dropdown-item",
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Something else here")])])])])]), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col"
@@ -562,11 +583,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-<<<<<<< HEAD
-  return _c("div", [_c("header", [_c("TheNavbar")], 1), _vm._v(" "), _c("main", [_c("router-view"), _vm._v(" "), _c("PlateInfo")], 1), _vm._v(" "), _c("footer", [_c("TheFooter")], 1)]);
-=======
   return _c("div", [_c("header", [_c("TheNavbar")], 1), _vm._v(" "), _c("main", [_c("router-view")], 1), _vm._v(" "), _c("PlateInfo"), _vm._v(" "), _c("footer", [_c("TheFooter")], 1)], 1);
->>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
 };
 
 var staticRenderFns = [];
@@ -587,11 +604,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "h3[data-v-6f63d109] {\n  margin: 40px 0 0;\n}\nul[data-v-6f63d109] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-6f63d109] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-6f63d109] {\n  color: #42b983;\n}\n.padding-x[data-v-6f63d109] {\n  padding-left: 2rem;\n  padding-right: 2rem;\n}", ""]);
-=======
 exports.push([module.i, "h3[data-v-6f63d109] {\n  margin: 40px 0 0;\n}\nul[data-v-6f63d109] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-6f63d109] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-6f63d109] {\n  color: #42b983;\n}\n.my-img[data-v-6f63d109] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  max-width: 50%;\n  transition-delay: 0;\n}\n.my-text[data-v-6f63d109] {\n  transition-delay: 0;\n}", ""]);
->>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
 
 // exports
 
@@ -610,11 +623,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-<<<<<<< HEAD
 exports.push([module.i, ".section-footer[data-v-2a04c4de] {\n  background: rgb(46, 51, 51);\n}\n.section-footer .col-footer[data-v-2a04c4de] {\n  background: rgb(67, 72, 72);\n  padding: 0.9375rem 0;\n  height: 100%;\n}\n.section-footer .col-footer li[data-v-2a04c4de] {\n  list-style: none;\n  padding-bottom: 0.4375rem;\n}\n.section-footer .col-footer li h4[data-v-2a04c4de] {\n  color: white;\n  font-size: 1.125rem;\n  font-weight: 700;\n}\n.section-footer .col-footer li a[data-v-2a04c4de],\n.section-footer .col-footer li span[data-v-2a04c4de] {\n  text-decoration: none;\n  color: white;\n  font-size: 0.875rem;\n  cursor: pointer;\n}\n.section-footer .col-footer li a[data-v-2a04c4de]:hover,\n.section-footer .col-footer li span[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .col-footer li .fa-github[data-v-2a04c4de] {\n  padding: 0 0.625rem;\n}\n.section-footer .social[data-v-2a04c4de] {\n  color: white;\n  padding-left: 0rem;\n}\n.section-footer .social li[data-v-2a04c4de] {\n  list-style: none;\n}\n.section-footer .social i[data-v-2a04c4de] {\n  padding-right: 0.8125rem;\n  font-size: 1.25rem;\n  color: white;\n}\n.section-footer .social i[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .copyright[data-v-2a04c4de] {\n  color: rgb(67, 72, 72);\n}", ""]);
-=======
-exports.push([module.i, ".section-footer[data-v-2a04c4de] {\n  background: rgb(46, 51, 51);\n}\n.section-footer .col-footer[data-v-2a04c4de] {\n  background: rgb(67, 72, 72);\n  padding: 0.9375rem 0;\n  height: 100%;\n}\n.section-footer .col-footer li[data-v-2a04c4de] {\n  list-style: none;\n  padding-bottom: 0.4375rem;\n}\n.section-footer .col-footer li h4[data-v-2a04c4de] {\n  color: white;\n  font-size: 1.125rem;\n  font-weight: 700;\n}\n.section-footer .col-footer li a[data-v-2a04c4de], .section-footer .col-footer li span[data-v-2a04c4de] {\n  text-decoration: none;\n  color: white;\n  font-size: 0.875rem;\n}\n.section-footer .col-footer li a[data-v-2a04c4de]:hover, .section-footer .col-footer li span[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .col-footer li span[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .col-footer li .fa-github[data-v-2a04c4de] {\n  padding: 0 10px;\n}\n.section-footer .social[data-v-2a04c4de] {\n  color: white;\n  padding-left: 0rem;\n}\n.section-footer .social li[data-v-2a04c4de] {\n  list-style: none;\n}\n.section-footer .social i[data-v-2a04c4de] {\n  padding-right: 0.8125rem;\n  font-size: 1.25rem;\n  color: white;\n}\n.section-footer .social i[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .copyright[data-v-2a04c4de] {\n  color: rgb(67, 72, 72);\n}", ""]);
->>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
 
 // exports
 
@@ -14128,15 +14137,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\Users\annat\Documents\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
-=======
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
->>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
-=======
 module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
->>>>>>> 3c4a8a48a85066cc8b2265731e7dae7b7c731bef
 
 
 /***/ })
