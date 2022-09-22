@@ -1,77 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container p-3">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1>Tutti i posts</h1>
+                <h1>Tutti i piatti</h1>
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <a href="{{ route('admin.dishes.create') }}" class="btn btn-success">
-                        Crea nuovo post
-                    </a>
                     <a href="{{ route('admin.home') }}"><i class="fa-solid fa-3x fa-circle-arrow-left btn-back"></i></a>
+                    <a href="{{ route('admin.dishes.create') }}" class="btn btn-success">
+                        Crea nuovo piatto
+                    </a>
+                    {{-- <a href="{{ route('admin.home') }}"><i class="fa-solid fa-3x fa-circle-arrow-left btn-back"></i></a> --}}
                 </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Titolo</th>
-                            <th>Slug</th>
-                            <th>Autore</th>
-                            <th>Categoria</th>
-                            <th class="text-center">Azioni</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($dishes as $dish)
-                            <tr>
-                                <td>{{ $dish->title }}</td>
-                                <td>{{ $dish->slug }}</td>
-                                <td>{{ $dish->user ? $dish->user->name : '' }}</td>
-                                <td>
-                                    <div>{{ $dish->category ? $dish->category->name : '' }}</div>
-                                </td>
-                                <td class="text-center">
-                                    <a class="btn btn-info btn-sm"
-                                        href="{{ route('admin.dish.show', ['post' => $dish->slug]) }}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                            <circle cx="12" cy="12" r="3"></circle>
-                                        </svg>
-                                    </a>
-                                    <a class="btn btn-warning btn-sm"
-                                        href="{{ route('admin.dish.edit', ['post' => $dish->slug]) }}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-                                            <polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon>
-                                            <line x1="3" y1="22" x2="21" y2="22"></line>
-                                        </svg>
-                                    </a>
-                                    <form class="d-inline-block"
-                                        action="{{ route('admin.dish.destroy', ['post' => $dish->slug]) }}" method="post">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-activity">
-                                                <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path
-                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                                                </path>
-                                                <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                <line x1="14" y1="11" x2="14" y2="17"></line>
-                                            </svg>
-                                        </button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+
+                @if (session()->get('deleted'))
+                <div class="alert alert-danger my-3">
+                    {{ session()->get('deleted') }}
+                </div>
+                @endif
+
+                <div class="row">
+                    @foreach ($dishes as $dish)
+                        @if ($dish->user->id === Auth::user()->id)
+                            <div class="col-6 col-sm-4 g-3">
+                                <a href="{{ route('admin.dishes.show', ['dish' => $dish->slug]) }}" class="text-uppercase">
+                                    <div class="card position-realtive x overflow-hidden" style="height: 150px">
+                                        <img src="{{ asset('storage/' . $dish->dish_img) }}" alt=""
+                                            class="w-100 rounded">
+                                        <h2>
+                                            {{ $dish->name }}
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

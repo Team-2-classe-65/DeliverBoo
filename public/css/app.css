@@ -12632,3 +12632,104 @@ fieldset:disabled .btn {
   }
 }
 
+.main-container {
+  display: flex;
+}
+
+.main-container main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container main .main-scroll-container {
+  overflow: auto;
+  flex: 1;
+}
+
+.text-bg-dark {
+  background-color: rgba(20, 20, 20, 0.984);
+}
+
+.text-bg-dark .nav-link {
+  color: white;
+}
+
+.text-bg-dark .nav-link.active {
+  background: linear-gradient(to right, #D0EB99, #00CCBC);
+  color: black;
+}
+
+.text-bg-dark svg {
+  fill: var(--bs-light);
+}
+
+.btn-back {
+  color: #D0EB99;
+  transition: color 0.4s;
+}
+
+.btn-back:hover {
+  color: #00CCBC;
+}
+
+.x {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.4s;
+}
+
+.x:hover {
+  background-color: rgba(77, 77, 77, 0.5);
+}
+
+.x img {
+  position: absolute;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -10;
+}
+
+.x h2,
+.x .h2 {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.person-digger {
+  background: -webkit-linear-gradient(-45deg, rgb(2, 175, 25) 5%, rgb(255, 255, 255) 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg_primary {
+  background-color: #D0EB99;
+}
+
+.text_primary {
+  color: #D0EB99;
+}
+
+.bg_secondary {
+  background-color: #00CCBC;
+}
+
+.text_secondary {
+  color: #00CCBC;
+}
+
+.sidebar {
+  width: 280px;
+  transition: all 0.4s;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 90px;
+  }
+}
+
