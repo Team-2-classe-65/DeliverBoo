@@ -86,6 +86,8 @@
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
+=======
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PlateInfo.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PlateInfo.vue?vue&type=script&lang=js& ***!
@@ -108,18 +110,17 @@ __webpack_require__.r(__webpack_exports__);
       "https://s3.eu-de.cloud-object-storage.appdomain.cloud/pro-strapi-media-library/web_alimentos_ultraprocesados2_f215d111af", //fast-food
       "https://static2-viaggi.corriereobjects.it/wp-content/uploads/2021/09/214892655_6035116193228248_5179461785950087407_n-1080x720.jpeg?v=449399" // Pizza
       ],
-      story: ["La cucina Italiana  è l espressione dell'arte culinaria sviluppatasi in Italia, comprendente tradizioni fortemente radicate e comuni a tutto il paese, nonché l'insieme di tutte le gastronomie regionali, in uno scambio continuo: molti piatti italiani che una volta erano conosciuti solo nelle regioni di provenienza col tempo si sono diffusi in tutto il paese. È conosciuta come classico esempio di dieta mediterranea, riconosciuta come patrimonio immateriale dell'umanità dall'UNESCO nel 2010. Inoltre, si tratta di una delle gastronomie più note e apprezzate a livello globale. Una delle caratteristiche principali della cucina italiana è la sua semplicità, con molti piatti composti da pochi ingredienti: i cuochi italiani fanno affidamento sulla qualità degli ingredienti, piuttosto che sulla complessità di preparazione.", "La cucina Greca comprende una serie di piatti tipici, vini e dolci diffusi in tutta la Grecia e spesso presenti, con poche variazioni, nei paesi del bacino del Mediterraneo.Le fonti storiche e archeologiche suggeriscono che la cucina in Grecia antica fosse più articolata in quanto a tecniche e abbinamenti delle sue vicine già prima di Alessandro Magno.l pasto greco si apre con una serie di antipasti detti mezédes (μεζέδες) oppure orektiká (ορεκτικά). Segue un piatto principale che può essere a base di carne o pesce, spesso cucinati alla griglia o alla piastra, oppure un'insalata e formaggi. Seguono i dolci che possono essere al macino forno o al cucchiaio. Onnipresente è l'olio d'oliva, solitamente di alta qualità, che viene impiegato senza risparmio.", "La cucina Cinese rappresenta la somma di cucine regionali anche molto diverse e si è evoluta anche in altre parti del mondo con caratteristiche diverse dall'Asia orientale al Nord America, dall'Australia all'Europa occidentale. Si possono distinguere otto cucine regionali: Anhui, Cantonese, Fujian, Hunan, Jiangsu, Shandong, Sichuan e Zhejiang. Nel paleolitico, gli antenati dei cinesi, in particolare l'uomo di Pechino, in base agli scavi e ai resti nel complesso di grotte di Zhōukǒudiàn (周口店), si cibavano prevalentemente di piccoli animali come roditori, chirotteri, insettivori e invertebrati di vario tipo, ma non mancavano anche grandi animali come il mammut, cervidi, bufali, grandi carnivori e tanti altri, la Cina è uno di quei punti del mondo dove è nata l'agricoltura. Intorno al 5400 a.C. I cinesi compensavano il basso consumo di carne con legumi, panico e miglio, ricchi di acidi grassi e proteine, oltre che di carboidrati. Infatti, a differenza della cucina occidentale che usa grassi animali come il burro, ancora oggi i cinesi si servono di olii di semi, come ad esempio olio di semi di soia, di arachidi, di mais ecc.", "La cucina Spagnola è fortemente radicata nelle tradizioni più antiche e ha il merito di aver promosso dall'inizio del XVI secolo l'ingresso di prodotti nuovi in Europa (patata, pomodoro, mais, cacao, fagioli, ecc.) provenienti dalle Americhe. I piatti tipici sono la paella (riso, zafferano con frutti di mare o carne) e il gazpacho (zuppa fredda).I piatti, nel peridoo medievale, si dividevano in pietances, piatti a base di carne e pesce di consistenza piuttosto solida, tra cui arrosti, bolliti e empanadas, e cuines, piatti di consistenza pastosa o liquida da bere in ciotole o scodelle e si suddividevano a loro volte in cuines mangiate con il pane e cuines da mangiare con il cucchiaio come le zuppe. Oggi la cucina spagnola è divisa tra i grandi cuochi spagnoli che hanno avuto un riconoscimento internazionale come Ferran Adrià e Santi Santamaria che hanno portato alla ribalta i loro ristoranti: il Bulli, il Racò de Can Fabes e l'attenzione alle cucine regionali grazie alla forte autonomia politica di cui godono le comunità autonome (il corrispettivo delle regioni italiane) che incoraggiano la gastronomia locale o in caso non esista creano una tradizione fenomenale", "La storia della cucina giapponese ha inizio nel periodo preistorico (periodo Jōmon) con i primi insediamenti neolitici giapponesi che basavano la loro alimentazione sul riso e sui frutti di mare fin dai primi tempi. Sul periodo Kofun (III-VII secolo) regna l'incertezza. Alcune fonti suggeriscono un quadro di abitudini alimentari ben definito solo a partire dal momento della formazione della dinastia Yamato. Quando il buddismo divenne pratica comune, venne introdotto il divieto di consumazione della carne, che resterà in vigore fino alle Restaurazione Meiji. Durante il periodo Heian, i documenti sull'alimentazione dei giapponesi divennero più numerosi, permettendo di fare un elenco degli ingredienti utilizzati e dei metodi preparazione. Una volta che il Giappone entrò nel periodo Edo, venne introdotta una ricca varietà di cibi e specialità culinarie, la quale andrà a comporre la cucina tradizionale giapponese. Nel periodo Meiji, con l'abolizione del sakoku, diverse specialità straniere andranno a complementare la già ricca lista di piatti giapponesi.", "La cucina indiana è l'espressione dell'arte culinaria sviluppata in India. È nota soprattutto per il grande uso che fa di spezie, latte e latticini. Si differenzia in numerose varietà regionali, comunque riferibili a due grandi gruppi: la cucina dell'India del nord, che fa uso di carni ed è meno speziata, e quella del sud, vegetariana e più speziata. La cucina, soprattutto nei Aristotele, viene anche classificata in cucina non vegetariana (indicata da cartelli con la scritta non veg), latto-ovo-vegetariana (veg, senza carni), e latto-vegetariana, detta quasi vegana (pure veg che non fa uso di uova). Praticamente inesistente la cucina vegana propriamente detta, cioè senza neanche latte e latticini.", "Il fast food (espressione inglese, letteralmente cibo veloce, in italiano è anche detta ristorazione rapida) è un tipo di ristorazione originatasi nei paesi anglosassoni, veloce da cucinare, consumare, economica e con servizio ridotto al minimo. Si possono incontrare anche fast food ambulanti ovvero cibo di strada, che forniscono cibi rapidi economici e standardizzati. Il pasto veloce offerto con un sistema di ristorazione industriale a partire dagli anni ottanta ha registrato una vasta diffusione a livello mondiale. Il primo ristorante di fish & chips fu aperto nel 1860 in Inghilterra.", "Una storia spesso raccontata sostiene che l'11 giugno 1889, in onore della regina consorte d'Italia, Margherita di Savoia, il pizzaiolo napoletano Raffaele Esposito creò la Pizza Margherita, una pizza guarnita con pomodori, mozzarella e basilico, per rappresentare il colori nazionali dell'Italia come sulla bandiera dell'Italia. In realtà, la Margherita esisteva già da diverse decenni: viene descritta in un libro del 1866 insieme alla Marinara (cibo preferito dai pescatori al rientro dal lavoro) e al Calzone e in un’altra pubblicazione del 1830 si parla di una pizza condita con pomodoro, mozzarella e basilico. Nella Napoli del XVI secolo, una focaccia di galette veniva comunemente chiamata pizza. Conosciuto come il piatto per i poveri, veniva venduto per strada e conobbe in fretta un gran successo, fino a diventare un piatto amato anche dai nobili borbonici."],
+      story: [" <h1>La cucina Italiana</h1>   è l espressione dell'arte culinaria sviluppatasi in Italia, comprendente tradizioni fortemente radicate e comuni a tutto il paese, nonché l'insieme di tutte le gastronomie regionali, in uno scambio continuo: molti piatti italiani che una volta erano conosciuti solo nelle regioni di provenienza col tempo si sono diffusi in tutto il paese. È conosciuta come classico esempio di dieta mediterranea, riconosciuta come patrimonio immateriale dell'umanità dall'UNESCO nel 2010. Inoltre, si tratta di una delle gastronomie più note e apprezzate a livello globale. Una delle caratteristiche principali della cucina italiana è la sua semplicità, con molti piatti composti da pochi ingredienti: i cuochi italiani fanno affidamento sulla qualità degli ingredienti, piuttosto che sulla complessità di preparazione.", "La cucina Greca comprende una serie di piatti tipici, vini e dolci diffusi in tutta la Grecia e spesso presenti, con poche variazioni, nei paesi del bacino del Mediterraneo.Le fonti storiche e archeologiche suggeriscono che la cucina in Grecia antica fosse più articolata in quanto a tecniche e abbinamenti delle sue vicine già prima di Alessandro Magno.l pasto greco si apre con una serie di antipasti detti mezédes (μεζέδες) oppure orektiká (ορεκτικά). Segue un piatto principale che può essere a base di carne o pesce, spesso cucinati alla griglia o alla piastra, oppure un'insalata e formaggi. Seguono i dolci che possono essere al macino forno o al cucchiaio. Onnipresente è l'olio d'oliva, solitamente di alta qualità, che viene impiegato senza risparmio.", "La cucina Cinese rappresenta la somma di cucine regionali anche molto diverse e si è evoluta anche in altre parti del mondo con caratteristiche diverse dall'Asia orientale al Nord America, dall'Australia all'Europa occidentale. Si possono distinguere otto cucine regionali: Anhui, Cantonese, Fujian, Hunan, Jiangsu, Shandong, Sichuan e Zhejiang. Nel paleolitico, gli antenati dei cinesi, in particolare l'uomo di Pechino, in base agli scavi e ai resti nel complesso di grotte di Zhōukǒudiàn (周口店), si cibavano prevalentemente di piccoli animali come roditori, chirotteri, insettivori e invertebrati di vario tipo, ma non mancavano anche grandi animali come il mammut, cervidi, bufali, grandi carnivori e tanti altri, la Cina è uno di quei punti del mondo dove è nata l'agricoltura. Intorno al 5400 a.C. I cinesi compensavano il basso consumo di carne con legumi, panico e miglio, ricchi di acidi grassi e proteine, oltre che di carboidrati. Infatti, a differenza della cucina occidentale che usa grassi animali come il burro, ancora oggi i cinesi si servono di olii di semi, come ad esempio olio di semi di soia, di arachidi, di mais ecc.", "La cucina Spagnola è fortemente radicata nelle tradizioni più antiche e ha il merito di aver promosso dall'inizio del XVI secolo l'ingresso di prodotti nuovi in Europa (patata, pomodoro, mais, cacao, fagioli, ecc.) provenienti dalle Americhe. I piatti tipici sono la paella (riso, zafferano con frutti di mare o carne) e il gazpacho (zuppa fredda).I piatti, nel peridoo medievale, si dividevano in pietances, piatti a base di carne e pesce di consistenza piuttosto solida, tra cui arrosti, bolliti e empanadas, e cuines, piatti di consistenza pastosa o liquida da bere in ciotole o scodelle e si suddividevano a loro volte in cuines mangiate con il pane e cuines da mangiare con il cucchiaio come le zuppe. Oggi la cucina spagnola è divisa tra i grandi cuochi spagnoli che hanno avuto un riconoscimento internazionale come Ferran Adrià e Santi Santamaria che hanno portato alla ribalta i loro ristoranti: il Bulli, il Racò de Can Fabes e l'attenzione alle cucine regionali grazie alla forte autonomia politica di cui godono le comunità autonome (il corrispettivo delle regioni italiane) che incoraggiano la gastronomia locale o in caso non esista creano una tradizione fenomenale", "La storia della cucina giapponese ha inizio nel periodo preistorico (periodo Jōmon) con i primi insediamenti neolitici giapponesi che basavano la loro alimentazione sul riso e sui frutti di mare fin dai primi tempi. Sul periodo Kofun (III-VII secolo) regna l'incertezza. Alcune fonti suggeriscono un quadro di abitudini alimentari ben definito solo a partire dal momento della formazione della dinastia Yamato. Quando il buddismo divenne pratica comune, venne introdotto il divieto di consumazione della carne, che resterà in vigore fino alle Restaurazione Meiji. Durante il periodo Heian, i documenti sull'alimentazione dei giapponesi divennero più numerosi, permettendo di fare un elenco degli ingredienti utilizzati e dei metodi preparazione. Una volta che il Giappone entrò nel periodo Edo, venne introdotta una ricca varietà di cibi e specialità culinarie, la quale andrà a comporre la cucina tradizionale giapponese. Nel periodo Meiji, con l'abolizione del sakoku, diverse specialità straniere andranno a complementare la già ricca lista di piatti giapponesi.", "La cucina indiana è l'espressione dell'arte culinaria sviluppata in India. È nota soprattutto per il grande uso che fa di spezie, latte e latticini. Si differenzia in numerose varietà regionali, comunque riferibili a due grandi gruppi: la cucina dell'India del nord, che fa uso di carni ed è meno speziata, e quella del sud, vegetariana e più speziata. La cucina, soprattutto nei Aristotele, viene anche classificata in cucina non vegetariana (indicata da cartelli con la scritta non veg), latto-ovo-vegetariana (veg, senza carni), e latto-vegetariana, detta quasi vegana (pure veg che non fa uso di uova). Praticamente inesistente la cucina vegana propriamente detta, cioè senza neanche latte e latticini.", "Il fast food (espressione inglese, letteralmente cibo veloce, in italiano è anche detta ristorazione rapida) è un tipo di ristorazione originatasi nei paesi anglosassoni, veloce da cucinare, consumare, economica e con servizio ridotto al minimo. Si possono incontrare anche fast food ambulanti ovvero cibo di strada, che forniscono cibi rapidi economici e standardizzati. Il pasto veloce offerto con un sistema di ristorazione industriale a partire dagli anni ottanta ha registrato una vasta diffusione a livello mondiale. Il primo ristorante di fish & chips fu aperto nel 1860 in Inghilterra.", "Una storia spesso raccontata sostiene che l'11 giugno 1889, in onore della regina consorte d'Italia, Margherita di Savoia, il pizzaiolo napoletano Raffaele Esposito creò la Pizza Margherita, una pizza guarnita con pomodori, mozzarella e basilico, per rappresentare il colori nazionali dell'Italia come sulla bandiera dell'Italia. In realtà, la Margherita esisteva già da diverse decenni: viene descritta in un libro del 1866 insieme alla Marinara (cibo preferito dai pescatori al rientro dal lavoro) e al Calzone e in un’altra pubblicazione del 1830 si parla di una pizza condita con pomodoro, mozzarella e basilico. Nella Napoli del XVI secolo, una focaccia di galette veniva comunemente chiamata pizza. Conosciuto come il piatto per i poveri, veniva venduto per strada e conobbe in fretta un gran successo, fino a diventare un piatto amato anche dai nobili borbonici."],
       timer: null,
       currentIndex: 0,
       currentIndexStory: 0
     };
   },
-  mounted: function mounted() {// this.startSlide();
+  mounted: function mounted() {//  this.startSlide();
   },
   methods: {
-    // startSlide: function() {
-    //   this.timer = setInterval(this.next, 4000);
-    // },
+    startSlide: function startSlide() {// this.timer = setInterval(this.next, 4000);
+    },
     next: function next() {
       this.currentIndex += 1;
     },
@@ -604,7 +605,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "h3[data-v-6f63d109] {\n  margin: 40px 0 0;\n}\nul[data-v-6f63d109] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-6f63d109] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-6f63d109] {\n  color: #42b983;\n}\n.my-img[data-v-6f63d109] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  max-width: 50%;\n  transition-delay: 0;\n}\n.my-text[data-v-6f63d109] {\n  transition-delay: 0;\n}", ""]);
+exports.push([module.i, "h3[data-v-6f63d109] {\n  margin: 40px 0 0;\n}\nul[data-v-6f63d109] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-6f63d109] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-6f63d109] {\n  color: #42b983;\n}\n.my-img[data-v-6f63d109] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  max-width: 50%;\n  transition-delay: 1s;\n}\n.my-text[data-v-6f63d109] {\n  transition-delay: 1s;\n}", ""]);
 
 // exports
 
@@ -642,7 +643,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.prev, .next {\n  cursor: pointer;\n  position: absolute;\n  top: 40%;\n  width: auto;\n  padding: 16px;\n  color: white;\n  font-weight: bold;\n  font-size: 18px;\n  transition: 0.7s ease;\n  border-radius: 0 4px 4px 0;\n  text-decoration: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n          user-select: none;\n} \n/* Position the \"next button\" to the right */\n.next {\n  right: 0px;\n}\n.prev {\n  left: 0px;\n}\n/* On hover, add a black background color with a little bit see-through */\n.prev:hover, .next:hover {\n  background-color: rgba(0,0,0,0.9);\n} \n", ""]);
+exports.push([module.i, "\n.prev, .next {\r\n  cursor: pointer;\r\n  position: absolute;\r\n  top: 40%;\r\n  width: auto;\r\n  padding: 16px;\r\n  color: rgb(0, 0, 0);\r\n  font-weight: bold;\r\n  font-size: 18px;\r\n  transition: 0.7s ease;\r\n  border-radius: 0 4px 4px 0;\r\n  text-decoration: none;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n          user-select: none;\n} \r\n/* Position the \"next button\" to the right */\n.next {\r\n  right: 0px;\r\n  transition-delay:0.2s;\n}\n.prev {\r\n  left: 0px;\r\n  transition-delay:0.2s;\n}\r\n/* On hover, add a black background color with a little bit see-through */\r\n/* .prev:hover, .next:hover {\r\n  background-color: rgba(0,0,0,0.9);\r\n}  */\r\n  ", ""]);
 
 // exports
 
@@ -14038,95 +14039,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+>>>>>>> 32c99970684a8c44f031f619c724ecc96682e068
 /***/ "./resources/js/frontend.js":
 /*!**********************************!*\
   !*** ./resources/js/frontend.js ***!
   \**********************************/
 /*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _views_App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/App.vue */ "./resources/js/views/App.vue");
-
-
-new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app',
-  render: function render(h) {
-    return h(_views_App_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
-  }
-});
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue":
-/*!************************************!*\
-  !*** ./resources/js/views/App.vue ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=91ac6b5c& */ "./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&");
-/* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/views/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/views/App.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue?vue&type=script&lang=js&":
-/*!*************************************************************!*\
-  !*** ./resources/js/views/App.vue?vue&type=script&lang=js& ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&":
-/*!*******************************************************************!*\
-  !*** ./resources/js/views/App.vue?vue&type=template&id=91ac6b5c& ***!
-  \*******************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=template&id=91ac6b5c& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\resources\\js\\frontend.js: Unexpected token (7:0)\n\n\u001b[0m \u001b[90m  5 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  6 |\u001b[39m \u001b[33mAOS\u001b[39m\u001b[33m.\u001b[39minit()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m \u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m \u001b[33m>>>\u001b[39m\u001b[33m>>>\u001b[39m\u001b[33m>\u001b[39m feature\u001b[33m/\u001b[39madd\u001b[33m-\u001b[39maos\u001b[33m-\u001b[39mlibrary\u001b[0m\n    at instantiate (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:367:12)\n    at Parser.raise (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:3678:19)\n    at Parser.unexpected (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:3716:16)\n    at Parser.parseExprAtom (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:13265:22)\n    at Parser.parseExprSubscripts (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12790:23)\n    at Parser.parseUpdate (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12769:21)\n    at Parser.parseMaybeUnary (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12739:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12530:61)\n    at Parser.parseExprOps (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12537:23)\n    at Parser.parseMaybeConditional (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12507:23)\n    at Parser.parseMaybeAssign (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12459:21)\n    at Parser.parseExpressionBase (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12395:23)\n    at C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12389:39\n    at Parser.allowInAnd (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14485:16)\n    at Parser.parseExpression (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12389:17)\n    at Parser.parseStatementContent (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14925:23)\n    at Parser.parseStatement (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14782:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:15441:25)\n    at Parser.parseBlockBody (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:15432:10)\n    at Parser.parseProgram (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14700:10)\n    at Parser.parseTopLevel (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14687:25)\n    at Parser.parse (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:16710:10)\n    at parse (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:16762:38)\n    at parser (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\core\\lib\\parser\\index.js:52:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:87:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)");
 
 /***/ }),
 
@@ -14137,7 +14058,11 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+<<<<<<< HEAD
+module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+=======
+module.exports = __webpack_require__(/*! D:\Paolo\Documenti Master Boolean\Esercizi Boolean Master\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+>>>>>>> 32c99970684a8c44f031f619c724ecc96682e068
 
 
 /***/ })
