@@ -7,10 +7,8 @@
 
       <main>
         <router-view></router-view>
-
-        <PlateInfo></PlateInfo>
       </main>
-
+        <PlateInfo></PlateInfo>
       <footer>
         <TheFooter></TheFooter>
       </footer>
