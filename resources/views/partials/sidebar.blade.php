@@ -3,8 +3,8 @@
         <li class="nav-item h4">
             <a href="{{ route('admin.home') }}"
                 class="nav-link {{ Request::route()->getName() === 'admin.home' ? 'active' : '' }}" aria-current="page">
-                <i class="fa-solid fa-home"></i>
-                <span class="d-none d-md-inline">Home</span>
+                <i class="fa-solid fa-table-columns"></i>
+                <span class="d-none d-md-inline">Dashboard</span>
             </a>
         </li>
 
