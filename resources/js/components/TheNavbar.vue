@@ -13,7 +13,7 @@
                     <button type="button" class="btn btn-light">Registrati o accedi</button>
                     <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                        <span>Menu</span>
+                        <span>Menu</span> 
                     </button>
                 </div>
             </nav>
@@ -46,6 +46,10 @@
 </template>
 
 <style>
+    .container {
+        min-width: 300px;
+    }
+
     .logo {
         width: 50px;
         height: 50px;
@@ -55,11 +59,12 @@
         background-color: #00CCBC;
         min-height: 600px;
         max-height: 900px;
-        min-width: 600px;
+        min-width: 300px;
     }
 
     .search-section {
         padding-top: 120px;
+        min-width: 300px;
         max-width: 600px;
     }
 
@@ -76,16 +81,17 @@
     }
 
     .bg-home {
-        min-width: 400px;
-        height: 400px;
+        min-width: 200px;
+        height: 200px;
     }
 
     .search {
         height: 170px;
+        width: 300px;
     }
 
     .form-control {
-        width: 380px;
+        width: 100px;
         margin-right: 10px;
     }
 </style>

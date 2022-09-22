@@ -652,7 +652,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 600px;\n}\n.search-section {\n    padding-top: 120px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 400px;\n    height: 400px;\n}\n.search {\n    height: 170px;\n}\n.form-control {\n    width: 380px;\n    margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 300px;\n}\n.search-section {\n    padding-top: 120px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 200px;\n    height: 200px;\n}\n.search {\n    height: 170px;\n    width: 300px;\n}\n.form-control {\n    width: 100px;\n    margin-right: 10px;\n}\n", ""]);
 
 // exports
 
@@ -14129,10 +14129,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Users\annat\Documents\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 =======
 module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 >>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
+=======
+module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+>>>>>>> 3c4a8a48a85066cc8b2265731e7dae7b7c731bef
 
 
 /***/ })
