@@ -2,7 +2,7 @@
     <div>
   
       <div>
-        <h3 class="text-success pb-5">
+        <h3 class="text-success pb-5 text-center">
           SCOPRI CON NOI LA STORIA DELLE CUCINE DEL MONDO
         </h3>
       </div>
@@ -75,7 +75,7 @@
           timer: null,
           currentIndex: 0,
           currentIndexStory: 0,
-          currentIndexChef:0,
+          currentIndexChef: 0,
         }
       },
       
