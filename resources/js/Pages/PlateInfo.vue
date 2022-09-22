@@ -21,7 +21,7 @@
           <div class="row">
             <div class="col-6">
               <div class="" v-for="ind in [currentIndexChef]" :key="ind">
-                <img class="img-fluid px-3 pt-5" :src="currentIndexChef" />
+                <img class="img-fluid px-3 pt-5" :src="currentChef" />
               </div>
             </div>
             <div class="col-6">
@@ -104,8 +104,8 @@
           currentStory: function(){
             return this.story[Math.abs(this.currentIndex) % this.story.length];
           },
-          currentChefIndex: function() {
-            return this.chef[Math.abs(this.currentIndexChef) % this.chef.length];
+          currentChef: function() {
+            return this.chef[Math.abs(this.currentIndex) % this.chef.length];
           }
         }
       

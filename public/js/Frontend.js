@@ -145,8 +145,8 @@ __webpack_require__.r(__webpack_exports__);
     currentStory: function currentStory() {
       return this.story[Math.abs(this.currentIndex) % this.story.length];
     },
-    currentChefIndex: function currentChefIndex() {
-      return this.chef[Math.abs(this.currentIndexChef) % this.chef.length];
+    currentChef: function currentChef() {
+      return this.chef[Math.abs(this.currentIndex) % this.chef.length];
     }
   }
 });
@@ -254,7 +254,7 @@ var render = function render() {
     }, [_c("img", {
       staticClass: "img-fluid px-3 pt-5",
       attrs: {
-        src: _vm.currentIndexChef
+        src: _vm.currentChef
       }
     })]);
   }), 0), _vm._v(" "), _c("div", {
@@ -14121,7 +14121,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
