@@ -40245,23 +40245,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-__webpack_require__(/*! C:\Users\annat\Documents\Deliverboo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\annat\Documents\Deliverboo\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-<<<<<<< HEAD
-__webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
 __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> b048ffa7023d1ac61d5177385a44a89b0187b8a4
->>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
-=======
-__webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> 3c4a8a48a85066cc8b2265731e7dae7b7c731bef
 
 
 /***/ })

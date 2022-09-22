@@ -328,7 +328,9 @@ var render = function render() {
     }, [_c("img", {
       staticClass: "my-img rounded mx-auto d-block",
       attrs: {
-        src: _vm.currentImg
+        src: _vm.currentImg,
+        "data-aos": "fade-left",
+        "data-aos-duration": "3000"
       }
     })]);
   }), 0), _vm._v(" "), _c("div", {
@@ -356,7 +358,11 @@ var render = function render() {
       key: index,
       staticClass: "bg-black my-text"
     }, [_c("p", {
-      staticClass: "text-white padding-x py-3 px-5"
+      staticClass: "text-white padding-x py-3 px-5",
+      attrs: {
+        "data-aos": "fade-left",
+        "data-aos-duration": "2000"
+      }
     }, [_vm._v(_vm._s(_vm.currentStory))])]);
   }), 0)])])]);
 };
