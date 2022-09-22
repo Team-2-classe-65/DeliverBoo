@@ -18,21 +18,27 @@
                 </div>
             </nav>
 
-            <div class="row">
+            <div class="row ">
                 <div class="col">
-                    <div class="search-section">
-                        <div class="fs-1 fw-bold mb-4 search-title" >I piatti che ami, a domicilio.</div>
-                        <div class="bg-white p-5 h-50">
-                            <div class="mb-2">Inserisci il tuo indirizzo per trovare ristoranti nei dintorni</div>
-                            <div class="d-flex">
-                                <input type="text" class="form-control" placeholder="Inserisci il tuo indirizzo completo">
-                                <button type="button" class="btn search-btn text-white">Cerca</button>
+                    <div class="d-flex justify-content-center">
+                        <div class="search-section">
+                            <div class="fs-1 fw-bold mb-4 search-title" >I piatti che ami, a domicilio.</div>
+                            <div class="bg-white search p-5">
+                                <div class="mb-2">Inserisci il tuo indirizzo per trovare ristoranti nei dintorni</div>
+                                <div class="d-flex">
+                                    <input type="text" class="form-control" placeholder="Inserisci il tuo indirizzo completo">
+                                    <button type="button" class="btn search-btn text-white">Cerca</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
-                <div class="col">
-                    <img class="bg-home my-5" src="img/bg-home.svg" alt="" width="300" height="400">
+                <div class="col ">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid bg-home my-5" src="img/bg-home.svg" alt="">
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -47,12 +53,14 @@
 
     .nav-section {
         background-color: #00CCBC;
-        height: 600px;
+        min-height: 600px;
+        max-height: 900px;
         min-width: 600px;
     }
 
     .search-section {
         padding-top: 120px;
+        max-width: 600px;
     }
 
     .search-title {
@@ -68,9 +76,12 @@
     }
 
     .bg-home {
-        margin-left: 200px;
-        width: 400px;
+        min-width: 400px;
         height: 400px;
+    }
+
+    .search {
+        height: 170px;
     }
 
     .form-control {

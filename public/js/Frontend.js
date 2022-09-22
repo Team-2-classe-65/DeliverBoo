@@ -513,11 +513,13 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "col"
   }, [_c("div", {
+    staticClass: "d-flex justify-content-center"
+  }, [_c("div", {
     staticClass: "search-section"
   }, [_c("div", {
     staticClass: "fs-1 fw-bold mb-4 search-title"
   }, [_vm._v("I piatti che ami, a domicilio.")]), _vm._v(" "), _c("div", {
-    staticClass: "bg-white p-5 h-50"
+    staticClass: "bg-white search p-5"
   }, [_c("div", {
     staticClass: "mb-2"
   }, [_vm._v("Inserisci il tuo indirizzo per trovare ristoranti nei dintorni")]), _vm._v(" "), _c("div", {
@@ -533,17 +535,17 @@ var staticRenderFns = [function () {
     attrs: {
       type: "button"
     }
-  }, [_vm._v("Cerca")])])])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("Cerca")])])])])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
+  }, [_c("div", {
+    staticClass: "d-flex justify-content-center"
   }, [_c("img", {
-    staticClass: "bg-home my-5",
+    staticClass: "img-fluid bg-home my-5",
     attrs: {
       src: "img/bg-home.svg",
-      alt: "",
-      width: "300",
-      height: "400"
+      alt: ""
     }
-  })])])])]);
+  })])])])])]);
 }];
 render._withStripped = true;
 
@@ -643,7 +645,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    height: 600px;\n    min-width: 600px;\n}\n.search-section {\n    padding-top: 120px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    margin-left: 200px;\n    width: 400px;\n    height: 400px;\n}\n.form-control {\n    width: 380px;\n    margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 600px;\n}\n.search-section {\n    padding-top: 120px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 400px;\n    height: 400px;\n}\n.search {\n    height: 170px;\n}\n.form-control {\n    width: 380px;\n    margin-right: 10px;\n}\n", ""]);
 
 // exports
 
@@ -14119,7 +14121,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
