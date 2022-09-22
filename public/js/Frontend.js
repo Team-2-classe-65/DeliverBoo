@@ -151,7 +151,83 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "TheFooter",
   data: function data() {
-    return {};
+    return {
+      linksFooter: {
+        deliverboo: [{
+          link: "Investitori",
+          href: "https://corporate.deliveroo.co.uk/"
+        }, {
+          link: "Chi Siamo",
+          href: "https://deliveroo.it/it/about-us"
+        }, {
+          link: "Ristoranti",
+          href: "https://deliveroo.it/it/takeaway/"
+        }, {
+          link: "Altro",
+          href: "https://deliveroo.it/it/more/"
+        }, {
+          link: "Pressroom",
+          href: "https://it.deliveroo.news/"
+        }, {
+          link: "Programmazione",
+          href: "https://deliveroo.engineering/"
+        }, {
+          link: "Design",
+          href: "https://www.deliveroo.design/"
+        }, {
+          link: "Lavora con noi",
+          href: "https://www.deliveroo.design/"
+        }, {
+          link: "Diventa nostro partner",
+          href: "https://restaurants.deliveroo.com/it-it/"
+        }],
+        notes: [{
+          link: "Termini & Condizioni",
+          href: "https://deliveroo.it/it/legal"
+        }, {
+          link: "Informativa sulla privacy",
+          href: "https://deliveroo.it/it/privacy"
+        }, {
+          link: "Cookies",
+          href: "https://deliveroo.it/it/cookies"
+        }],
+        contacts: [{
+          name: "Anna Tassone",
+          git: "https://github.com/Anna93803",
+          iconGit: "fa-brands fa-github",
+          linkedin: "https://www.linkedin.com/in/anna-tassone/",
+          iconLinkedin: "fa-brands fa-linkedin"
+        }, {
+          name: "Paolo Pugliese",
+          git: "https://github.com/paolopu91",
+          iconGit: "fa-brands fa-github",
+          linkedin: "https://www.linkedin.com/in/paolo-pugliese-a3027a171/",
+          iconLinkedin: "fa-brands fa-linkedin"
+        }, {
+          name: "Debora De Felice",
+          git: "https://github.com/Debby95",
+          iconGit: "fa-brands fa-github",
+          linkedin: "https://www.linkedin.com/in/debora-de-felice-0349a3186/",
+          iconLinkedin: "fa-brands fa-linkedin"
+        }, {
+          name: "Stefano Saccocci",
+          git: "https://github.com/StefanoSax93",
+          iconGit: "fa-brands fa-github",
+          linkedin: "https://www.linkedin.com/in/stefano-saccocci-a67164200/",
+          iconLinkedin: "fa-brands fa-linkedin"
+        }],
+        social: [{
+          href: "https://www.facebook.com/DeliverooIT",
+          icon: "fa-brands fa-facebook"
+        }, {
+          href: "https://twitter.com/deliveroo_italy",
+          icon: "fa-brands fa-twitter"
+        }, {
+          href: "https://www.instagram.com/deliveroo_italy/",
+          icon: "fa-brands fa-instagram"
+        }]
+      }
+    };
   }
 });
 
@@ -272,13 +348,6 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
   return _c("div", {
     staticClass: "section-footer"
   }, [_c("div", {
@@ -289,137 +358,87 @@ var staticRenderFns = [function () {
     staticClass: "col-xs-12 col-md-4 pb-4"
   }, [_c("div", {
     staticClass: "col-footer"
-  }, [_c("ul", [_c("li", [_c("h4", [_vm._v("Scopri Deliveroo")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://corporate.deliveroo.co.uk/"
-    }
-  }, [_vm._v("Investitori")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://deliveroo.it/it/about-us"
-    }
-  }, [_vm._v("Chi Siamo")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://deliveroo.it/it/takeaway/"
-    }
-  }, [_vm._v("Ristoranti")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://deliveroo.it/it/more/"
-    }
-  }, [_vm._v("Altro")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://it.deliveroo.news/"
-    }
-  }, [_vm._v("Pressroom")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://deliveroo.engineering/"
-    }
-  }, [_vm._v("Programmazione")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://www.deliveroo.design/"
-    }
-  }, [_vm._v("Design")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://careers.deliveroo.it/en/"
-    }
-  }, [_vm._v("Lavora con noi")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://restaurants.deliveroo.com/it-it/"
-    }
-  }, [_vm._v("Diventa nostro partner")])])])])]), _vm._v(" "), _c("div", {
+  }, [_c("ul", [_vm._m(0), _vm._v(" "), _vm._l(_vm.linksFooter.deliverboo, function (link, i) {
+    return _c("li", {
+      key: i
+    }, [_c("a", {
+      attrs: {
+        href: link.href
+      }
+    }, [_vm._v(_vm._s(link.link))])]);
+  })], 2)])]), _vm._v(" "), _c("div", {
     staticClass: "col-xs-12 col-md-4 pb-4"
   }, [_c("div", {
     staticClass: "col-footer"
-  }, [_c("ul", [_c("li", [_c("h4", [_vm._v("Note legali")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://deliveroo.it/it/legal"
-    }
-  }, [_vm._v("Termini & condizioni")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://deliveroo.it/it/privacy"
-    }
-  }, [_vm._v("Informativa sulla privacy")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://deliveroo.it/it/cookies"
-    }
-  }, [_vm._v("Cookies")])])])])]), _vm._v(" "), _c("div", {
+  }, [_c("ul", [_vm._m(1), _vm._v(" "), _vm._l(_vm.linksFooter.notes, function (link, i) {
+    return _c("li", {
+      key: i
+    }, [_c("a", {
+      attrs: {
+        href: link.href
+      }
+    }, [_vm._v(_vm._s(link.link))])]);
+  })], 2)])]), _vm._v(" "), _c("div", {
     staticClass: "col-xs-12 col-md-4 pb-4"
   }, [_c("div", {
     staticClass: "col-footer"
-  }, [_c("ul", [_c("li", [_c("h4", [_vm._v("Contatti")])]), _vm._v(" "), _c("li", [_c("span", [_vm._v("Anna Tassone")]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "https://github.com/Anna93803"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-github"
-  })]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "https://www.linkedin.com/in/anna-tassone/"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-linkedin"
-  })])]), _vm._v(" "), _c("li", [_c("span", [_vm._v("Paolo Pugiese")]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "https://github.com/paolopu91"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-github"
-  })]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "https://www.linkedin.com/in/paolo-pugliese-a3027a171/"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-linkedin"
-  })])]), _vm._v(" "), _c("li", [_c("span", [_vm._v("Debora De Felice")]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "https://github.com/Debby95"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-github"
-  })]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "https://www.linkedin.com/in/debora-de-felice-0349a3186/"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-linkedin"
-  })])]), _vm._v(" "), _c("li", [_c("span", [_vm._v("Stefano Saccocci")]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "https://github.com/StefanoSax93"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-github"
-  })]), _vm._v(" "), _c("a", {
-    attrs: {
-      href: "https://www.linkedin.com/in/stefano-saccocci-a67164200/"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-linkedin"
-  })])])])])])]), _vm._v(" "), _c("div", {
+  }, [_c("ul", [_vm._m(2), _vm._v(" "), _vm._l(_vm.linksFooter.contacts, function (link, i) {
+    return _c("li", {
+      key: i
+    }, [_c("span", [_vm._v(_vm._s(link.name))]), _vm._v(" "), _c("a", {
+      attrs: {
+        href: link.git
+      }
+    }, [_c("i", {
+      "class": link.iconGit
+    })]), _vm._v(" "), _c("a", {
+      attrs: {
+        href: link.linkedin
+      }
+    }, [_c("i", {
+      "class": link.iconLinkedin
+    })])]);
+  })], 2)])])]), _vm._v(" "), _c("div", {
     staticClass: "row py-4"
   }, [_c("div", {
     staticClass: "col d-flex justify-content-between"
   }, [_c("ul", {
     staticClass: "social d-flex"
-  }, [_c("li", [_c("a", {
-    attrs: {
-      href: "https://www.facebook.com/DeliverooIT"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-facebook"
-  })])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://twitter.com/deliveroo_italy"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-twitter"
-  })])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://www.instagram.com/deliveroo_italy/"
-    }
-  }, [_c("i", {
-    staticClass: "fa-brands fa-instagram"
-  })])])]), _vm._v(" "), _c("div", {
+  }, _vm._l(_vm.linksFooter.social, function (link, i) {
+    return _c("li", {
+      key: i
+    }, [_c("a", {
+      attrs: {
+        href: link.href
+      }
+    }, [_c("i", {
+      "class": link.icon
+    })])]);
+  }), 0), _vm._v(" "), _vm._m(3)])])])]);
+};
+
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("li", [_c("h4", [_vm._v("Scopri Deliverboo")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("li", [_c("h4", [_vm._v("Note legali")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("li", [_c("h4", [_vm._v("Contatti")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
     staticClass: "copyright"
-  }, [_c("p", [_vm._v("© 2022 Deliverboo")])])])])])]);
+  }, [_c("p", [_vm._v("© 2022 Deliverboo")])]);
 }];
 render._withStripped = true;
 
@@ -543,7 +562,11 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
+<<<<<<< HEAD
+  return _c("div", [_c("header", [_c("TheNavbar")], 1), _vm._v(" "), _c("main", [_c("router-view"), _vm._v(" "), _c("PlateInfo")], 1), _vm._v(" "), _c("footer", [_c("TheFooter")], 1)]);
+=======
   return _c("div", [_c("header", [_c("TheNavbar")], 1), _vm._v(" "), _c("main", [_c("router-view")], 1), _vm._v(" "), _c("PlateInfo"), _vm._v(" "), _c("footer", [_c("TheFooter")], 1)], 1);
+>>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
 };
 
 var staticRenderFns = [];
@@ -564,7 +587,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
+<<<<<<< HEAD
+exports.push([module.i, "h3[data-v-6f63d109] {\n  margin: 40px 0 0;\n}\nul[data-v-6f63d109] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-6f63d109] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-6f63d109] {\n  color: #42b983;\n}\n.padding-x[data-v-6f63d109] {\n  padding-left: 2rem;\n  padding-right: 2rem;\n}", ""]);
+=======
 exports.push([module.i, "h3[data-v-6f63d109] {\n  margin: 40px 0 0;\n}\nul[data-v-6f63d109] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-6f63d109] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-6f63d109] {\n  color: #42b983;\n}\n.my-img[data-v-6f63d109] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  max-width: 50%;\n  transition-delay: 0;\n}\n.my-text[data-v-6f63d109] {\n  transition-delay: 0;\n}", ""]);
+>>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
 
 // exports
 
@@ -583,7 +610,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
+<<<<<<< HEAD
+exports.push([module.i, ".section-footer[data-v-2a04c4de] {\n  background: rgb(46, 51, 51);\n}\n.section-footer .col-footer[data-v-2a04c4de] {\n  background: rgb(67, 72, 72);\n  padding: 0.9375rem 0;\n  height: 100%;\n}\n.section-footer .col-footer li[data-v-2a04c4de] {\n  list-style: none;\n  padding-bottom: 0.4375rem;\n}\n.section-footer .col-footer li h4[data-v-2a04c4de] {\n  color: white;\n  font-size: 1.125rem;\n  font-weight: 700;\n}\n.section-footer .col-footer li a[data-v-2a04c4de],\n.section-footer .col-footer li span[data-v-2a04c4de] {\n  text-decoration: none;\n  color: white;\n  font-size: 0.875rem;\n  cursor: pointer;\n}\n.section-footer .col-footer li a[data-v-2a04c4de]:hover,\n.section-footer .col-footer li span[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .col-footer li .fa-github[data-v-2a04c4de] {\n  padding: 0 0.625rem;\n}\n.section-footer .social[data-v-2a04c4de] {\n  color: white;\n  padding-left: 0rem;\n}\n.section-footer .social li[data-v-2a04c4de] {\n  list-style: none;\n}\n.section-footer .social i[data-v-2a04c4de] {\n  padding-right: 0.8125rem;\n  font-size: 1.25rem;\n  color: white;\n}\n.section-footer .social i[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .copyright[data-v-2a04c4de] {\n  color: rgb(67, 72, 72);\n}", ""]);
+=======
 exports.push([module.i, ".section-footer[data-v-2a04c4de] {\n  background: rgb(46, 51, 51);\n}\n.section-footer .col-footer[data-v-2a04c4de] {\n  background: rgb(67, 72, 72);\n  padding: 0.9375rem 0;\n  height: 100%;\n}\n.section-footer .col-footer li[data-v-2a04c4de] {\n  list-style: none;\n  padding-bottom: 0.4375rem;\n}\n.section-footer .col-footer li h4[data-v-2a04c4de] {\n  color: white;\n  font-size: 1.125rem;\n  font-weight: 700;\n}\n.section-footer .col-footer li a[data-v-2a04c4de], .section-footer .col-footer li span[data-v-2a04c4de] {\n  text-decoration: none;\n  color: white;\n  font-size: 0.875rem;\n}\n.section-footer .col-footer li a[data-v-2a04c4de]:hover, .section-footer .col-footer li span[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .col-footer li span[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .col-footer li .fa-github[data-v-2a04c4de] {\n  padding: 0 10px;\n}\n.section-footer .social[data-v-2a04c4de] {\n  color: white;\n  padding-left: 0rem;\n}\n.section-footer .social li[data-v-2a04c4de] {\n  list-style: none;\n}\n.section-footer .social i[data-v-2a04c4de] {\n  padding-right: 0.8125rem;\n  font-size: 1.25rem;\n  color: white;\n}\n.section-footer .social i[data-v-2a04c4de]:hover {\n  color: rgb(0, 204, 188);\n}\n.section-footer .copyright[data-v-2a04c4de] {\n  color: rgb(67, 72, 72);\n}", ""]);
+>>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
 
 // exports
 
@@ -14097,7 +14128,15 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = __webpack_require__(/*! C:\Users\annat\Documents\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+=======
+module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+>>>>>>> bcb0e0baa2a6730ecb98a08514d8ddbd64ba9a9b
+=======
 module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+>>>>>>> 3c4a8a48a85066cc8b2265731e7dae7b7c731bef
 
 
 /***/ })
