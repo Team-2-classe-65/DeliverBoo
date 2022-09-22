@@ -484,10 +484,9 @@ var staticRenderFns = [function () {
       href: "#"
     }
   }, [_c("img", {
+    staticClass: "logo",
     attrs: {
       src: "img/unnamed.png",
-      width: "50",
-      height: "50",
       alt: "deliveboo logo"
     }
   }), _vm._v(" "), _c("span", {
@@ -534,14 +533,7 @@ var staticRenderFns = [function () {
     attrs: {
       type: "button"
     }
-  }, [_vm._v("Cerca")])]), _vm._v(" "), _c("div", {
-    staticClass: "mt-2"
-  }, [_c("a", {
-    staticClass: "signin",
-    attrs: {
-      href: ""
-    }
-  }, [_vm._v("Accedi")]), _vm._v(" "), _c("span", [_vm._v("per visualizzare i tuoi indirizzi recenti.")])])])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("Cerca")])])])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("img", {
     staticClass: "bg-home my-5",
@@ -651,7 +643,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.nav-section {\n    background-color: #00CCBC;\n    height: 600px;\n    min-width: 600px;\n}\n.search-section {\n    padding-top: 120px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    margin-left: 200px;\n}\n.form-control {\n    width: 380px;\n    margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    height: 600px;\n    min-width: 600px;\n}\n.search-section {\n    padding-top: 120px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    margin-left: 200px;\n    width: 400px;\n    height: 400px;\n}\n.form-control {\n    width: 380px;\n    margin-right: 10px;\n}\n", ""]);
 
 // exports
 
@@ -14127,7 +14119,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Paolo\Documenti Master Boolean\Esercizi Boolean Master\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })

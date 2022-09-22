@@ -6,7 +6,7 @@
             <nav class="navbar">
                 <a class="navbar-logo text-decoration-none" href="#">
                     <!-- deliveboo logo -->
-                    <img src="img/unnamed.png" width="50" height="50" alt="deliveboo logo">
+                    <img class="logo" src="img/unnamed.png" alt="deliveboo logo">
                     <span class="fw-bold text-white">deliveBoo</span>
                 </a>
                 <div>
@@ -28,10 +28,6 @@
                                 <input type="text" class="form-control" placeholder="Inserisci il tuo indirizzo completo">
                                 <button type="button" class="btn search-btn text-white">Cerca</button>
                             </div>
-                            <div class="mt-2">
-                                <a class="signin" href="">Accedi</a>
-                                <span>per visualizzare i tuoi indirizzi recenti.</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,6 +40,11 @@
 </template>
 
 <style>
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
     .nav-section {
         background-color: #00CCBC;
         height: 600px;
@@ -68,6 +69,8 @@
 
     .bg-home {
         margin-left: 200px;
+        width: 400px;
+        height: 400px;
     }
 
     .form-control {
