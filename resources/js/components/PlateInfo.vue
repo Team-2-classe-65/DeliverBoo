@@ -10,7 +10,7 @@
         <div class="container">
           <div class="rounded mx-auto d-block">
             <div v-for="i in [currentIndex]" :key="i">
-              <img class="my-img rounded mx-auto d-block" :src="currentImg" data-aos="fade-left" data-aos-duration="2000" />
+              <img class="my-img rounded mx-auto d-block" :src="currentImg" style="height:400px" data-aos="fade-left" data-aos-duration="1000" />
             </div>
           </div>
           <div class="prev" @click="prev" href="#">&#10094;</div>
@@ -21,9 +21,8 @@
           <div class="rounded mx-auto d-block bg-black">
             
             <div class="bg-black my-text" v-for="index in [currentIndexStory]" :key="index">
-              <p class="text-white  padding-x py-3 px-5" data-aos="fade-left" data-aos-duration="2000">{{currentStory}}</p>
+              <p class="text-white  padding-x py-3 px-5" data-aos="fade-in" data-aos-duration="2000">{{currentStory}}</p>
             </div>
-            
             
           </div>
         </div>
