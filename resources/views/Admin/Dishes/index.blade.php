@@ -14,7 +14,7 @@
                 </div>
 
                 @if (session()->get('deleted'))
-                <div class="alert alert-danger my-3">
+                <div class="alert alert-success my-3">
                     {{ session()->get('deleted') }}
                 </div>
                 @endif
