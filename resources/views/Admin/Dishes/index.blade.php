@@ -5,11 +5,12 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h1>Tutti i piatti</h1>
-                <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="d-flex justify-content-between align-items-center mb-2"></div>
+                    <a href="{{ route('admin.home') }}"><i class="fa-solid fa-3x fa-circle-arrow-left btn-back"></i></a>
                     <a href="{{ route('admin.dishes.create') }}" class="btn btn-success">
                         Crea nuovo piatto
                     </a>
-                    <a href="{{ route('admin.home') }}"><i class="fa-solid fa-3x fa-circle-arrow-left btn-back"></i></a>
+                    {{-- <a href="{{ route('admin.home') }}"><i class="fa-solid fa-3x fa-circle-arrow-left btn-back"></i></a> --}}
                 </div>
 
                 @if (session()->get('deleted'))
