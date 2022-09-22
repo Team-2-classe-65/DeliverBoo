@@ -485,24 +485,45 @@ var staticRenderFns = [function () {
     }
   }), _vm._v(" "), _c("span", {
     staticClass: "fw-bold text-white"
-  }, [_vm._v("deliveBoo")])]), _vm._v(" "), _c("div", [_c("button", {
-    staticClass: "btn btn-light",
+  }, [_vm._v("deliveBoo")])]), _vm._v(" "), _c("div", {
+    staticClass: "d-flex"
+  }, [_c("button", {
+    staticClass: "btn btn-light mx-3",
     attrs: {
       type: "button"
     }
-  }, [_vm._v("Registrati o accedi")]), _vm._v(" "), _c("button", {
-    staticClass: "navbar-toggler bg-white",
+  }, [_vm._v("Registrati o accedi")]), _vm._v(" "), _c("div", {
+    staticClass: "dropdown"
+  }, [_c("button", {
+    staticClass: "btn btn-light dropdown-toggle",
     attrs: {
       type: "button",
-      "data-toggle": "collapse",
-      "data-target": "#navbarToggleExternalContent",
-      "aria-controls": "navbarToggleExternalContent",
-      "aria-expanded": "false",
-      "aria-label": "Toggle navigation"
+      id: "dropdownMenuButton",
+      "data-toggle": "dropdown",
+      "aria-haspopup": "true",
+      "aria-expanded": "false"
     }
-  }, [_c("span", {
-    staticClass: "navbar-toggler-icon"
-  }), _vm._v(" "), _c("span", [_vm._v("Menu")])])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                        Menu\n                    ")]), _vm._v(" "), _c("div", {
+    staticClass: "dropdown-menu",
+    attrs: {
+      "aria-labelledby": "dropdownMenuButton"
+    }
+  }, [_c("a", {
+    staticClass: "dropdown-item",
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Action")]), _vm._v(" "), _c("a", {
+    staticClass: "dropdown-item",
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Another action")]), _vm._v(" "), _c("a", {
+    staticClass: "dropdown-item",
+    attrs: {
+      href: "#"
+    }
+  }, [_vm._v("Something else here")])])])])]), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col"
@@ -639,7 +660,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 300px;\n}\n.search-section {\n    padding-top: 120px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 200px;\n    height: 200px;\n}\n.search {\n    height: 170px;\n    width: 300px;\n}\n.form-control {\n    width: 100px;\n    margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 300px;\n}\n.search-section {\n    padding-top: 120px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 200px;\n    min-height: 200px;\n    max-height: 400px;\n}\n.search {\n    height: 170px;\n    min-width: 300px;\n}\n.form-control {\n    min-width: 100px;\n    margin-right: 10px;\n}\n", ""]);
 
 // exports
 
