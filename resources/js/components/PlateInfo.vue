@@ -10,7 +10,7 @@
         <div class="container">
           <div class="rounded mx-auto d-block">
             <div v-for="i in [currentIndex]" :key="i">
-              <img class="my-img rounded mx-auto d-block" :src="currentImg" data-aos="fade-left" data-aos-duration="3000" />
+              <img class="my-img rounded mx-auto d-block" :src="currentImg" data-aos="fade-left" data-aos-duration="2000" />
             </div>
           </div>
           <div class="prev" @click="prev" href="#">&#10094;</div>
