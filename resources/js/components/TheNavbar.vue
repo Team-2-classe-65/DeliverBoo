@@ -9,12 +9,18 @@
                     <img class="logo" src="img/unnamed.png" alt="deliveboo logo">
                     <span class="fw-bold text-white">deliveBoo</span>
                 </a>
-                <div>
-                    <button type="button" class="btn btn-light">Registrati o accedi</button>
-                    <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        <span>Menu</span> 
-                    </button>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-light mx-3">Registrati o accedi</button>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
 
