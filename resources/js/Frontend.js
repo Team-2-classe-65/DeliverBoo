@@ -4,10 +4,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 AOS.init();
-<<<<<<< HEAD
-=======
-
->>>>>>> feature/add-aos-library
 
 new Vue({
     el:'#app',
