@@ -55,7 +55,7 @@
         background-color: #00CCBC;
         min-height: 600px;
         max-height: 900px;
-        width: 100%;
+        min-width: 375px;
     }
 
     .search-section {
