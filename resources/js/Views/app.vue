@@ -1,8 +1,5 @@
 <template>
     <div>
-      <h1>
-        AUGURI DEBORAAAAAAAA
-      </h1> 
 
       <header>
         <TheNavbar></TheNavbar>
@@ -21,9 +18,9 @@
 </template>
 
 <script>
-import PlateInfo from '../Pages/PlateInfo.vue';
-import TheFooter from '../Pages/TheFooter.vue';
-import TheNavbar from '../Pages/TheNavbar.vue';
+import PlateInfo from '../components/PlateInfo.vue';
+import TheFooter from '../components/TheFooter.vue';
+import TheNavbar from '../components/TheNavbar.vue';
     export default{
     components: { PlateInfo, TheFooter, TheNavbar }
 }
