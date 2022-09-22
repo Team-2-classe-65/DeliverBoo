@@ -1,8 +1,9 @@
 <?php
 
+use App\Category;
 use Illuminate\Database\Seeder;
 
-class RestaurantTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +12,7 @@ class RestaurantTableSeeder extends Seeder
      */
     public function run()
     {
-        $restaurantCategorie = [
+        $categories = [
             [
                 "name" => "Cinese",
                 "img" => "cucina-cinese.jpg",
@@ -59,5 +60,9 @@ class RestaurantTableSeeder extends Seeder
                 "description" => "Specialità gastronomica simbolo della tradizione culinaria italiana, con la sua apparente semplicità la pizza richiede in sede di preparazione maestria e accuratezza estrema nella scelta degli ingredienti."
             ]
         ];
+
+        foreach ($categories as $category) {
+            Category::create($category);
+        }
     }
 }

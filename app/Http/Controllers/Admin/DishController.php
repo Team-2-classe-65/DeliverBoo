@@ -6,13 +6,22 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Dish;
-use App\Category;
-use App\Order;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
 class DishController extends Controller
 {
+    private function findBySlug($slug)
+    {
+        $dish = Dish::where("slug", $slug)->first();
+
+        if (!$dish) {
+            abort(404);
+        }
+
+        return $dish;
+    }
+
     private function generateSlug($text)
     {
         $toReturn = null;
@@ -25,7 +34,7 @@ class DishController extends Controller
             if ($counter > 0) {
                 $slug .= "-" . $counter;
             }
-            $slug_exist = DIsh::where("slug", $slug)->first();
+            $slug_exist = Dish::where("slug", $slug)->first();
             if ($slug_exist) {
                 $counter++;
             } else {
@@ -55,8 +64,7 @@ class DishController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view("admin.dishes.create", compact("categories"));
+        return view("admin.dishes.create");
     }
 
     /**
@@ -70,24 +78,20 @@ class DishController extends Controller
         $validatedData = $request->validate([
             "name" => "required|min:1",
             "description" => "required|min:10",
-            "category_id" => "nullable|exists:categories,id",
-            "availability" => "required|true",
-            "price',5,2" => "required|min:3.2",
+            "price" => "required|numeric|min:1|max:999",
             "dish_img" => "required|image",
         ]);
 
-        $order = new Dish();
-        $order->fill($validatedData);
-        $order->user_id = Auth::order()->id;
-        
-        $dishImg = Storage::put("/dish_img", $validatedData["dish_img"]);
-        $order->dish_img = $dishImg;
+        $dish = new Dish();
+        $dish->fill($validatedData);
+        $dish->user_id = Auth::user()->id;
+        $dish->slug = $this->generateSlug($dish->name);
+        $dishImg = Storage::put("/dish_images", $validatedData["dish_img"]);
+        $dish->dish_img = $dishImg;
 
-        $order->slug = $this->generateSlug($order->title);
+        $dish->save();
 
-        $order->save();
-
-        return redirect()->route("admin.dishes.index");
+        return redirect()->route("admin.dishes.show", $dish->slug)->with('message',"Piatto creato con successo");
     }
 
     /**
@@ -98,8 +102,8 @@ class DishController extends Controller
      */
     public function show($slug)
     {
-        $dish = Dish::where('slug', $slug)->first();
-        return view("admin.dishes.show", compact("dishes"));
+        $dish = $this->findBySlug($slug);
+        return view("admin.dishes.show", compact("dish"));
     }
 
     /**
@@ -110,9 +114,9 @@ class DishController extends Controller
      */
     public function edit($slug)
     {
-        $dish = Dish::where('slug', $slug)->first();
-        $categories = Category::all();
-        return view("admin.dishes.edit", compact("dish", "categories"));
+        $dish = $this->findBySlug($slug);
+
+        return view("admin.dishes.edit", compact("dish"));
     }
 
     /**
@@ -124,34 +128,36 @@ class DishController extends Controller
      */
     public function update(Request $request, $slug)
     {
+
         $validatedData = $request->validate([
             "name" => "required|min:1",
             "description" => "required|min:10",
-            "category_id" => "nullable|exists:categories,id",
-            "availability" => "required|true",
-            "price',5,2" => "required|min:3.2",
-            "dish_img" => "required|image",
-
+            "price" => "required|numeric|min:1|max:999",
+            "dish_img" => "nullable|image"
         ]);
 
-        $dish = Dish::where('slug', $slug)->first();
+        $dish = $this->findBySlug($slug);
 
         if(key_exists("dish_img", $validatedData)) {
-            if($dish->dish_img){
+            //se esiste già un immagine per quel post
+            //devo eliminare prima quella vecchia
+            if($dish->dish_img) {
                 Storage::delete($dish->dish_img);
             }
-            $dishImg = Storage::put("/dish_img" , $validatedData["dish_img"]);
+
+            $dishImg = Storage::put("/dish_images", $validatedData["dish_img"]);
 
             $dish->dish_img = $dishImg;
         }
-        
-        if ($validatedData["title"] !== $dish->title) {
-            $dish->slug = $this->generateSlug($validatedData["title"]);
+
+        if ($validatedData["name"] !== $dish->name) {
+            
+            $dish->slug = $this->generateSlug($validatedData["name"]);
         }
 
         $dish->update($validatedData);
 
-        return redirect()->route("admin.dishes.show", $dish->slug);
+        return redirect()->route("admin.dishes.show", $dish->slug)->with('message', 'Piatto ' . $dish->name . ' aggiornato correttamente');
     }
 
     /**
@@ -162,8 +168,9 @@ class DishController extends Controller
      */
     public function destroy($slug)
     {
-        $dish = Dish::where('slug', $slug)->first();
+        $dish = $this->findBySlug($slug);
+        Storage::delete($dish->dish_img);
         $dish->delete();
-        return redirect()->route("admin.dishes.index");
+        return redirect()->route("admin.dishes.index")->with('deleted', 'Piatto ' . $dish->name . ' eliminato correttamente');
     }
 }
