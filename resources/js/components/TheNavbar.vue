@@ -9,12 +9,18 @@
                     <img class="logo" src="img/unnamed.png" alt="deliveboo logo">
                     <span class="fw-bold text-white">deliveBoo</span>
                 </a>
-                <div>
-                    <button type="button" class="btn btn-light">Registrati o accedi</button>
-                    <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        <span>Menu</span>
-                    </button>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-light mx-3">Registrati o accedi</button>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
 
@@ -46,6 +52,10 @@
 </template>
 
 <style>
+    .container {
+        min-width: 300px;
+    }
+
     .logo {
         width: 50px;
         height: 50px;
@@ -55,11 +65,12 @@
         background-color: #00CCBC;
         min-height: 600px;
         max-height: 900px;
-        min-width: 600px;
+        min-width: 300px;
     }
 
     .search-section {
         padding-top: 120px;
+        min-width: 300px;
         max-width: 600px;
     }
 
@@ -76,16 +87,18 @@
     }
 
     .bg-home {
-        min-width: 400px;
-        height: 400px;
+        min-width: 200px;
+        min-height: 200px;
+        max-height: 400px;
     }
 
     .search {
         height: 170px;
+        min-width: 300px;
     }
 
     .form-control {
-        width: 380px;
+        min-width: 100px;
         margin-right: 10px;
     }
 </style>
