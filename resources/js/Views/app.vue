@@ -23,7 +23,8 @@
 <script>
 import PlateInfo from '../Pages/PlateInfo.vue';
 import TheFooter from '../Pages/TheFooter.vue';
+import TheNavbar from '../Pages/TheNavbar.vue';
     export default{
-    components: { PlateInfo, TheFooter }
+    components: { PlateInfo, TheFooter, TheNavbar }
 }
 </script>
