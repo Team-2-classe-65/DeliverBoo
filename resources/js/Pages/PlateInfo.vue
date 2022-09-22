@@ -21,7 +21,7 @@
           <div class="row">
             <div class="col-6">
               <div class="" v-for="ind in [currentIndexChef]" :key="ind">
-                <img class="img-fluid px-3 pt-5" :src="currentChefIndex">
+                <img class="img-fluid px-3 pt-5" :src="currentIndexChef" />
               </div>
             </div>
             <div class="col-6">

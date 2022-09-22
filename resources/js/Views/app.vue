@@ -5,7 +5,7 @@
       </h1> 
 
       <header>
-
+        <TheNavbar></TheNavbar>
       </header>
 
       <main>
