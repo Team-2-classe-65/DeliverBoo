@@ -46,6 +46,10 @@
 </template>
 
 <style>
+    .container {
+        min-width: 300px;
+    }
+
     .logo {
         width: 50px;
         height: 50px;
@@ -60,6 +64,7 @@
 
     .search-section {
         padding-top: 120px;
+        min-width: 300px;
         max-width: 600px;
     }
 
@@ -76,16 +81,17 @@
     }
 
     .bg-home {
-        min-width: 400px;
-        height: 400px;
+        min-width: 200px;
+        height: 200px;
     }
 
     .search {
         height: 170px;
+        width: 300px;
     }
 
     .form-control {
-        width: 380px;
+        width: 100px;
         margin-right: 10px;
     }
 </style>
