@@ -82,16 +82,17 @@
 
     .bg-home {
         min-width: 200px;
-        height: 200px;
+        min-height: 200px;
+        max-height: 400px;
     }
 
     .search {
         height: 170px;
-        width: 300px;
+        min-width: 300px;
     }
 
     .form-control {
-        width: 100px;
+        min-width: 100px;
         margin-right: 10px;
     }
 </style>

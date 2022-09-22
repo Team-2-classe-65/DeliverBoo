@@ -621,7 +621,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 300px;\n}\n.search-section {\n    padding-top: 120px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 200px;\n    height: 200px;\n}\n.search {\n    height: 170px;\n    width: 300px;\n}\n.form-control {\n    width: 100px;\n    margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 300px;\n}\n.search-section {\n    padding-top: 120px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 200px;\n    min-height: 200px;\n    max-height: 400px;\n}\n.search {\n    height: 170px;\n    min-width: 300px;\n}\n.form-control {\n    min-width: 100px;\n    margin-right: 10px;\n}\n", ""]);
 
 // exports
 
