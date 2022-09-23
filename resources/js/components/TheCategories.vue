@@ -7,9 +7,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
+                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3" v-for="category in categories" :key="category.id">
                     <a href="#">
                         <div class="card-categories overlay">
+<<<<<<< HEAD
                             <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details" >
                                 <span>Cinese</span>
@@ -102,6 +103,13 @@
                             <div class="restaurant-details">
                                 <span>Fast-Food</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
+=======
+                            <img class="w-100" v-if="category.img" :src="category.img">
+                            <img v-else src="img/placeholder.jpg">
+                            <div class="restaurant-details" >
+                                <span>{{ category.name }}</span>
+                                <p>Scopri ristoranti {{ category.name}} <i class="fa-solid fa-arrow-right"></i></p>
+>>>>>>> changes-Anna
                             </div>
                         </div>
                     </a>
@@ -112,12 +120,29 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: "TheCategories",
     data() {
         return {
-
+            categories: [],
         }
+    },
+    methods: {
+        getCategories() {
+
+            axios
+            .get("/api/categories" )
+            .then((response) => {
+                this.categories = response.data;
+            })
+
+            // console.log(this.categories);
+        }
+    },
+    mounted() {
+        this.getCategories();
     }
 }
 </script>
