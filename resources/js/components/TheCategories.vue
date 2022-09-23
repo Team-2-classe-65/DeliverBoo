@@ -7,18 +7,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
+                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3" v-for="(category, i) in getRestaurant()" :key="i">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-cinese.jpg" alt="">
+                            <img class="w-100" :src="require('../../../public/img/' + category.img)" :alt="category.name">
                             <div class="restaurant-details" >
-                                <span>Cinese</span>
+                                <span>{{ category.name }}</span>
                                 <p>Scopri ristoranti cinesi <i class="fa-solid fa-arrow-right"></i></p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
+                <!-- <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
                             <img class="w-100" src="../assets/img/giapponese2.jpg" alt="">
@@ -105,18 +105,32 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import Axios from 'axios';
+
 export default {
     name: "TheCategories",
     data() {
         return {
+            // categories: [],
+        }
+    },
+    methods: {
+        getRestaurant() {
 
+            axios
+            .get("/api/categories")
+            .then((response) => {
+                this.categories = response.data.data;
+            })
+
+            console.log("ciao");
         }
     }
 }
