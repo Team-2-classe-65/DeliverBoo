@@ -86,8 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-<<<<<<< HEAD
-=======
 /***/ "./node_modules/@popperjs/core/lib/createPopper.js":
 /*!*********************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/createPopper.js ***!
@@ -44989,17 +44987,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
->>>>>>> b30219471cb9f67ba4ed25cb018f650f08147c4e
 /***/ "./resources/js/frontend.js":
 /*!**********************************!*\
   !*** ./resources/js/frontend.js ***!
   \**********************************/
-<<<<<<< HEAD
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\utente\\Boolean\\Deliverboo\\resources\\js\\frontend.js: Unexpected token (9:0)\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m \u001b[33mAOS\u001b[39m\u001b[33m.\u001b[39minit()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m \u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m \u001b[36mimport\u001b[39m \u001b[33mVueRouter\u001b[39m \u001b[36mfrom\u001b[39m \u001b[32m\"vue-router\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at instantiate (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:367:12)\n    at Parser.raise (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:3678:19)\n    at Parser.unexpected (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:3716:16)\n    at Parser.parseExprAtom (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:13265:22)\n    at Parser.parseExprSubscripts (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12790:23)\n    at Parser.parseUpdate (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12769:21)\n    at Parser.parseMaybeUnary (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12739:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12530:61)\n    at Parser.parseExprOps (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12537:23)\n    at Parser.parseMaybeConditional (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12507:23)\n    at Parser.parseMaybeAssign (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12459:21)\n    at Parser.parseExpressionBase (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12395:23)\n    at C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12389:39\n    at Parser.allowInAnd (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14485:16)\n    at Parser.parseExpression (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12389:17)\n    at Parser.parseStatementContent (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14925:23)\n    at Parser.parseStatement (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14782:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:15441:25)\n    at Parser.parseBlockBody (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:15432:10)\n    at Parser.parseProgram (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14700:10)\n    at Parser.parseTopLevel (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14687:25)\n    at Parser.parse (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:16710:10)\n    at parse (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:16762:38)\n    at parser (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\core\\lib\\parser\\index.js:52:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:87:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\Users\\utente\\Boolean\\Deliverboo\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)");
-=======
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -45134,7 +45125,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
->>>>>>> b30219471cb9f67ba4ed25cb018f650f08147c4e
 
 /***/ }),
 
@@ -45145,11 +45135,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
-=======
-module.exports = __webpack_require__(/*! D:\Paolo\Documenti Master Boolean\Esercizi Boolean Master\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
->>>>>>> b30219471cb9f67ba4ed25cb018f650f08147c4e
+module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
