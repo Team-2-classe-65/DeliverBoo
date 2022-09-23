@@ -29,8 +29,6 @@ Route::middleware("auth")
     Route::resource("dishes", "DishController");
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('{any?}', function () {
-    return view('frontend');
-})->where("any", "*");
+    return view('welcome');
+})->where("any", ".*");
