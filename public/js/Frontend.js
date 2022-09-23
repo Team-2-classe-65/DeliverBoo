@@ -86,12 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/@popperjs/core/lib/createPopper.js":
 /*!*********************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/createPopper.js ***!
@@ -3331,10 +3325,6 @@ function withinMaxClamp(min, value, max) {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/aos/dist/aos.css":
 /*!***************************************!*\
   !*** ./node_modules/aos/dist/aos.css ***!
@@ -3376,11 +3366,6 @@ if(false) {}
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -5213,10 +5198,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PlateInfo.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PlateInfo.vue?vue&type=script&lang=js& ***!
@@ -5239,24 +5220,18 @@ __webpack_require__.r(__webpack_exports__);
       "https://s3.eu-de.cloud-object-storage.appdomain.cloud/pro-strapi-media-library/web_alimentos_ultraprocesados2_f215d111af", //fast-food
       "https://static2-viaggi.corriereobjects.it/wp-content/uploads/2021/09/214892655_6035116193228248_5179461785950087407_n-1080x720.jpeg?v=449399" // Pizza
       ],
-<<<<<<< HEAD
       story: [" La cucina Italiana è l espressione dell'arte culinaria sviluppatasi in Italia, comprendente tradizioni fortemente radicate e comuni a tutto il paese, nonché l'insieme di tutte le gastronomie regionali, in uno scambio continuo: molti piatti italiani che una volta erano conosciuti solo nelle regioni di provenienza col tempo si sono diffusi in tutto il paese. È conosciuta come classico esempio di dieta mediterranea, riconosciuta come patrimonio immateriale dell'umanità dall'UNESCO nel 2010. Inoltre, si tratta di una delle gastronomie più note e apprezzate a livello globale. Una delle caratteristiche principali della cucina italiana è la sua semplicità, con molti piatti composti da pochi ingredienti: i cuochi italiani fanno affidamento sulla qualità degli ingredienti, piuttosto che sulla complessità di preparazione.", "La cucina Greca comprende una serie di piatti tipici, vini e dolci diffusi in tutta la Grecia e spesso presenti, con poche variazioni, nei paesi del bacino del Mediterraneo.Le fonti storiche e archeologiche suggeriscono che la cucina in Grecia antica fosse più articolata in quanto a tecniche e abbinamenti delle sue vicine già prima di Alessandro Magno.l pasto greco si apre con una serie di antipasti detti mezédes (μεζέδες) oppure orektiká (ορεκτικά). Segue un piatto principale che può essere a base di carne o pesce, spesso cucinati alla griglia o alla piastra, oppure un'insalata e formaggi. Seguono i dolci che possono essere al macino forno o al cucchiaio. Onnipresente è l'olio d'oliva, solitamente di alta qualità, che viene impiegato senza risparmio.", "La cucina Cinese rappresenta la somma di cucine regionali anche molto diverse e si è evoluta anche in altre parti del mondo con caratteristiche diverse dall'Asia orientale al Nord America, dall'Australia all'Europa occidentale. Si possono distinguere otto cucine regionali: Anhui, Cantonese, Fujian, Hunan, Jiangsu, Shandong, Sichuan e Zhejiang. Nel paleolitico, gli antenati dei cinesi, in particolare l'uomo di Pechino, in base agli scavi e ai resti nel complesso di grotte di Zhōukǒudiàn (周口店), si cibavano prevalentemente di piccoli animali come roditori, chirotteri, insettivori e invertebrati di vario tipo, ma non mancavano anche grandi animali come il mammut, cervidi, bufali, grandi carnivori e tanti altri, la Cina è uno di quei punti del mondo dove è nata l'agricoltura. Intorno al 5400 a.C. I cinesi compensavano il basso consumo di carne con legumi, panico e miglio, ricchi di acidi grassi e proteine, oltre che di carboidrati. Infatti, a differenza della cucina occidentale che usa grassi animali come il burro, ancora oggi i cinesi si servono di olii di semi, come ad esempio olio di semi di soia, di arachidi, di mais ecc.", "La cucina Spagnola è fortemente radicata nelle tradizioni più antiche e ha il merito di aver promosso dall'inizio del XVI secolo l'ingresso di prodotti nuovi in Europa (patata, pomodoro, mais, cacao, fagioli, ecc.) provenienti dalle Americhe. I piatti tipici sono la paella (riso, zafferano con frutti di mare o carne) e il gazpacho (zuppa fredda).I piatti, nel peridoo medievale, si dividevano in pietances, piatti a base di carne e pesce di consistenza piuttosto solida, tra cui arrosti, bolliti e empanadas, e cuines, piatti di consistenza pastosa o liquida da bere in ciotole o scodelle e si suddividevano a loro volte in cuines mangiate con il pane e cuines da mangiare con il cucchiaio come le zuppe. Oggi la cucina spagnola è divisa tra i grandi cuochi spagnoli che hanno avuto un riconoscimento internazionale come Ferran Adrià e Santi Santamaria che hanno portato alla ribalta i loro ristoranti: il Bulli, il Racò de Can Fabes e l'attenzione alle cucine regionali grazie alla forte autonomia politica di cui godono le comunità autonome (il corrispettivo delle regioni italiane) che incoraggiano la gastronomia locale o in caso non esista creano una tradizione fenomenale", "La storia della cucina giapponese ha inizio nel periodo preistorico (periodo Jōmon) con i primi insediamenti neolitici giapponesi che basavano la loro alimentazione sul riso e sui frutti di mare fin dai primi tempi. Sul periodo Kofun (III-VII secolo) regna l'incertezza. Alcune fonti suggeriscono un quadro di abitudini alimentari ben definito solo a partire dal momento della formazione della dinastia Yamato. Quando il buddismo divenne pratica comune, venne introdotto il divieto di consumazione della carne, che resterà in vigore fino alle Restaurazione Meiji. Durante il periodo Heian, i documenti sull'alimentazione dei giapponesi divennero più numerosi, permettendo di fare un elenco degli ingredienti utilizzati e dei metodi preparazione. Una volta che il Giappone entrò nel periodo Edo, venne introdotta una ricca varietà di cibi e specialità culinarie, la quale andrà a comporre la cucina tradizionale giapponese. Nel periodo Meiji, con l'abolizione del sakoku, diverse specialità straniere andranno a complementare la già ricca lista di piatti giapponesi.", "La cucina indiana è l'espressione dell'arte culinaria sviluppata in India. È nota soprattutto per il grande uso che fa di spezie, latte e latticini. Si differenzia in numerose varietà regionali, comunque riferibili a due grandi gruppi: la cucina dell'India del nord, che fa uso di carni ed è meno speziata, e quella del sud, vegetariana e più speziata. La cucina, soprattutto nei Aristotele, viene anche classificata in cucina non vegetariana (indicata da cartelli con la scritta non veg), latto-ovo-vegetariana (veg, senza carni), e latto-vegetariana, detta quasi vegana (pure veg che non fa uso di uova). Praticamente inesistente la cucina vegana propriamente detta, cioè senza neanche latte e latticini.", "Il fast food (espressione inglese, letteralmente cibo veloce, in italiano è anche detta ristorazione rapida) è un tipo di ristorazione originatasi nei paesi anglosassoni, veloce da cucinare, consumare, economica e con servizio ridotto al minimo. Si possono incontrare anche fast food ambulanti ovvero cibo di strada, che forniscono cibi rapidi economici e standardizzati. Il pasto veloce offerto con un sistema di ristorazione industriale a partire dagli anni ottanta ha registrato una vasta diffusione a livello mondiale. Il primo ristorante di fish & chips fu aperto nel 1860 in Inghilterra.", "Una storia spesso raccontata sostiene che l'11 giugno 1889, in onore della regina consorte d'Italia, Margherita di Savoia, il pizzaiolo napoletano Raffaele Esposito creò la Pizza Margherita, una pizza guarnita con pomodori, mozzarella e basilico, per rappresentare il colori nazionali dell'Italia come sulla bandiera dell'Italia. In realtà, la Margherita esisteva già da diverse decenni: viene descritta in un libro del 1866 insieme alla Marinara (cibo preferito dai pescatori al rientro dal lavoro) e al Calzone e in un’altra pubblicazione del 1830 si parla di una pizza condita con pomodoro, mozzarella e basilico. Nella Napoli del XVI secolo, una focaccia di galette veniva comunemente chiamata pizza. Conosciuto come il piatto per i poveri, veniva venduto per strada e conobbe in fretta un gran successo, fino a diventare un piatto amato anche dai nobili borbonici."],
-=======
-<<<<<<< HEAD
-      story: [" <h1>La cucina Italiana</h1>   è l espressione dell'arte culinaria sviluppatasi in Italia, comprendente tradizioni fortemente radicate e comuni a tutto il paese, nonché l'insieme di tutte le gastronomie regionali, in uno scambio continuo: molti piatti italiani che una volta erano conosciuti solo nelle regioni di provenienza col tempo si sono diffusi in tutto il paese. È conosciuta come classico esempio di dieta mediterranea, riconosciuta come patrimonio immateriale dell'umanità dall'UNESCO nel 2010. Inoltre, si tratta di una delle gastronomie più note e apprezzate a livello globale. Una delle caratteristiche principali della cucina italiana è la sua semplicità, con molti piatti composti da pochi ingredienti: i cuochi italiani fanno affidamento sulla qualità degli ingredienti, piuttosto che sulla complessità di preparazione.", "La cucina Greca comprende una serie di piatti tipici, vini e dolci diffusi in tutta la Grecia e spesso presenti, con poche variazioni, nei paesi del bacino del Mediterraneo.Le fonti storiche e archeologiche suggeriscono che la cucina in Grecia antica fosse più articolata in quanto a tecniche e abbinamenti delle sue vicine già prima di Alessandro Magno.l pasto greco si apre con una serie di antipasti detti mezédes (μεζέδες) oppure orektiká (ορεκτικά). Segue un piatto principale che può essere a base di carne o pesce, spesso cucinati alla griglia o alla piastra, oppure un'insalata e formaggi. Seguono i dolci che possono essere al macino forno o al cucchiaio. Onnipresente è l'olio d'oliva, solitamente di alta qualità, che viene impiegato senza risparmio.", "La cucina Cinese rappresenta la somma di cucine regionali anche molto diverse e si è evoluta anche in altre parti del mondo con caratteristiche diverse dall'Asia orientale al Nord America, dall'Australia all'Europa occidentale. Si possono distinguere otto cucine regionali: Anhui, Cantonese, Fujian, Hunan, Jiangsu, Shandong, Sichuan e Zhejiang. Nel paleolitico, gli antenati dei cinesi, in particolare l'uomo di Pechino, in base agli scavi e ai resti nel complesso di grotte di Zhōukǒudiàn (周口店), si cibavano prevalentemente di piccoli animali come roditori, chirotteri, insettivori e invertebrati di vario tipo, ma non mancavano anche grandi animali come il mammut, cervidi, bufali, grandi carnivori e tanti altri, la Cina è uno di quei punti del mondo dove è nata l'agricoltura. Intorno al 5400 a.C. I cinesi compensavano il basso consumo di carne con legumi, panico e miglio, ricchi di acidi grassi e proteine, oltre che di carboidrati. Infatti, a differenza della cucina occidentale che usa grassi animali come il burro, ancora oggi i cinesi si servono di olii di semi, come ad esempio olio di semi di soia, di arachidi, di mais ecc.", "La cucina Spagnola è fortemente radicata nelle tradizioni più antiche e ha il merito di aver promosso dall'inizio del XVI secolo l'ingresso di prodotti nuovi in Europa (patata, pomodoro, mais, cacao, fagioli, ecc.) provenienti dalle Americhe. I piatti tipici sono la paella (riso, zafferano con frutti di mare o carne) e il gazpacho (zuppa fredda).I piatti, nel peridoo medievale, si dividevano in pietances, piatti a base di carne e pesce di consistenza piuttosto solida, tra cui arrosti, bolliti e empanadas, e cuines, piatti di consistenza pastosa o liquida da bere in ciotole o scodelle e si suddividevano a loro volte in cuines mangiate con il pane e cuines da mangiare con il cucchiaio come le zuppe. Oggi la cucina spagnola è divisa tra i grandi cuochi spagnoli che hanno avuto un riconoscimento internazionale come Ferran Adrià e Santi Santamaria che hanno portato alla ribalta i loro ristoranti: il Bulli, il Racò de Can Fabes e l'attenzione alle cucine regionali grazie alla forte autonomia politica di cui godono le comunità autonome (il corrispettivo delle regioni italiane) che incoraggiano la gastronomia locale o in caso non esista creano una tradizione fenomenale", "La storia della cucina giapponese ha inizio nel periodo preistorico (periodo Jōmon) con i primi insediamenti neolitici giapponesi che basavano la loro alimentazione sul riso e sui frutti di mare fin dai primi tempi. Sul periodo Kofun (III-VII secolo) regna l'incertezza. Alcune fonti suggeriscono un quadro di abitudini alimentari ben definito solo a partire dal momento della formazione della dinastia Yamato. Quando il buddismo divenne pratica comune, venne introdotto il divieto di consumazione della carne, che resterà in vigore fino alle Restaurazione Meiji. Durante il periodo Heian, i documenti sull'alimentazione dei giapponesi divennero più numerosi, permettendo di fare un elenco degli ingredienti utilizzati e dei metodi preparazione. Una volta che il Giappone entrò nel periodo Edo, venne introdotta una ricca varietà di cibi e specialità culinarie, la quale andrà a comporre la cucina tradizionale giapponese. Nel periodo Meiji, con l'abolizione del sakoku, diverse specialità straniere andranno a complementare la già ricca lista di piatti giapponesi.", "La cucina indiana è l'espressione dell'arte culinaria sviluppata in India. È nota soprattutto per il grande uso che fa di spezie, latte e latticini. Si differenzia in numerose varietà regionali, comunque riferibili a due grandi gruppi: la cucina dell'India del nord, che fa uso di carni ed è meno speziata, e quella del sud, vegetariana e più speziata. La cucina, soprattutto nei Aristotele, viene anche classificata in cucina non vegetariana (indicata da cartelli con la scritta non veg), latto-ovo-vegetariana (veg, senza carni), e latto-vegetariana, detta quasi vegana (pure veg che non fa uso di uova). Praticamente inesistente la cucina vegana propriamente detta, cioè senza neanche latte e latticini.", "Il fast food (espressione inglese, letteralmente cibo veloce, in italiano è anche detta ristorazione rapida) è un tipo di ristorazione originatasi nei paesi anglosassoni, veloce da cucinare, consumare, economica e con servizio ridotto al minimo. Si possono incontrare anche fast food ambulanti ovvero cibo di strada, che forniscono cibi rapidi economici e standardizzati. Il pasto veloce offerto con un sistema di ristorazione industriale a partire dagli anni ottanta ha registrato una vasta diffusione a livello mondiale. Il primo ristorante di fish & chips fu aperto nel 1860 in Inghilterra.", "Una storia spesso raccontata sostiene che l'11 giugno 1889, in onore della regina consorte d'Italia, Margherita di Savoia, il pizzaiolo napoletano Raffaele Esposito creò la Pizza Margherita, una pizza guarnita con pomodori, mozzarella e basilico, per rappresentare il colori nazionali dell'Italia come sulla bandiera dell'Italia. In realtà, la Margherita esisteva già da diverse decenni: viene descritta in un libro del 1866 insieme alla Marinara (cibo preferito dai pescatori al rientro dal lavoro) e al Calzone e in un’altra pubblicazione del 1830 si parla di una pizza condita con pomodoro, mozzarella e basilico. Nella Napoli del XVI secolo, una focaccia di galette veniva comunemente chiamata pizza. Conosciuto come il piatto per i poveri, veniva venduto per strada e conobbe in fretta un gran successo, fino a diventare un piatto amato anche dai nobili borbonici."],
-=======
-      story: [" La cucina Italiana è l espressione dell'arte culinaria sviluppatasi in Italia, comprendente tradizioni fortemente radicate e comuni a tutto il paese, nonché l'insieme di tutte le gastronomie regionali, in uno scambio continuo: molti piatti italiani che una volta erano conosciuti solo nelle regioni di provenienza col tempo si sono diffusi in tutto il paese. È conosciuta come classico esempio di dieta mediterranea, riconosciuta come patrimonio immateriale dell'umanità dall'UNESCO nel 2010. Inoltre, si tratta di una delle gastronomie più note e apprezzate a livello globale. Una delle caratteristiche principali della cucina italiana è la sua semplicità, con molti piatti composti da pochi ingredienti: i cuochi italiani fanno affidamento sulla qualità degli ingredienti, piuttosto che sulla complessità di preparazione.", "La cucina Greca comprende una serie di piatti tipici, vini e dolci diffusi in tutta la Grecia e spesso presenti, con poche variazioni, nei paesi del bacino del Mediterraneo.Le fonti storiche e archeologiche suggeriscono che la cucina in Grecia antica fosse più articolata in quanto a tecniche e abbinamenti delle sue vicine già prima di Alessandro Magno.l pasto greco si apre con una serie di antipasti detti mezédes (μεζέδες) oppure orektiká (ορεκτικά). Segue un piatto principale che può essere a base di carne o pesce, spesso cucinati alla griglia o alla piastra, oppure un'insalata e formaggi. Seguono i dolci che possono essere al macino forno o al cucchiaio. Onnipresente è l'olio d'oliva, solitamente di alta qualità, che viene impiegato senza risparmio.", "La cucina Cinese rappresenta la somma di cucine regionali anche molto diverse e si è evoluta anche in altre parti del mondo con caratteristiche diverse dall'Asia orientale al Nord America, dall'Australia all'Europa occidentale. Si possono distinguere otto cucine regionali: Anhui, Cantonese, Fujian, Hunan, Jiangsu, Shandong, Sichuan e Zhejiang. Nel paleolitico, gli antenati dei cinesi, in particolare l'uomo di Pechino, in base agli scavi e ai resti nel complesso di grotte di Zhōukǒudiàn (周口店), si cibavano prevalentemente di piccoli animali come roditori, chirotteri, insettivori e invertebrati di vario tipo, ma non mancavano anche grandi animali come il mammut, cervidi, bufali, grandi carnivori e tanti altri, la Cina è uno di quei punti del mondo dove è nata l'agricoltura. Intorno al 5400 a.C. I cinesi compensavano il basso consumo di carne con legumi, panico e miglio, ricchi di acidi grassi e proteine, oltre che di carboidrati. Infatti, a differenza della cucina occidentale che usa grassi animali come il burro, ancora oggi i cinesi si servono di olii di semi, come ad esempio olio di semi di soia, di arachidi, di mais ecc.", "La cucina Spagnola è fortemente radicata nelle tradizioni più antiche e ha il merito di aver promosso dall'inizio del XVI secolo l'ingresso di prodotti nuovi in Europa (patata, pomodoro, mais, cacao, fagioli, ecc.) provenienti dalle Americhe. I piatti tipici sono la paella (riso, zafferano con frutti di mare o carne) e il gazpacho (zuppa fredda).I piatti, nel peridoo medievale, si dividevano in pietances, piatti a base di carne e pesce di consistenza piuttosto solida, tra cui arrosti, bolliti e empanadas, e cuines, piatti di consistenza pastosa o liquida da bere in ciotole o scodelle e si suddividevano a loro volte in cuines mangiate con il pane e cuines da mangiare con il cucchiaio come le zuppe. Oggi la cucina spagnola è divisa tra i grandi cuochi spagnoli che hanno avuto un riconoscimento internazionale come Ferran Adrià e Santi Santamaria che hanno portato alla ribalta i loro ristoranti: il Bulli, il Racò de Can Fabes e l'attenzione alle cucine regionali grazie alla forte autonomia politica di cui godono le comunità autonome (il corrispettivo delle regioni italiane) che incoraggiano la gastronomia locale o in caso non esista creano una tradizione fenomenale", "La storia della cucina giapponese ha inizio nel periodo preistorico (periodo Jōmon) con i primi insediamenti neolitici giapponesi che basavano la loro alimentazione sul riso e sui frutti di mare fin dai primi tempi. Sul periodo Kofun (III-VII secolo) regna l'incertezza. Alcune fonti suggeriscono un quadro di abitudini alimentari ben definito solo a partire dal momento della formazione della dinastia Yamato. Quando il buddismo divenne pratica comune, venne introdotto il divieto di consumazione della carne, che resterà in vigore fino alle Restaurazione Meiji. Durante il periodo Heian, i documenti sull'alimentazione dei giapponesi divennero più numerosi, permettendo di fare un elenco degli ingredienti utilizzati e dei metodi preparazione. Una volta che il Giappone entrò nel periodo Edo, venne introdotta una ricca varietà di cibi e specialità culinarie, la quale andrà a comporre la cucina tradizionale giapponese. Nel periodo Meiji, con l'abolizione del sakoku, diverse specialità straniere andranno a complementare la già ricca lista di piatti giapponesi.", "La cucina indiana è l'espressione dell'arte culinaria sviluppata in India. È nota soprattutto per il grande uso che fa di spezie, latte e latticini. Si differenzia in numerose varietà regionali, comunque riferibili a due grandi gruppi: la cucina dell'India del nord, che fa uso di carni ed è meno speziata, e quella del sud, vegetariana e più speziata. La cucina, soprattutto nei Aristotele, viene anche classificata in cucina non vegetariana (indicata da cartelli con la scritta non veg), latto-ovo-vegetariana (veg, senza carni), e latto-vegetariana, detta quasi vegana (pure veg che non fa uso di uova). Praticamente inesistente la cucina vegana propriamente detta, cioè senza neanche latte e latticini.", "Il fast food (espressione inglese, letteralmente cibo veloce, in italiano è anche detta ristorazione rapida) è un tipo di ristorazione originatasi nei paesi anglosassoni, veloce da cucinare, consumare, economica e con servizio ridotto al minimo. Si possono incontrare anche fast food ambulanti ovvero cibo di strada, che forniscono cibi rapidi economici e standardizzati. Il pasto veloce offerto con un sistema di ristorazione industriale a partire dagli anni ottanta ha registrato una vasta diffusione a livello mondiale. Il primo ristorante di fish & chips fu aperto nel 1860 in Inghilterra.", "Una storia spesso raccontata sostiene che l'11 giugno 1889, in onore della regina consorte d'Italia, Margherita di Savoia, il pizzaiolo napoletano Raffaele Esposito creò la Pizza Margherita, una pizza guarnita con pomodori, mozzarella e basilico, per rappresentare il colori nazionali dell'Italia come sulla bandiera dell'Italia. In realtà, la Margherita esisteva già da diverse decenni: viene descritta in un libro del 1866 insieme alla Marinara (cibo preferito dai pescatori al rientro dal lavoro) e al Calzone e in un’altra pubblicazione del 1830 si parla di una pizza condita con pomodoro, mozzarella e basilico. Nella Napoli del XVI secolo, una focaccia di galette veniva comunemente chiamata pizza. Conosciuto come il piatto per i poveri, veniva venduto per strada e conobbe in fretta un gran successo, fino a diventare un piatto amato anche dai nobili borbonici."],
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
       timer: null,
       currentIndex: 0,
       currentIndexStory: 0
     };
   },
-  mounted: function mounted() {//  this.startSlide();
+  mounted: function mounted() {
+    this.startSlide();
   },
   methods: {
-    startSlide: function startSlide() {// this.timer = setInterval(this.next, 4000);
+    startSlide: function startSlide() {
+      this.timer = setInterval(this.next, 10000);
     },
     next: function next() {
       this.currentIndex += 1;
@@ -5380,47 +5355,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
 /* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
 /* harmony import */ var _components_TheNavbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TheNavbar.vue */ "./resources/js/components/TheNavbar.vue");
-=======
-<<<<<<< HEAD
-/* harmony import */ var _components_PlateInfo_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/PlateInfo.vue */ "./resources/js/components/PlateInfo.vue");
-/* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
-/* harmony import */ var _components_TheNavbar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/TheNavbar.vue */ "./resources/js/components/TheNavbar.vue");
-
-=======
-/* harmony import */ var _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/TheFooter.vue */ "./resources/js/components/TheFooter.vue");
-/* harmony import */ var _components_TheNavbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TheNavbar.vue */ "./resources/js/components/TheNavbar.vue");
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-<<<<<<< HEAD
     TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     TheNavbar: _components_TheNavbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-=======
-<<<<<<< HEAD
-    PlateInfo: _components_PlateInfo_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    TheNavbar: _components_TheNavbar_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
-=======
-    TheFooter: _components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    TheNavbar: _components_TheNavbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
   }
 });
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/home.vue?vue&type=template&id=66898068&":
 /*!********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/home.vue?vue&type=template&id=66898068& ***!
@@ -5445,10 +5392,6 @@ render._withStripped = true;
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PlateInfo.vue?vue&type=template&id=6f63d109&scoped=true&":
 /*!******************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PlateInfo.vue?vue&type=template&id=6f63d109&scoped=true& ***!
@@ -5477,18 +5420,6 @@ var render = function render() {
       key: i
     }, [_c("img", {
       staticClass: "my-img rounded mx-auto d-block",
-<<<<<<< HEAD
-      attrs: {
-        src: _vm.currentImg,
-        "data-aos": "fade-left",
-        "data-aos-duration": "2000"
-=======
-<<<<<<< HEAD
-      attrs: {
-        src: _vm.currentImg,
-        "data-aos": "fade-left",
-        "data-aos-duration": "3000"
-=======
       staticStyle: {
         height: "400px"
       },
@@ -5496,8 +5427,6 @@ var render = function render() {
         src: _vm.currentImg,
         "data-aos": "fade-left",
         "data-aos-duration": "1000"
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
       }
     })]);
   }), 0), _vm._v(" "), _c("div", {
@@ -5527,15 +5456,7 @@ var render = function render() {
     }, [_c("p", {
       staticClass: "text-white padding-x py-3 px-5",
       attrs: {
-<<<<<<< HEAD
-        "data-aos": "fade-left",
-=======
-<<<<<<< HEAD
-        "data-aos": "fade-left",
-=======
         "data-aos": "fade-in",
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
         "data-aos-duration": "2000"
       }
     }, [_vm._v(_vm._s(_vm.currentStory))])]);
@@ -5718,25 +5639,11 @@ var staticRenderFns = [function () {
   }, [_vm._v("Registrati o accedi")]), _vm._v(" "), _c("div", {
     staticClass: "dropdown"
   }, [_c("button", {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    staticClass: "btn btn-light dropdown-toggle",
-    attrs: {
-      type: "button",
-      id: "dropdownMenuButton",
-      "data-toggle": "dropdown",
-=======
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
     staticClass: "btn btn-light dropdown-bs-toggle",
     attrs: {
       type: "button",
       id: "dropdownMenuButton",
       "data-bs-toggle": "dropdown",
-<<<<<<< HEAD
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
       "aria-haspopup": "true",
       "aria-expanded": "false"
     }
@@ -5767,18 +5674,10 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "d-flex justify-content-center"
   }, [_c("div", {
-<<<<<<< HEAD
-    staticClass: "search-section"
-=======
-<<<<<<< HEAD
-    staticClass: "search-section"
-=======
     staticClass: "search-section position-realtive",
     staticStyle: {
       "z-index": "10"
     }
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
   }, [_c("div", {
     staticClass: "fs-1 fw-bold mb-4 search-title"
   }, [_vm._v("I piatti che ami, a domicilio.")]), _vm._v(" "), _c("div", {
@@ -5803,18 +5702,10 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "d-flex justify-content-center"
   }, [_c("img", {
-<<<<<<< HEAD
-    staticClass: "img-fluid bg-home my-5",
-=======
-<<<<<<< HEAD
-    staticClass: "img-fluid bg-home my-5",
-=======
     staticClass: "img-fluid bg-home my-5 position-relative",
     staticStyle: {
       "z-index": "10"
     },
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
     attrs: {
       src: "img/bg-home.svg",
       alt: ""
@@ -5841,15 +5732,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-<<<<<<< HEAD
   return _c("div", [_c("header", [_c("TheNavbar")], 1), _vm._v(" "), _c("main", [_c("router-view")], 1), _vm._v(" "), _c("footer", [_c("TheFooter")], 1)]);
-=======
-<<<<<<< HEAD
-  return _c("div", [_c("header", [_c("TheNavbar")], 1), _vm._v(" "), _c("main", [_c("router-view")], 1), _vm._v(" "), _c("PlateInfo"), _vm._v(" "), _c("footer", [_c("TheFooter")], 1)], 1);
-=======
-  return _c("div", [_c("header", [_c("TheNavbar")], 1), _vm._v(" "), _c("main", [_c("router-view")], 1), _vm._v(" "), _c("footer", [_c("TheFooter")], 1)]);
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 };
 
 var staticRenderFns = [];
@@ -5858,11 +5741,6 @@ render._withStripped = true;
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.esm.js ***!
@@ -11106,10 +10984,6 @@ defineJQueryPlugin(Toast);
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PlateInfo.vue?vue&type=style&index=1&id=6f63d109&scoped=true&lang=scss&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PlateInfo.vue?vue&type=style&index=1&id=6f63d109&scoped=true&lang=scss& ***!
@@ -11198,15 +11072,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 300px;\n}\n.search-section {\n    padding-top: 120px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 200px;\n    min-height: 200px;\n    max-height: 400px;\n}\n.search {\n    height: 170px;\n    min-width: 300px;\n}\n.form-control {\n    min-width: 100px;\n    margin-right: 10px;\n}\n", ""]);
-=======
-<<<<<<< HEAD
-exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    background-color: #00CCBC;\n    min-height: 600px;\n    max-height: 900px;\n    min-width: 300px;\n}\n.search-section {\n    padding-top: 120px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 200px;\n    min-height: 200px;\n    max-height: 400px;\n}\n.search {\n    height: 170px;\n    min-width: 300px;\n}\n.form-control {\n    min-width: 100px;\n    margin-right: 10px;\n}\n", ""]);
-=======
 exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.nav-section {\n    position: relative;\n    background-color: #D0EB99;\n}\n.nav-section::before {\ncontent: \"\";\nwidth: 110%;\nheight: 280px;\nposition: absolute;\nright: 0;\nbackground-color: #00ccbc;\ntransform: skewY(-4deg);\ntransform-origin: left;\n}\n.search-section {\n    padding-top: 120px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.bg-home {\n    min-width: 200px;\n    min-height: 200px;\n    max-height: 400px;\n}\n.search {\n    height: 170px;\n    min-width: 300px;\n}\n.form-control {\n    min-width: 100px;\n    margin-right: 10px;\n}\n", ""]);
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 
 // exports
 
@@ -11300,11 +11166,6 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
@@ -28518,10 +28379,6 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -29729,11 +29586,6 @@ function normalizeComponent(
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/vue-router/dist/vue-router.esm.js":
 /*!********************************************************!*\
   !*** ./node_modules/vue-router/dist/vue-router.esm.js ***!
@@ -32913,10 +32765,6 @@ var version = '3.6.5';
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/vue/dist/vue.common.dev.js":
 /*!*************************************************!*\
   !*** ./node_modules/vue/dist/vue.common.dev.js ***!
@@ -44730,11 +44578,6 @@ module.exports = g;
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./node_modules/webpack/buildin/module.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
@@ -44881,10 +44724,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./resources/js/components/PlateInfo.vue":
 /*!***********************************************!*\
   !*** ./resources/js/components/PlateInfo.vue ***!
@@ -45148,21 +44987,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2be70d6c5d0fb870ebb0e4777c16561e4e3f7e20
-=======
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 /***/ "./resources/js/frontend.js":
 /*!**********************************!*\
   !*** ./resources/js/frontend.js ***!
   \**********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
-<<<<<<< HEAD
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -45212,12 +45042,20 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var _Pages_home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pages/home.vue */ "./resources/js/Pages/home.vue");
+ // import per la pagina non trovata 
+// import PageNotFound from './Pages/PageNotFound.vue'
+// import per la pagina delle categorie di Anna
+// import TheCategories from './components/TheCategories.vue';
 
 var routes = [{
   path: "/",
   component: _Pages_home_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-  name: "home"
-}];
+  name: "home.index"
+} // questa qui sarà la nostra rotta per la pagina non trovata per la
+//{ path: "/*", component: PageNotFound },
+// ho aggiunto in modo commentato le rotte che dovremo mettere nel file per far funzionare il componente di Anna
+// { path: "/categorie", component: TheCategories, name: "TheCategories.index" },
+];
 
 /***/ }),
 
@@ -45287,229 +45125,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-=======
-<<<<<<< HEAD
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _views_App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/App.vue */ "./resources/js/views/App.vue");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-aos__WEBPACK_IMPORTED_MODULE_2___default.a.init();
-new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app',
-  render: function render(h) {
-    return h(_views_App_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
-  }
-});
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue":
-/*!************************************!*\
-  !*** ./resources/js/views/App.vue ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=91ac6b5c& */ "./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&");
-/* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/views/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/views/App.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue?vue&type=script&lang=js&":
-/*!*************************************************************!*\
-  !*** ./resources/js/views/App.vue?vue&type=script&lang=js& ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&":
-/*!*******************************************************************!*\
-  !*** ./resources/js/views/App.vue?vue&type=template&id=91ac6b5c& ***!
-  \*******************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=template&id=91ac6b5c& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-<<<<<<< HEAD
-=======
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\resources\\js\\frontend.js: Unexpected token (9:0)\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m \u001b[33mAOS\u001b[39m\u001b[33m.\u001b[39minit()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m \u001b[36mimport\u001b[39m \u001b[33mVueRouter\u001b[39m \u001b[36mfrom\u001b[39m \u001b[32m\"vue-router\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m \u001b[36mimport\u001b[39m {routes} \u001b[36mfrom\u001b[39m \u001b[32m\"./routes\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at instantiate (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:367:12)\n    at Parser.raise (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:3678:19)\n    at Parser.unexpected (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:3716:16)\n    at Parser.parseExprAtom (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:13265:22)\n    at Parser.parseExprSubscripts (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12790:23)\n    at Parser.parseUpdate (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12769:21)\n    at Parser.parseMaybeUnary (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12739:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12530:61)\n    at Parser.parseExprOps (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12537:23)\n    at Parser.parseMaybeConditional (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12507:23)\n    at Parser.parseMaybeAssign (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12459:21)\n    at Parser.parseExpressionBase (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12395:23)\n    at C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12389:39\n    at Parser.allowInAnd (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14485:16)\n    at Parser.parseExpression (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:12389:17)\n    at Parser.parseStatementContent (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14925:23)\n    at Parser.parseStatement (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14782:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:15441:25)\n    at Parser.parseBlockBody (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:15432:10)\n    at Parser.parseProgram (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14700:10)\n    at Parser.parseTopLevel (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:14687:25)\n    at Parser.parse (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:16710:10)\n    at parse (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\parser\\lib\\index.js:16762:38)\n    at parser (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\core\\lib\\parser\\index.js:52:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:87:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\Users\\Hybri\\Documents\\Boolean\\Esercizi\\Deliverboo\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)");
->>>>>>> 2be70d6c5d0fb870ebb0e4777c16561e4e3f7e20
-=======
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _views_App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/App.vue */ "./resources/js/views/App.vue");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
-
-
-
-
-
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
-aos__WEBPACK_IMPORTED_MODULE_2___default.a.init();
-
-
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]);
-new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app',
-  render: function render(h) {
-    return h(_views_App_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
-  },
-  router: new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
-    routes: _routes__WEBPACK_IMPORTED_MODULE_5__["routes"],
-    mode: "history"
-  })
-});
-
-/***/ }),
-
-/***/ "./resources/js/routes.js":
-/*!********************************!*\
-  !*** ./resources/js/routes.js ***!
-  \********************************/
-/*! exports provided: routes */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
-/* harmony import */ var _Pages_home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pages/home.vue */ "./resources/js/Pages/home.vue");
-
-var routes = [{
-  path: "/",
-  component: _Pages_home_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-  name: "home"
-}];
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue":
-/*!************************************!*\
-  !*** ./resources/js/views/App.vue ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=91ac6b5c& */ "./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&");
-/* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/views/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/views/App.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue?vue&type=script&lang=js&":
-/*!*************************************************************!*\
-  !*** ./resources/js/views/App.vue?vue&type=script&lang=js& ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&":
-/*!*******************************************************************!*\
-  !*** ./resources/js/views/App.vue?vue&type=template&id=91ac6b5c& ***!
-  \*******************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=template&id=91ac6b5c& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_91ac6b5c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
->>>>>>> a6e801eb1495047d8e9886f000e0dddf7b097a45
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 
 /***/ }),
 
@@ -45520,15 +45135,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! D:\Paolo\Documenti Master Boolean\Esercizi Boolean Master\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
-=======
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
-=======
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
->>>>>>> 2be70d6c5d0fb870ebb0e4777c16561e4e3f7e20
->>>>>>> cfdc8b23f2ca2877c343534c8263e049925676c5
 
 
 /***/ })
