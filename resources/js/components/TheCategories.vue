@@ -10,7 +10,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-cinese.jpg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details" >
                                 <span>Cinese</span>
                                 <p>Scopri ristoranti cinesi <i class="fa-solid fa-arrow-right"></i></p>
@@ -21,7 +21,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/giapponese2.jpg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details">
                                 <span>Giapponese</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
@@ -32,7 +32,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-greco.jpg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details">
                                 <span>Greco</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
@@ -43,7 +43,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-italiana.jpeg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details">
                                 <span>Italiano</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
@@ -54,7 +54,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-indiana.jpg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details">
                                 <span>Indiano</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
@@ -65,7 +65,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-pizza.jpg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details">
                                 <span>Pizzeria</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
@@ -76,7 +76,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-spagnola.jpg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details">
                                 <span>Spagnolo</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
@@ -87,7 +87,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cannoli.jpg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details">
                                 <span>Dolci & Dessert</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
@@ -98,7 +98,7 @@
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cibo3.jpg" alt="">
+                            <img class="w-100" src="../../../public/img/cucina-cinese.jpg" alt="">
                             <div class="restaurant-details">
                                 <span>Fast-Food</span>
                                 <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>

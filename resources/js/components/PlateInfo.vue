@@ -7,6 +7,7 @@
             SCOPRI CON NOI LA STORIA DELLE CUCINE DEL MONDO
           </h3>
         </div>
+        
         <div class="container">
           <div class="rounded mx-auto d-block">
             <div v-for="i in [currentIndex]" :key="i">
