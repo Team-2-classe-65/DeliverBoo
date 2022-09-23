@@ -7,131 +7,47 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3" v-for="(category, i) in getRestaurant()" :key="i">
+                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3" v-for="category in categories" :key="category.id">
                     <a href="#">
                         <div class="card-categories overlay">
-                            <img class="w-100" :src="require('../../../public/img/' + category.img)" :alt="category.name">
+                            <img class="w-100" v-if="category.img" :src="category.img">
+                            <img v-else src="img/placeholder.jpg">
                             <div class="restaurant-details" >
                                 <span>{{ category.name }}</span>
-                                <p>Scopri ristoranti cinesi <i class="fa-solid fa-arrow-right"></i></p>
+                                <p>Scopri ristoranti {{ category.name}} <i class="fa-solid fa-arrow-right"></i></p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
-                    <a href="#">
-                        <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/giapponese2.jpg" alt="">
-                            <div class="restaurant-details">
-                                <span>Giapponese</span>
-                                <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
-                    <a href="#">
-                        <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-greco.jpg" alt="">
-                            <div class="restaurant-details">
-                                <span>Greco</span>
-                                <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
-                    <a href="#">
-                        <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-italiana.jpeg" alt="">
-                            <div class="restaurant-details">
-                                <span>Italiano</span>
-                                <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
-                    <a href="#">
-                        <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-indiana.jpg" alt="">
-                            <div class="restaurant-details">
-                                <span>Indiano</span>
-                                <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
-                    <a href="#">
-                        <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-pizza.jpg" alt="">
-                            <div class="restaurant-details">
-                                <span>Pizzeria</span>
-                                <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
-                    <a href="#">
-                        <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cucina-spagnola.jpg" alt="">
-                            <div class="restaurant-details">
-                                <span>Spagnolo</span>
-                                <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
-                    <a href="#">
-                        <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cannoli.jpg" alt="">
-                            <div class="restaurant-details">
-                                <span>Dolci & Dessert</span>
-                                <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3">
-                    <a href="#">
-                        <div class="card-categories overlay">
-                            <img class="w-100" src="../assets/img/cibo3.jpg" alt="">
-                            <div class="restaurant-details">
-                                <span>Fast-Food</span>
-                                <p>Scopri cucina cinese <i class="fa-solid fa-arrow-right"></i></p>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import Axios from 'axios';
+import axios from 'axios';
 
 export default {
     name: "TheCategories",
     data() {
         return {
-            // categories: [],
+            categories: [],
         }
     },
     methods: {
-        getRestaurant() {
+        getCategories() {
 
             axios
-            .get("/api/categories")
+            .get("/api/categories" )
             .then((response) => {
-                this.categories = response.data.data;
+                this.categories = response.data;
             })
 
-            console.log("ciao");
+            // console.log(this.categories);
         }
+    },
+    mounted() {
+        this.getCategories();
     }
 }
 </script>

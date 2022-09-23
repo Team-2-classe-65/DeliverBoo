@@ -64,11 +64,5 @@ class CategoriesTableSeeder extends Seeder
         foreach ($categories as $category) {
             Category::create($category);
         }
-        // foreach( $categories as $category ) {
-        //     $newCategory = new Category();
-        //     $newCategory->name = $category['name'];
-        //     $newCategory->img = $category['img'];
-        //     $newCategory->save();
-        // }
     }
 }
