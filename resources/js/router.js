@@ -15,5 +15,5 @@ export const routes = [
     { path: "*", component: PageNotFound  },
 
     // ho aggiunto in modo commentato le rotte che dovremo mettere nel file per far funzionare il componente di Anna
-    // { path: "/categorie", component: TheCategories, name: "TheCategories.index" },
+    // { path: "/categorie", component: TheCategories, name: "TheCategories" },
 ];

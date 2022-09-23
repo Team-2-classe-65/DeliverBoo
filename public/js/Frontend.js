@@ -5189,8 +5189,10 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_PlateInfo_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/PlateInfo.vue */ "./resources/js/components/PlateInfo.vue");
+ // import TheCategories from '../components/TheCategories.vue'
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  // qui dentro va inserito il file TheCategories di Anna
   components: {
     PlateInfo: _components_PlateInfo_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -45164,7 +45166,7 @@ var routes = [{
   path: "*",
   component: _Pages_PageNotFound_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
 } // ho aggiunto in modo commentato le rotte che dovremo mettere nel file per far funzionare il componente di Anna
-// { path: "/categorie", component: TheCategories, name: "TheCategories.index" },
+// { path: "/categorie", component: TheCategories, name: "TheCategories" },
 ];
 
 /***/ }),
