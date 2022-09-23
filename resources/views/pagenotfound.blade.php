@@ -1,11 +1,37 @@
-<template>
-    <div style="height: 92.2vh;background-color: #D0EB99;">
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DeliveBoo</title>
+
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Styles -->
+</head>
+
+<body>
+    <div class="vh-100 bg_secondary">
         <div class="d-flex flex-column justify-content-center align-items-center h-50">
+            <div>
+                <img src="{{asset('img/unnamed.png')}}" alt="" style="max-width: 200px">
+            </div>
             <div class="display-3 f-wbold mb-3">
                 Error 404-Page Not Found
             </div>
             <div>
-                Prova a inserire un altro url
+                Prova a inserire un altro url oppure
+            </div>
+            <div>
+                <a href="/" class="btn btn-info mt-3">Torna alla home</a>
             </div>
         </div>
 
@@ -18,8 +44,6 @@
             </svg>
         </div>
     </div>
-</template>
-    
-<style lang="scss">
+</body>
 
-</style>
+</html>
