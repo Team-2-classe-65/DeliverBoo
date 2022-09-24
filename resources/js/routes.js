@@ -9,7 +9,7 @@ import TheMenu from './Pages/TheMenu.vue';
 
 export const routes = [
     { path: "/", component: Home, name: "home" },
-    { path: "/:id", component: TheMenu, name: "TheMenu"  },
+    { path: "/:slug", component: TheMenu, name: "TheMenu"  },
     { path: "*", component: PageNotFound  },
     
 ];

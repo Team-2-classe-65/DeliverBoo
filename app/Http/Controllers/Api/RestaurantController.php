@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    public function show($id)
+    public function show($slug)
     {
-        $restaurant = User::where("id", $id)->first();
+        $restaurant = User::where("slug", $slug)->first();
 
         $restaurant->load("dishes");
 

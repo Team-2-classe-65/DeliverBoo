@@ -39,7 +39,7 @@ export default {
     },
     mounted() {
 
-        axios.get("/api/" + this.$route.params.id)
+        axios.get("/api/" + this.$route.params.slug)
             .then((resp) => {
                 this.restaurant = resp.data
                 console.log(this.restaurant)
@@ -50,7 +50,6 @@ export default {
 
 
 <style lang="scss" scoped>
-
     .menu-section {
         background-color: #00ccbc;
     }
@@ -78,4 +77,10 @@ export default {
         -webkit-backdrop-filter: blur(6.9px);
         border: 1px solid rgba(208, 235, 153, 1);
     }
+
+    .restaurant-img {
+        height: 220px;
+        object-fit: cover;
+    }
+
 </style>

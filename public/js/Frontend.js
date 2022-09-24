@@ -5200,7 +5200,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/" + this.$route.params.id).then(function (resp) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/" + this.$route.params.slug).then(function (resp) {
       _this.restaurant = resp.data;
       console.log(_this.restaurant);
     });
@@ -6036,7 +6036,7 @@ var render = function render() {
         to: {
           name: "TheMenu",
           params: {
-            id: restaurant.id
+            slug: restaurant.slug
           }
         }
       }
@@ -11442,7 +11442,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".menu-section[data-v-08626c52] {\n  background-color: #00ccbc;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card-img-top[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.card[data-v-08626c52] {\n  background: rgba(208, 235, 153, 0.36);\n  border-radius: 16px;\n  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);\n  backdrop-filter: blur(6.9px);\n  -webkit-backdrop-filter: blur(6.9px);\n  border: 1px solid rgb(208, 235, 153);\n}", ""]);
+exports.push([module.i, ".menu-section[data-v-08626c52] {\n  background-color: #00ccbc;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card-img-top[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.card[data-v-08626c52] {\n  background: rgba(208, 235, 153, 0.36);\n  border-radius: 16px;\n  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);\n  backdrop-filter: blur(6.9px);\n  -webkit-backdrop-filter: blur(6.9px);\n  border: 1px solid rgb(208, 235, 153);\n}\n.restaurant-img[data-v-08626c52] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
 
 // exports
 
@@ -45976,7 +45976,7 @@ var routes = [{
   component: _Pages_home_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
   name: "home"
 }, {
-  path: "/:id",
+  path: "/:slug",
   component: _Pages_TheMenu_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   name: "TheMenu"
 }, {

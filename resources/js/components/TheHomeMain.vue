@@ -39,7 +39,7 @@
                         <!-- Tutti i ristoranti filtrati -->
                         <div class="col-12 col-md-6 col-lg-4" v-if='filteredRestaurant.length > 0 && onSearch==false' v-for="restaurant in filteredRestaurant">
                             <div class="card" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100">
-                                <router-link :to="{ name: 'TheMenu', params: { id: restaurant.id } }" class="text-dark text-decoration-none">
+                                <router-link :to="{ name: 'TheMenu', params: { slug: restaurant.slug } }" class="text-dark text-decoration-none">
                                     <img class="card-img-top restaurant-img" :src="'Storage/' + restaurant.restaurant_img"
                                         :alt="restaurant.name">
                                     <div class="card-body">
