@@ -59,7 +59,7 @@
     }
 
     .search-section {
-        padding-top: 120px;
+        padding-top: 20px;
         min-width: 300px;
         max-width: 600px;
     }
