@@ -32,9 +32,10 @@
                             <div class="fs-1 fw-bold mb-4 search-title" >I piatti che ami, a domicilio.</div>
                             <div class="bg-white search p-5">
                                 <div class="mb-2">Inserisci il tuo indirizzo per trovare ristoranti nei dintorni</div>
-                                <div class="d-flex">
-                                    <input type="text" class="form-control" placeholder="Inserisci il tuo indirizzo completo">
-                                    <button type="button" class="btn search-btn text-white">Cerca</button>
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <!-- <input type="text" class="form-control" v-model="userSearch" placeholder="Inserisci la tua categoria preferita"> -->
+                                    <h6>Scopri le nostre categorie <span class="ms-2"><i class="fa-solid fa-arrow-right"></i></span></h6>
+                                    <button type="button" class="btn btn-primary text-white" @click="onSearch">Show</button>
                                 </div>
                             </div>
                         </div>
@@ -51,6 +52,25 @@
         </div>
     </div>
 </template>
+<script>
+
+    import { searchCategories } from '../store';
+
+    export default{
+        data(){
+            return{
+                name:"TheNavbar",
+                userSearch:'',
+            }
+        },
+        methods:{
+            onSearch(){
+                // console.log(this.userSearch)
+                searchCategories(this.userSearch)
+            }
+        },
+    }
+</script>
 
 <style>
     .container {

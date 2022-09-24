@@ -3,9 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col pb-4">
-                    <h2>Le categorie dei ristoranti più amati</h2>
+                    <h2 class="text-center">Le categorie dei ristoranti più amati</h2>
                 </div>
             </div>
+            <!-- <input type="text" v-model="search" placeholder="Cerca il tuo ristorante preferito"> -->
             <div class="row">
                 <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3" v-for="category in categories" :key="category.id">
                     <a href="#">
@@ -14,7 +15,7 @@
                             <img v-else src="img/placeholder.jpg">
                             <div class="restaurant-details" >
                                 <span>{{ category.name }}</span>
-                                <p>Scopri ristoranti {{ category.name}} <i class="fa-solid fa-arrow-right"></i></p>
+                                <a>Scopri ristoranti {{ category.name}} <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </a>
@@ -25,29 +26,40 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
+import { state } from "../store";
 
 export default {
     name: "TheCategories",
     data() {
         return {
-            categories: [],
+            //categories: [],
+            // search:'',
         }
     },
     methods: {
-        getCategories() {
+        // getCategories() {
 
-            axios
-            .get("/api/categories" )
-            .then((response) => {
-                this.categories = response.data;
-            })
+        //     axios
+        //     .get("/api/categories" )
+        //     .then((response) => {
+        //         this.categories = response.data;
+        //     })
 
-            // console.log(this.categories);
-        }
+        // }
     },
     mounted() {
-        this.getCategories();
+        // this.getCategories();
+    },
+    computed:{
+        // filteredCategories: function(){
+        //     return this.categories.filter((category)=>{
+        //         return category.name.match(this.search)
+        //     })
+        // },
+        categories(){
+            return state.categories
+        }
     }
 }
 </script>
