@@ -5442,8 +5442,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store */ "./resources/js/store.js");
-
+// import { searchCategories } from '../store';
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5451,12 +5450,7 @@ __webpack_require__.r(__webpack_exports__);
       userSearch: ''
     };
   },
-  methods: {
-    onSearch: function onSearch() {
-      // console.log(this.userSearch)
-      Object(_store__WEBPACK_IMPORTED_MODULE_0__["searchCategories"])(this.userSearch);
-    }
-  }
+  methods: {}
 });
 
 /***/ }),
@@ -5833,45 +5827,18 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "nav-section pt-1"
-  }, [_c("div", {
-    staticClass: "container"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
-    staticClass: "row"
-  }, [_c("div", {
-    staticClass: "col"
-  }, [_c("div", {
-    staticClass: "d-flex justify-content-center"
-  }, [_c("div", {
-    staticClass: "search-section position-realtive",
-    staticStyle: {
-      "z-index": "10"
-    }
-  }, [_c("div", {
-    staticClass: "fs-1 fw-bold mb-4 search-title"
-  }, [_vm._v("I piatti che ami, a domicilio.")]), _vm._v(" "), _c("div", {
-    staticClass: "bg-white search p-5"
-  }, [_c("div", {
-    staticClass: "mb-2"
-  }, [_vm._v("Inserisci il tuo indirizzo per trovare ristoranti nei dintorni")]), _vm._v(" "), _c("div", {
-    staticClass: "d-flex justify-content-between align-items-end"
-  }, [_vm._m(1), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-primary text-white",
-    attrs: {
-      type: "button"
-    },
-    on: {
-      click: _vm.onSearch
-    }
-  }, [_vm._v("Show")])])])])])]), _vm._v(" "), _vm._m(2)])])]);
+  return _vm._m(0);
 };
 
 var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("nav", {
+  return _c("div", {
+    staticClass: "nav-section pt-1"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("nav", {
     staticClass: "navbar"
   }, [_c("a", {
     staticClass: "navbar-logo text-decoration-none",
@@ -5924,21 +5891,37 @@ var staticRenderFns = [function () {
     attrs: {
       href: "#"
     }
-  }, [_vm._v("Something else here")])])])])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("h6", [_vm._v("Scopri le nostre categorie "), _c("span", {
-    staticClass: "ms-2"
-  }, [_c("i", {
-    staticClass: "fa-solid fa-arrow-right"
-  })])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
+  }, [_vm._v("Something else here")])])])])]), _vm._v(" "), _c("div", {
+    staticClass: "row"
+  }, [_c("div", {
+    staticClass: "col"
+  }, [_c("div", {
+    staticClass: "d-flex justify-content-center"
+  }, [_c("div", {
+    staticClass: "search-section position-realtive",
+    staticStyle: {
+      "z-index": "10"
+    }
+  }, [_c("div", {
+    staticClass: "fs-1 fw-bold mb-4 search-title"
+  }, [_vm._v("I piatti che ami, a domicilio.")]), _vm._v(" "), _c("div", {
+    staticClass: "bg-white search p-5"
+  }, [_c("div", {
+    staticClass: "mb-2"
+  }, [_vm._v("Inserisci il tuo indirizzo per trovare ristoranti nei dintorni")]), _vm._v(" "), _c("div", {
+    staticClass: "d-flex justify-content-between align-items-end"
+  }, [_c("input", {
+    staticClass: "form-control",
+    attrs: {
+      type: "text",
+      placeholder: "Inserisci la tua categoria preferita"
+    }
+  }), _vm._v(" "), _c("button", {
+    staticClass: "btn btn-primary text-white",
+    attrs: {
+      type: "button"
+    }
+  }, [_vm._v("Cerca")])])])])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
     staticClass: "d-flex justify-content-center"
@@ -5951,7 +5934,7 @@ var staticRenderFns = [function () {
       src: "img/bg-home.svg",
       alt: ""
     }
-  })])]);
+  })])])])])]);
 }];
 render._withStripped = true;
 
@@ -45454,38 +45437,6 @@ var routes = [{
   component: _components_TheHomeMain_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   name: "TheHomeMain.index"
 }];
-
-/***/ }),
-
-/***/ "./resources/js/store.js":
-/*!*******************************!*\
-  !*** ./resources/js/store.js ***!
-  \*******************************/
-/*! exports provided: state, searchCategories */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "state", function() { return state; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchCategories", function() { return searchCategories; });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var state = vue__WEBPACK_IMPORTED_MODULE_0___default.a.observable({
-  categories: []
-});
-function searchCategories(userSearch) {
-  // chiamata per vedere le categorie
-  axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/categories", {// params:{
-    //   query: userSearch  
-    // }
-  }).then(function (response) {
-    state.categories = response.data;
-  }); // console.log(this.categories);
-}
 
 /***/ }),
 

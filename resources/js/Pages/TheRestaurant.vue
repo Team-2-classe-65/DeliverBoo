@@ -1,5 +1,4 @@
 <template>
-    <div v-if="" key="">
         <div class="section-restaurant pb-5">
             <div class="bg-restaurant mb-5">
                 <div class="container">
@@ -119,10 +118,10 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
+    
 export default {
     name: "TheRestaurant",
     data() {
