@@ -1,16 +1,16 @@
 <template>
     <div>
-        <TheCategories></TheCategories>
+        <TheHomeMain></TheHomeMain>
         <PlateInfo></PlateInfo>
     </div>
 </template>
 
 <script>
     import PlateInfo from '../components/PlateInfo.vue';
-    import TheCategories from '../components/TheCategories.vue'  
-     export default{
+    import TheHomeMain from '../components/TheHomeMain.vue'  
+    export default{
         // qui dentro va inserito il file TheCategories di Anna
-    components: {  PlateInfo, TheCategories }
+    components: {  PlateInfo, TheHomeMain }
 
 }
 </script>
