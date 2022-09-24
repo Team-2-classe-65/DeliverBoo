@@ -62,30 +62,6 @@ class RegisterController extends Controller
         ]);
     }
 
-    private function generateSlug($text)
-    {
-        $toReturn = null;
-        $counter = 0;
-
-
-        do {
-            $slug = Str::slug($text);
-
-            if ($counter > 0) {
-                $slug .= "-" . $counter;
-            }
-            $slug_exist = User::where("slug", $slug)->first();
-            if ($slug_exist) {
-                $counter++;
-            } else {
-                $toReturn = $slug;
-            }
-        } while($slug_exist);
-
-        return $toReturn;
-
-    }
-
     /**
      * Create a new user instance after a valid registration.
      *
@@ -100,6 +76,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'address' => $data['address'],
+            'slug'=>Str::slug($data['name']),
             'vat' => $data['vat'],
             'restaurant_img'=>Storage::put('/restaurant_images', $data['restaurant_img'])
         ]);
