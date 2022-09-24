@@ -2,7 +2,7 @@
     <div class="nav-section">
         <div class="row row-cols-2">
             <div class="col">
-                <div class="team-2 fs-1 animation fw-bold">#A casa tua con deliverboo By Team 2</div>
+                <div class="team-2 bg-home fs-1 animation fw-bold">#A casa tua con deliverboo By Team 2</div>
             </div>
             <div class="col">
                 <div class="d-flex justify-content-center">
@@ -33,9 +33,6 @@
 </script>
 
 <style>
-    .search-section {
-        min-width: 200px;
-    }
 
     .nav-section {
         position: relative;
@@ -82,8 +79,8 @@
     }
 
     .bg-home {
-        min-width: 200px;
-        min-height: 200px;
-        max-height: 400px;
+        min-width: 100px;
+        min-height: 100px;
+
     }
 </style>

@@ -58,12 +58,6 @@
         background-color: #00CCBC;
     }
 
-    .search-section {
-        padding-top: 20px;
-        min-width: 300px;
-        max-width: 600px;
-    }
-
     .search-title {
         color: #440263;
     }
@@ -75,8 +69,6 @@
     .signin {
         color: #00CCBC;
     }
-
-
 
     .search {
         height: 170px;
