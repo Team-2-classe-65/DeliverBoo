@@ -5721,11 +5721,13 @@ var staticRenderFns = [function () {
   return _c("div", {
     staticClass: "nav-section"
   }, [_c("div", {
-    staticClass: "row row-cols-2"
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "row"
   }, [_c("div", {
     staticClass: "col"
   }, [_c("div", {
-    staticClass: "team-2 fs-1 animation fw-bold"
+    staticClass: "team-2 fs-1 fw-bold"
   }, [_vm._v("#A casa tua con deliverboo By Team 2")])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
@@ -5736,7 +5738,10 @@ var staticRenderFns = [function () {
       "z-index": "10"
     }
   }, [_c("div", {
-    staticClass: "fs-1 fw-bold mb-4 search-title animation"
+    staticClass: "fs-1 fw-bold mb-4",
+    attrs: {
+      "data-aos": "fade-down"
+    }
   }, [_vm._v("I piatti che ami, a domicilio.")]), _vm._v(" "), _c("div", {
     staticClass: "d-flex justify-content-center"
   }, [_c("img", {
@@ -5746,9 +5751,10 @@ var staticRenderFns = [function () {
     },
     attrs: {
       src: "img/bg-home.svg",
-      alt: ""
+      alt: "",
+      "data-aos": "fade-left"
     }
-  })])])])])])]);
+  })])])])])])])]);
 }];
 render._withStripped = true;
 
@@ -11533,7 +11539,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.search-section {\n    min-width: 200px;\n}\n.nav-section {\n    position: relative;\n    background-color: #D0EB99;\n    z-index: -1;\n}\n.nav-section::before {\ncontent: \"\";\nwidth: 100%;\nheight: 280px;\nposition: absolute;\nright: 0;\nbackground-color: #00ccbc;\ntransform: skewY(-4deg);\ntransform-origin: left;\n}\n.team-2 {\n    transform: rotate(-4deg);\n    top: 300px;\n    left: 10px;\n    min-width: 80px;\n    max-width: 400px;\n}\n.animation {\n    -webkit-animation: ani 1s;\n            animation: ani 1s;\n    transform-origin: left;\n    color: #440263;\n    position: relative;\n}\n@-webkit-keyframes ani{\nfrom {\n        letter-spacing: 35px;\n        filter: blur(5px);\n        opacity: 0;\n}\nto {\n        letter-spacing: 0;\n        filter: blur(0);\n        opacity: 1px;\n}\n}\n@keyframes ani{\nfrom {\n        letter-spacing: 35px;\n        filter: blur(5px);\n        opacity: 0;\n}\nto {\n        letter-spacing: 0;\n        filter: blur(0);\n        opacity: 1px;\n}\n}\n.bg-home {\n    min-width: 200px;\n    min-height: 200px;\n    max-height: 400px;\n}\n", ""]);
+exports.push([module.i, "\n.search-section {\n    min-width: 200px;\n}\n.nav-section {\n    position: relative;\n    background-color: #D0EB99;\n    z-index: -1;\n}\n.nav-section::before {\ncontent: \"\";\nwidth: 100%;\nheight: 280px;\nposition: absolute;\nright: 0;\nbackground-color: #00ccbc;\ntransform: skewY(-4deg);\ntransform-origin: left;\n}\n.team-2 {\n    position: relative;\n    transform: rotate(-4deg);\n    top: 300px;\n}\n.bg-home {\n    min-width: 200px;\n    max-height: 400px;\n}\n", ""]);
 
 // exports
 
@@ -46058,7 +46064,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
