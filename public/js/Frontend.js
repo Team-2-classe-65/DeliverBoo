@@ -5764,6 +5764,7 @@ var render = function render() {
     staticClass: "row g-4"
   }, _vm._l(_vm.filteredRestaurant, function (restaurant) {
     return _vm.filteredRestaurant.length > 0 && _vm.onSearch == false ? _c("div", {
+      key: _vm.resturant.id,
       staticClass: "col-12 col-md-6 col-lg-4"
     }, [_c("div", {
       staticClass: "card",
@@ -5791,8 +5792,10 @@ var render = function render() {
       staticClass: "card-text mt-3"
     }, [_c("i", {
       staticClass: "fas fa-map-marker-alt"
-    }), _vm._v("\n                                        " + _vm._s(restaurant.address))]), _vm._v(" "), _vm._l(restaurant.categories, function (category) {
-      return _c("span", [_vm._v("●\n                                        " + _vm._s(category.name) + " ")]);
+    }), _vm._v("\n                                        " + _vm._s(restaurant.address))]), _vm._v(" "), _vm._l(restaurant.categories, function (category, i) {
+      return _c("span", {
+        key: i
+      }, [_vm._v("●\n                                        " + _vm._s(category.name) + " ")]);
     })], 2)])])]) : _vm._e();
   }), 0)])])])]);
 };

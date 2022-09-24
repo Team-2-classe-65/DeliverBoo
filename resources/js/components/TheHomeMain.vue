@@ -37,8 +37,7 @@
                 <div class="restaurant-container">
                     <div class="row g-4">
                         <!-- Tutti i ristoranti filtrati -->
-                        <div class="col-12 col-md-6 col-lg-4" v-if='filteredRestaurant.length > 0 && onSearch==false'
-                            v-for="restaurant in filteredRestaurant">
+                        <div class="col-12 col-md-6 col-lg-4" v-if='filteredRestaurant.length > 0 && onSearch==false' v-for="restaurant in filteredRestaurant" :key="resturant.id">
                             <div class="card" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100">
                                 <a href="" class="text-dark text-decoration-none">
                                     <img class="card-img-top restaurant-img" :src="'Storage/' + restaurant.restaurant_img"
@@ -47,7 +46,7 @@
                                         <h5 class="card-title">{{ restaurant.name }}</h5>
                                         <p class="card-text mt-3"><i class="fas fa-map-marker-alt"></i>
                                             {{restaurant.address }}</p>
-                                        <span v-for="category in restaurant.categories">&#9679;
+                                        <span v-for="category,i in restaurant.categories" :key="i">&#9679;
                                             {{category.name }} </span>
                                     </div>
                                 </a>
