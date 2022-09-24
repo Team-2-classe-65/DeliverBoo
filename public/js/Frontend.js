@@ -5725,7 +5725,10 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col"
+    staticClass: "col",
+    attrs: {
+      "data-aos": "fade-right"
+    }
   }, [_c("div", {
     staticClass: "team-2 fs-1 fw-bold"
   }, [_vm._v("#A casa tua con deliverboo By Team 2")])]), _vm._v(" "), _c("div", {
@@ -11444,7 +11447,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".menu-section[data-v-08626c52] {\n  background-color: #00ccbc;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card-img-top[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.card[data-v-08626c52] {\n  background: rgba(208, 235, 153, 0.36);\n  border-radius: 16px;\n  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);\n  backdrop-filter: blur(6.9px);\n  -webkit-backdrop-filter: blur(6.9px);\n  border: 1px solid rgb(208, 235, 153);\n}\n.restaurant-img[data-v-08626c52] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
+exports.push([module.i, ".menu-section[data-v-08626c52] {\n  background-color: #00ccbc;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card-img-top[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
 
 // exports
 
