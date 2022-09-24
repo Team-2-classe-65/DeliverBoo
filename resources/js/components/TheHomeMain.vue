@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col pb-4">
-                        <h2>Le categorie dei ristoranti più amati</h2>
+                        <h2 class="text-center">Le categorie dei ristoranti più amati</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -37,8 +37,7 @@
                 <div class="restaurant-container">
                     <div class="row g-4">
                         <!-- Tutti i ristoranti filtrati -->
-                        <div class="col-12 col-md-6 col-lg-4" v-if='filteredRestaurant.length > 0 && onSearch==false'
-                            v-for="restaurant in filteredRestaurant">
+                        <div class="col-12 col-md-6 col-lg-4" v-if='filteredRestaurant.length > 0 && onSearch==false' v-for="restaurant in filteredRestaurant">
                             <div class="card" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100">
                                 <a href="" class="text-dark text-decoration-none">
                                     <img class="card-img-top restaurant-img" :src="'Storage/' + restaurant.restaurant_img"
@@ -123,7 +122,7 @@ export default {
             if (this.selectedCategory == 'all') {
                 this.selectedCategory = category.name;
                 this.filterCategory();
-            } else if (this.selectedCategory != 'all' && this.selectedCategory != category.name) {
+            } else if (this.selectedCategory != 'all' || this.selectedCategory != category.name) {
                 this.selectedCategory = category.name;
                 this.filterCategory();
             } else if (this.selectedCategory == category.name) {
