@@ -122,7 +122,7 @@ export default {
             if (this.selectedCategory == 'all') {
                 this.selectedCategory = category.name;
                 this.filterCategory();
-            } else if (this.selectedCategory != 'all' && this.selectedCategory != category.name) {
+            } else if (this.selectedCategory != 'all' || this.selectedCategory != category.name) {
                 this.selectedCategory = category.name;
                 this.filterCategory();
             } else if (this.selectedCategory == category.name) {

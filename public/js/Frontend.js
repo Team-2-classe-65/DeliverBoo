@@ -5416,7 +5416,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.selectedCategory == 'all') {
         this.selectedCategory = category.name;
         this.filterCategory();
-      } else if (this.selectedCategory != 'all' && this.selectedCategory != category.name) {
+      } else if (this.selectedCategory != 'all' || this.selectedCategory != category.name) {
         this.selectedCategory = category.name;
         this.filterCategory();
       } else if (this.selectedCategory == category.name) {
