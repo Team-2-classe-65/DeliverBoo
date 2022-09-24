@@ -5726,9 +5726,11 @@ var staticRenderFns = [function () {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col"
-  }, [_c("div", {
+  }, [_vm._v("\n<<<<<<< HEAD\n                "), _c("div", {
     staticClass: "team-2 fs-1 fw-bold"
-  }, [_vm._v("#A casa tua con deliverboo By Team 2")])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("#A casa tua con deliverboo By Team 2")]), _vm._v("\n=======\n                "), _c("div", {
+    staticClass: "team-2 bg-home fs-1 animation fw-bold"
+  }, [_vm._v("#A casa tua con deliverboo By Team 2")]), _vm._v("\n>>>>>>> 7cc04efd6ac99a10a084b795b598e6e130c3be6a\n            ")]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
     staticClass: "d-flex justify-content-center"
@@ -11532,17 +11534,9 @@ exports.push([module.i, "[data-aos][data-aos][data-aos-duration=\"50\"],body[dat
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/HomeJumbotron.vue?vue&type=style&index=0&id=1f7dee9c&lang=css& ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.search-section {\n    min-width: 200px;\n}\n.nav-section {\n    position: relative;\n    background-color: #D0EB99;\n    z-index: -1;\n}\n.nav-section::before {\ncontent: \"\";\nwidth: 100%;\nheight: 280px;\nposition: absolute;\nright: 0;\nbackground-color: #00ccbc;\ntransform: skewY(-4deg);\ntransform-origin: left;\n}\n.team-2 {\n    position: relative;\n    transform: rotate(-4deg);\n    top: 300px;\n}\n.bg-home {\n    min-width: 200px;\n    max-height: 400px;\n}\n", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/postcss-loader/src/index.js):\nSyntaxError\n\n(26:9) Unknown word\n\n \u001b[90m 24 | \u001b[39m    \u001b[33m}\u001b[39m\n \u001b[90m 25 | \u001b[39m    \u001b[33m.bg-home\u001b[39m \u001b[33m{\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 | \u001b[39m<<<<<<< HEAD\n \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 | \u001b[39m        min-width\u001b[33m:\u001b[39m 200px\u001b[33m;\u001b[39m\n \u001b[90m 28 | \u001b[39m        max-height\u001b[33m:\u001b[39m 400px\u001b[33m;\u001b[39m\n");
 
 /***/ }),
 
@@ -11577,7 +11571,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.my-nav {\n    background-color: #00CCBC;\n}\n.search-section {\n    padding-top: 20px;\n    min-width: 300px;\n    max-width: 600px;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.search {\n    height: 170px;\n    min-width: 300px;\n}\n.form-control {\n    min-width: 100px;\n    margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.my-nav {\n    background-color: #00CCBC;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.search {\n    height: 170px;\n    min-width: 300px;\n}\n.form-control {\n    min-width: 100px;\n    margin-right: 10px;\n}\n", ""]);
 
 // exports
 

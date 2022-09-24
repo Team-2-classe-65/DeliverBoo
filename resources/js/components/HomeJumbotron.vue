@@ -3,7 +3,11 @@
         <div class="container">
             <div class="row">
             <div class="col">
+<<<<<<< HEAD
                 <div class="team-2 fs-1 fw-bold">#A casa tua con deliverboo By Team 2</div>
+=======
+                <div class="team-2 bg-home fs-1 animation fw-bold">#A casa tua con deliverboo By Team 2</div>
+>>>>>>> 7cc04efd6ac99a10a084b795b598e6e130c3be6a
             </div>
             <div class="col">
                 <div class="d-flex justify-content-center">
@@ -27,9 +31,6 @@
 </script>
 
 <style>
-    .search-section {
-        min-width: 200px;
-    }
 
     .nav-section {
         position: relative;
@@ -54,7 +55,13 @@
         top: 300px;
     }
     .bg-home {
+<<<<<<< HEAD
         min-width: 200px;
         max-height: 400px;
+=======
+        min-width: 100px;
+        min-height: 100px;
+
+>>>>>>> 7cc04efd6ac99a10a084b795b598e6e130c3be6a
     }
 </style>
