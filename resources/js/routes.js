@@ -5,6 +5,7 @@ import Home from './Pages/home.vue';
 
 // import per la pagina delle categorie di Anna
 import TheHomeMain from './components/TheHomeMain.vue';
+import TheMenu from './Pages/TheMenu.vue';
 
 
 
@@ -16,4 +17,6 @@ export const routes = [
 
     // ho aggiunto in modo commentato le rotte che dovremo mettere nel file per far funzionare il componente di Anna
     { path: "/categorie", component: TheHomeMain, name: "TheHomeMain.index" },
+    { path: "/:user_id/user", component: TheMenu, name: "TheMenu.show"  }
 ];
+
