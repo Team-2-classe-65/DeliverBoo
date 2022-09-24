@@ -76,11 +76,7 @@
         color: #00CCBC;
     }
 
-    .bg-home {
-        min-width: 200px;
-        min-height: 200px;
-        max-height: 400px;
-    }
+
 
     .search {
         height: 170px;

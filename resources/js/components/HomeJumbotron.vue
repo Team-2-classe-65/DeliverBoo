@@ -1,13 +1,13 @@
 <template>
     <div class="nav-section">
-        <div class="row">
+        <div class="row row-cols-2">
             <div class="col">
-                <div class="team-2 fs-1 animation fw-bold">#A casa tua con deliverboo</div>
+                <div class="team-2 fs-1 animation fw-bold">#A casa tua con deliverboo By Team 2</div>
             </div>
             <div class="col">
                 <div class="d-flex justify-content-center">
-                    <div class="search-section position-realtive" style="z-index:10">
-                        <div class="fs-1 fw-bold mb-4 search-title" >I piatti che ami, a domicilio.</div>
+                    <div class="search-section" style="z-index:10">
+                        <div class="fs-1 fw-bold mb-4 search-title animation" >I piatti che ami, a domicilio.</div>
                         <div class="d-flex justify-content-center">
                             <img class="img-fluid bg-home my-5 position-relative" src="img/bg-home.svg" alt="" style="z-index:10">
                         </div>
@@ -22,9 +22,6 @@
                             </div> -->
                 </div>
             </div>
-            <div class="col">
-                <div class="team2 fs-1 animation fw-bold">By Team 2</div>
-            </div>
         </div>
     </div>
 </template>
@@ -36,6 +33,10 @@
 </script>
 
 <style>
+    .search-section {
+        min-width: 200px;
+    }
+
     .nav-section {
         position: relative;
         background-color: #D0EB99;
@@ -56,13 +57,9 @@
     .team-2 {
         transform: rotate(-4deg);
         top: 300px;
-        left: 115px;
-    }
-
-    .team2 {
-        transform: rotate(-3deg);
-        top: 210px;
-        left: 70px;
+        left: 10px;
+        min-width: 80px;
+        max-width: 400px;
     }
 
     .animation {
@@ -73,14 +70,20 @@
     }
 
     @keyframes ani{
-    from {
-        letter-spacing: 35px;
-        filter: blur(5px);
-        opacity: 0;
-    } to {
-        letter-spacing: 0;
-        filter: blur(0);
-        opacity: 1px;
+        from {
+            letter-spacing: 35px;
+            filter: blur(5px);
+            opacity: 0;
+        } to {
+            letter-spacing: 0;
+            filter: blur(0);
+            opacity: 1px;
+        }
     }
-}
+
+    .bg-home {
+        min-width: 200px;
+        min-height: 200px;
+        max-height: 400px;
+    }
 </style>
