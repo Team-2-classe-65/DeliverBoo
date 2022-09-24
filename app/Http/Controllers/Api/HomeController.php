@@ -11,7 +11,6 @@ class HomeController extends Controller
 {
     public function categories()
     {
-
         $categories = Category::all();
 
         $categories->map(function ($category) {

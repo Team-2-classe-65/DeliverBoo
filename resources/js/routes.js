@@ -9,10 +9,8 @@ import TheMenu from './Pages/TheMenu.vue';
 
 export const routes = [
     { path: "/", component: Home, name: "home" },
-
+    { path: "/:id", component: TheMenu, name: "TheMenu"  },
     { path: "*", component: PageNotFound  },
-
-    // ho aggiunto in modo commentato le rotte che dovremo mettere nel file per far funzionare il componente di Anna
-    { path: "/themenu", component: TheMenu, name: "TheMenu"  }
+    
 ];
 
