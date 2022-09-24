@@ -5603,9 +5603,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "menu-section"
-  }, [_c("img", {
+  return _c("div", [_vm.restaurant.slug ? _c("div", [_c("img", {
     staticClass: "top-img",
     attrs: {
       src: _vm.restaurant.restaurant_img,
@@ -5641,7 +5639,11 @@ var render = function render() {
     }, [_vm._v(_vm._s(dish.name))]), _vm._v(" "), _c("p", {
       staticClass: "card-text mt-3"
     }, [_vm._v("Prezzo: " + _vm._s(dish.price) + "€")]), _vm._v(" "), _vm._m(0, true)])])]);
-  }), _vm._v(" "), _vm._m(1)], 2)])]);
+  }), _vm._v(" "), _vm._m(1)], 2)])]) : _c("div", {
+    staticClass: "container py-5 my-5"
+  }, [_c("div", {
+    staticClass: "py-5 my-5 text-center display-1 text-uppercase fw-bold"
+  }, [_vm._v("\n            questo ristorante non esiste\n        ")])])]);
 };
 
 var staticRenderFns = [function () {
@@ -11447,7 +11449,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".menu-section[data-v-08626c52] {\n  background-color: #00ccbc;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card-img-top[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
+exports.push([module.i, ".top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card-img-top[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
 
 // exports
 
