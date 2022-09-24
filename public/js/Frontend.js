@@ -5603,7 +5603,9 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("img", {
+  return _c("div", {
+    staticClass: "menu-section"
+  }, [_c("img", {
     staticClass: "top-img",
     attrs: {
       src: _vm.restaurant.restaurant_img,
@@ -5723,10 +5725,8 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "col"
   }, [_c("div", {
-    staticClass: "team-2"
-  }, [_c("div", {
-    staticClass: "fs-1"
-  }, [_vm._v("#A casa tua con deliverboo")])])]), _vm._v(" "), _c("div", {
+    staticClass: "team-2 fs-1 animation fw-bold"
+  }, [_vm._v("#A casa tua con deliverboo")])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
     staticClass: "d-flex justify-content-center"
@@ -5751,7 +5751,7 @@ var staticRenderFns = [function () {
   })])])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
-    staticClass: "team2 fs-1"
+    staticClass: "team2 fs-1 animation fw-bold"
   }, [_vm._v("By Team 2")])])])]);
 }];
 render._withStripped = true;
@@ -11442,7 +11442,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
+exports.push([module.i, ".menu-section[data-v-08626c52] {\n  background-color: #00ccbc;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card-img-top[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.card[data-v-08626c52] {\n  background: rgba(208, 235, 153, 0.36);\n  border-radius: 16px;\n  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);\n  backdrop-filter: blur(6.9px);\n  -webkit-backdrop-filter: blur(6.9px);\n  border: 1px solid rgb(208, 235, 153);\n}", ""]);
 
 // exports
 
@@ -11537,7 +11537,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.nav-section {\n        position: relative;\n        background-color: #D0EB99;\n        z-index: -1;\n}\n.nav-section::before {\n    content: \"\";\n    width: 100%;\n    height: 280px;\n    position: absolute;\n    right: 0;\n    background-color: #00ccbc;\n    transform: skewY(-4deg);\n    transform-origin: left;\n}\n.team-2 {\n        transform: rotate(-4deg);\n        transform-origin: left;\n        color: #440263;\n        top: 300px;\n        position: relative;\n        left: 115px;\n        -webkit-animation: ani 1s;\n                animation: ani 1s;\n}\n.team2 {\n        transform: rotate(-3deg);\n        transform-origin: left;\n        color: #440263;\n        position: relative;\n        top: 210px;\n        left: 70px;\n        -webkit-animation: ani 1s;\n                animation: ani 1s;\n}\n@-webkit-keyframes ani{\nfrom {\n        letter-spacing: 35px;\n        filter: blur(5px);\n        opacity: 0;\n}\nto {\n        letter-spacing: 0;\n        filter: blur(0);\n        opacity: 1px;\n}\n}\n@keyframes ani{\nfrom {\n        letter-spacing: 35px;\n        filter: blur(5px);\n        opacity: 0;\n}\nto {\n        letter-spacing: 0;\n        filter: blur(0);\n        opacity: 1px;\n}\n}\n", ""]);
+exports.push([module.i, "\n.nav-section {\n        position: relative;\n        background-color: #D0EB99;\n        z-index: -1;\n}\n.nav-section::before {\n    content: \"\";\n    width: 100%;\n    height: 280px;\n    position: absolute;\n    right: 0;\n    background-color: #00ccbc;\n    transform: skewY(-4deg);\n    transform-origin: left;\n}\n.team-2 {\n        transform: rotate(-4deg);\n        top: 300px;\n        left: 115px;\n}\n.team2 {\n        transform: rotate(-3deg);\n        top: 210px;\n        left: 70px;\n}\n.animation {\n        -webkit-animation: ani 1s;\n                animation: ani 1s;\n        transform-origin: left;\n        color: #440263;\n        position: relative;\n}\n@-webkit-keyframes ani{\nfrom {\n        letter-spacing: 35px;\n        filter: blur(5px);\n        opacity: 0;\n}\nto {\n        letter-spacing: 0;\n        filter: blur(0);\n        opacity: 1px;\n}\n}\n@keyframes ani{\nfrom {\n        letter-spacing: 35px;\n        filter: blur(5px);\n        opacity: 0;\n}\nto {\n        letter-spacing: 0;\n        filter: blur(0);\n        opacity: 1px;\n}\n}\n", ""]);
 
 // exports
 

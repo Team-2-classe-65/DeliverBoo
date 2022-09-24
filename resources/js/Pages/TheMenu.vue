@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="menu-section">
         <img class="top-img" :src="restaurant.restaurant_img" alt="">
         <div class="container py-5">
             <div class="fs-2 text-uppercase fw-bold mb-3">Scegli i tuoi Piatti</div>
@@ -50,14 +50,32 @@ export default {
 
 
 <style lang="scss" scoped>
-.top-img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-}
 
-.restaurant-img {
-    max-height: 220px;
-    object-fit: cover;
-}
+    .menu-section {
+        background-color: #00ccbc;
+    }
+    .top-img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .restaurant-img {
+        max-height: 220px;
+        object-fit: cover;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+    }
+
+    .card {
+        background: rgba(208, 235, 153, 0.36);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.9px);
+        -webkit-backdrop-filter: blur(6.9px);
+        border: 1px solid rgba(208, 235, 153, 1);
+    }
 </style>

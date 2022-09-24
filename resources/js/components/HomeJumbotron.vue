@@ -2,9 +2,7 @@
     <div class="nav-section">
         <div class="row">
             <div class="col">
-                <div class="team-2">
-                    <div class="fs-1">#A casa tua con deliverboo</div>
-                </div>
+                <div class="team-2 fs-1 animation fw-bold">#A casa tua con deliverboo</div>
             </div>
             <div class="col">
                 <div class="d-flex justify-content-center">
@@ -25,7 +23,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="team2 fs-1">By Team 2</div>
+                <div class="team2 fs-1 animation fw-bold">By Team 2</div>
             </div>
         </div>
     </div>
@@ -57,22 +55,21 @@
 
     .team-2 {
         transform: rotate(-4deg);
-        transform-origin: left;
-        color: #440263;
         top: 300px;
-        position: relative;
         left: 115px;
-        animation: ani 1s;
     }
 
     .team2 {
         transform: rotate(-3deg);
+        top: 210px;
+        left: 70px;
+    }
+
+    .animation {
+        animation: ani 1s;
         transform-origin: left;
         color: #440263;
         position: relative;
-        top: 210px;
-        left: 70px;
-        animation: ani 1s;
     }
 
     @keyframes ani{
