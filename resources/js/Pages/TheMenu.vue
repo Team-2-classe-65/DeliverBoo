@@ -39,7 +39,7 @@ export default {
     },
     mounted() {
 
-        axios.get("/api/" + this.$route.params.id)
+        axios.get("/api/" + this.$route.params.slug)
             .then((resp) => {
                 this.restaurant = resp.data
                 console.log(this.restaurant)

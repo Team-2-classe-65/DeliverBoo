@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -59,6 +60,30 @@ class RegisterController extends Controller
             'vat' => ['required', 'digits:11'],
             'restaurant_img'=>['required', 'image']
         ]);
+    }
+
+    private function generateSlug($text)
+    {
+        $toReturn = null;
+        $counter = 0;
+
+
+        do {
+            $slug = Str::slug($text);
+
+            if ($counter > 0) {
+                $slug .= "-" . $counter;
+            }
+            $slug_exist = User::where("slug", $slug)->first();
+            if ($slug_exist) {
+                $counter++;
+            } else {
+                $toReturn = $slug;
+            }
+        } while($slug_exist);
+
+        return $toReturn;
+
     }
 
     /**

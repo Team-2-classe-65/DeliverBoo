@@ -5200,7 +5200,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/" + this.$route.params.id).then(function (resp) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/" + this.$route.params.slug).then(function (resp) {
       _this.restaurant = resp.data;
       console.log(_this.restaurant);
     });
@@ -6028,7 +6028,7 @@ var render = function render() {
         to: {
           name: "TheMenu",
           params: {
-            id: restaurant.id
+            slug: restaurant.slug
           }
         }
       }
@@ -45968,7 +45968,7 @@ var routes = [{
   component: _Pages_home_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
   name: "home"
 }, {
-  path: "/:id",
+  path: "/:slug",
   component: _Pages_TheMenu_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   name: "TheMenu"
 }, {
@@ -46054,7 +46054,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! D:\Paolo\Documenti Master Boolean\Esercizi Boolean Master\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
