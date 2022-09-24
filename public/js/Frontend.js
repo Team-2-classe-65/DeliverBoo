@@ -5805,7 +5805,9 @@ var staticRenderFns = [function () {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col pb-4"
-  }, [_c("h2", [_vm._v("Le categorie dei ristoranti più amati")])])]);
+  }, [_c("h2", {
+    staticClass: "text-center"
+  }, [_vm._v("Le categorie dei ristoranti più amati")])])]);
 }];
 render._withStripped = true;
 
@@ -5904,24 +5906,7 @@ var staticRenderFns = [function () {
     }
   }, [_c("div", {
     staticClass: "fs-1 fw-bold mb-4 search-title"
-  }, [_vm._v("I piatti che ami, a domicilio.")]), _vm._v(" "), _c("div", {
-    staticClass: "bg-white search p-5"
-  }, [_c("div", {
-    staticClass: "mb-2"
-  }, [_vm._v("Inserisci il tuo indirizzo per trovare ristoranti nei dintorni")]), _vm._v(" "), _c("div", {
-    staticClass: "d-flex justify-content-between align-items-end"
-  }, [_c("input", {
-    staticClass: "form-control",
-    attrs: {
-      type: "text",
-      placeholder: "Inserisci la tua categoria preferita"
-    }
-  }), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-primary text-white",
-    attrs: {
-      type: "button"
-    }
-  }, [_vm._v("Cerca")])])])])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("I piatti che ami, a domicilio.")])])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
     staticClass: "d-flex justify-content-center"

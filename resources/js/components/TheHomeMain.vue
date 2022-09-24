@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col pb-4">
-                        <h2>Le categorie dei ristoranti più amati</h2>
+                        <h2 class="text-center">Le categorie dei ristoranti più amati</h2>
                     </div>
                 </div>
                 <div class="row">
