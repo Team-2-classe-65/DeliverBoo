@@ -4,7 +4,7 @@
         <div class="container">
             <!-- navbar -->
             <nav class="navbar">
-                <a class="navbar-logo text-decoration-none" href="#">
+                <a class="navbar-logo text-decoration-none" href="/">
                     <!-- deliveboo logo -->
                     <img class="logo" src="img/unnamed.png" alt="deliveboo logo">
                     <span class="fw-bold text-white">deliveBoo</span>

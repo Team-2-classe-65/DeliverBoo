@@ -5188,9 +5188,22 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      restaurant: {}
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/" + this.$route.params.id).then(function (resp) {
+      _this.restaurant = resp.data;
+      console.log(_this.restaurant);
+    });
   }
 });
 
@@ -5590,44 +5603,67 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("div", [_c("img", {
+    staticClass: "top-img",
+    attrs: {
+      src: _vm.restaurant.restaurant_img,
+      alt: ""
+    }
+  }), _vm._v(" "), _c("div", {
+    staticClass: "container py-5"
+  }, [_c("div", {
+    staticClass: "fs-2 text-uppercase fw-bold mb-3"
+  }, [_vm._v("Scegli i tuoi Piatti")]), _vm._v(" "), _c("div", {
+    staticClass: "row g-4"
+  }, [_vm._l(_vm.restaurant.dishes, function (dish) {
+    return _c("div", {
+      key: dish.id,
+      staticClass: "col-6 col-md-4 col-lg-3 h-100"
+    }, [_c("div", {
+      staticClass: "card",
+      attrs: {
+        "data-aos": "zoom-in",
+        "data-aos-duration": "700",
+        "data-aos-delay": "100"
+      }
+    }, [_c("img", {
+      staticClass: "card-img-top restaurant-img",
+      attrs: {
+        src: "Storage/" + dish.dish_img,
+        alt: dish.name
+      }
+    }), _vm._v(" "), _c("div", {
+      staticClass: "card-body"
+    }, [_c("h5", {
+      staticClass: "card-title"
+    }, [_vm._v(_vm._s(dish.name))]), _vm._v(" "), _c("p", {
+      staticClass: "card-text mt-3"
+    }, [_vm._v("Prezzo: " + _vm._s(dish.price) + "€")]), _vm._v(" "), _vm._m(0, true)])])]);
+  }), _vm._v(" "), _vm._m(1)], 2)])]);
 };
 
 var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
+  return _c("div", [_c("span", {
+    staticClass: "border border-2 border-dark rounded p-1 me-1"
+  }, [_c("i", {
+    staticClass: "fa-solid fa-plus"
+  })]), _vm._v(" "), _c("span", {
+    staticClass: "border border-2 border-dark rounded p-1"
+  }, [_c("i", {
+    staticClass: "fa-solid fa-minus"
+  })])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
   return _c("div", {
-    staticClass: "container"
-  }, [_c("img", {
-    staticClass: "top-img",
-    attrs: {
-      src: "",
-      alt: ""
-    }
-  }), _vm._v(" "), _c("div", {
-    staticClass: "fs-2"
-  }, [_vm._v("Dettagli")]), _vm._v(" "), _c("div", {
-    staticClass: "row"
-  }, [_c("div", {
-    staticClass: "col-lg-3"
-  }, [_c("div", {
-    staticClass: "card mb-3"
-  }, [_c("div", {
-    staticClass: "pizza-img"
-  }), _vm._v(" "), _c("div", {
-    staticClass: "card-body"
-  }, [_c("div", {
-    staticClass: "card-title text-dark fs-4"
-  }, [_vm._v("HelloWorld")]), _vm._v(" "), _c("div", {
-    staticClass: "card-description"
-  }, [_vm._v("HelloWorld")]), _vm._v(" "), _c("div", {
-    staticClass: "card-price"
-  }, [_vm._v("Hello world")])])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
     staticClass: "fs-2"
-  }, [_vm._v("Carrello")]), _vm._v(" "), _c("div", [_vm._v("Total Price")])])])]);
+  }, [_vm._v("Carrello")]), _vm._v(" "), _c("div", [_vm._v("Total Price")])]);
 }];
 render._withStripped = true;
 
@@ -5986,10 +6022,15 @@ var render = function render() {
         "data-aos-duration": "700",
         "data-aos-delay": "100"
       }
-    }, [_c("a", {
+    }, [_c("router-link", {
       staticClass: "text-dark text-decoration-none",
       attrs: {
-        href: ""
+        to: {
+          name: "TheMenu",
+          params: {
+            id: restaurant.id
+          }
+        }
       }
     }, [_c("img", {
       staticClass: "card-img-top restaurant-img",
@@ -6007,7 +6048,7 @@ var render = function render() {
       staticClass: "fas fa-map-marker-alt"
     }), _vm._v("\n                                        " + _vm._s(restaurant.address))]), _vm._v(" "), _vm._l(restaurant.categories, function (category) {
       return _c("span", [_vm._v("●\n                                        " + _vm._s(category.name) + " ")]);
-    })], 2)])])]) : _vm._e();
+    })], 2)])], 1)]) : _vm._e();
   }), 0)])])])]);
 };
 
@@ -6059,7 +6100,7 @@ var staticRenderFns = [function () {
   }, [_c("a", {
     staticClass: "navbar-logo text-decoration-none",
     attrs: {
-      href: "#"
+      href: "/"
     }
   }, [_c("img", {
     staticClass: "logo",
@@ -11393,7 +11434,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "img[data-v-08626c52] {\n  width: 100%;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n}\n.card[data-v-08626c52] {\n  background-color: #00ccbc;\n  height: 380px;\n}", ""]);
+exports.push([module.i, ".top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-img[data-v-08626c52] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
 
 // exports
 
@@ -45927,13 +45968,12 @@ var routes = [{
   component: _Pages_home_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
   name: "home"
 }, {
-  path: "*",
-  component: _Pages_PageNotFound_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-}, // ho aggiunto in modo commentato le rotte che dovremo mettere nel file per far funzionare il componente di Anna
-{
-  path: "/themenu",
+  path: "/:id",
   component: _Pages_TheMenu_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   name: "TheMenu"
+}, {
+  path: "*",
+  component: _Pages_PageNotFound_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
 }];
 
 /***/ }),
