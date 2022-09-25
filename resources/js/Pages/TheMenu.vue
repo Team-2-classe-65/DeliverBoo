@@ -1,157 +1,109 @@
 <template>
     <div>
-        <div
-                id="modal-cart"
-                style="z-index: 5"
-                tabindex="-1"
-                class="modal-bg position-fixed top-0 bottom-0 end-0 start-0 d-none align-items-center justify-content-center px-3"
-            >
-                <div class="modal-dialog bg-white rounded p-3">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">
-                                Hai degli elementi nel carrello
-                            </h5>
-                        </div>
-                        <div class="modal-body">
-                            <p>
-                                Per accedere ad altro ristorante bisogna
-                                svuotare il carrello.
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <!-- button to close the modal -->
-                            <button
-                                class="btn btn-secondary"
-                                @click="closeModalCart()"
-                            >
-                                Continua sulla pagina
-                            </button>
+        <div id="modal-cart" style="z-index: 5" tabindex="-1"
+            class="modal-bg position-fixed top-0 bottom-0 end-0 start-0 d-none align-items-center justify-content-center px-3">
+            <div class="modal-dialog bg-white rounded p-3">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Hai degli elementi nel carrello
+                        </h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Per accedere ad altro ristorante bisogna
+                            svuotare il carrello.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- button to close the modal -->
+                        <button class="btn btn-secondary" @click="closeModalCart()">
+                            Continua sulla pagina
+                        </button>
 
-                            <button
-                                class="btn btn-danger mt-3"
-                                @click="removeAllFromSession()"
-                            >
-                                Svuota carrello
-                            </button>
-                        </div>
+                        <button class="btn btn-danger mt-3" @click="removeAllFromSession()">
+                            Svuota carrello
+                        </button>
                     </div>
                 </div>
             </div>
-        <div v-if="restaurant.slug">
+        </div>
+
+        <div>
             <img class="top-img" :src="restaurant.restaurant_img" alt="">
             <div class="container py-5">
                 <div class="fs-2 text-uppercase fw-bold mb-3">Scegli i tuoi Piatti</div>
                 <div class="row g-4">
-                    <div class="col-6 col-md-4 col-lg-3 h-100" v-for="dish in restaurant.dishes" :key="dish.id">
-                        <div class="card" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100">
-                            <img class="card-img-top restaurant-img" :src="'Storage/' + dish.dish_img" :alt="dish.name">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ dish.name }}</h5>
-                                <p class="card-text mt-3">Prezzo: {{dish.price }}€</p>
-                                <div>
-                                    <span class="border border-2 border-dark rounded p-1 me-1" @click="addToCart(dish)"><i
-                                            class="fa-solid fa-plus"></i></span>
-                                    <span class="border border-2 border-dark rounded p-1" @click="removeOneFromCart(dish)"><i
-                                            class="fa-solid fa-minus"></i></span>
+                    <!-- lista piatti -->
+                    <div class="col-lg-7 col-xl-8 col-12">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4 col-xl-3" v-for="dish in restaurant.dishes" :key="dish.id">
+                                <div class="card" style="height:300px" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100">
+                                    <img class="card-img-top restaurant-img" :src="'Storage/' + dish.dish_img"
+                                        :alt="dish.name">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ dish.name }}</h5>
+                                        <p class="card-text mt-3">Prezzo: {{dish.price }}€</p>
+                                        <div>
+                                            <span class="border border-2 border-dark rounded p-1 me-1"
+                                                @click="addToCart(dish)"><i class="fa-solid fa-plus"></i></span>
+                                            <span class="border border-2 border-dark rounded p-1"
+                                                @click="removeOneFromCart(dish)"><i
+                                                    class="fa-solid fa-minus"></i></span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Carrello -->
+                    <div class="col-lg-5 col-xl-4 col-12">
+                        <div class="border border-2 border-dark rounded pt-3 my-cart">
+                            <h1 class="text-center text-uppercase fw-bold">Il tuo carrello</h1>
+                            <div v-for="dish in cart" :key="dish.id" class="row my-3 px-3">
+                                <div class="col-3">
+                                    <img :src="'Storage/' + dish.dish_img" :alt="dish.name"
+                                        class="img-thumbnail img-dish-cart" />
+                                </div>
 
-                <div class="border border-2 rounded">
-                    <div class="">
-                        <div
-                    v-for="dish in cart"
-                    :key="dish.id"
-                    class="row g-3"
-                >
-                    <div class="col-3">
-                        <div class="dish-image">
-                            <!-- image of the dish -->
-                            <img
-                                :src="'Storage/' + dish.dish_img"
-                                :alt="dish.name"
-                                class="img-thumbnail plate-img img-dish-cart"
-                            />
-                        </div>
-                    </div>
-
-                    <div class="col-9 dish-information">
-                        <div class="dish-and-price">
-                            <!-- title and price -->
-                            <p class="text-orange">{{ dish.name }}</p>
-                            <p class="ps-1 price text-nowrap">
-                                € {{ dish.price * dish.quantity}}
-                            </p>
-                        </div>
-
-                        <!-- cart quantity handle -->
-                        <div
-                            class="d-flex align-items-center cart-quantity-button"
-                        >
-                            <!-- bin icon -->
-                            <a
-                                class="no-decoration"
-                                href="http://"
-                                @click="removeAllFromCart(dish)"
-                                ><i class="fa-solid fa-trash no-decoration"></i
-                            ></a>
-                            <!-- add and remove item from cart  -->
-                            <div
-                               
-                            >
-                                <div class="display-num-pill-button">
-                                    {{ dish.quantity }}
+                                <div class="col-9 ">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <!-- title and price -->
+                                        <div>
+                                            <p class="fw-bold text-uppercase">{{ dish.name }}</p>
+                                            <p>
+                                                <span>Totale:</span> {{ dish.price * dish.quantity}}€
+                                            </p>
+                                            <div>
+                                                <span>Quantità:</span> {{ dish.quantity }}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a class="text-decoration-none" href="http://"
+                                                @click="removeAllFromCart(dish)"><i
+                                                    class="fa-solid fa-trash text-danger"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- Checkout -->
+                            <div class="mt-4">
+                                <h1 class="text-center">
+                                    <i class="fa-solid fa-cart-shopping me-3"></i>Checkout
+                                </h1>
+                                <div class="d-flex align-items-center justify-content-between p-3">
+                                    <div class="fs-5">Total price</div>
+                                    <div class="fs-5">{{ partialTotal }}€</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                    </div>
-                </div>
-                    
                 </div>
             </div>
+        </div>
 
-            <!-- here start check-out -->
-
-            <div class="my-5 px-5">
-                
-                <div class="container d-flex justify-content-center my-5">
-                    
-                    <div class=" d-flex justify-content-end">
-                        <img class="img-thumbnail w-25" src="../../../public/img/Shopping-Cart.jpg" alt=""></img>
-                    </div>
-
-                    <h1 class="text-center">
-                        Checkout
-                    </h1>
-                     
-                </div> 
-                <!-- <img
-                    class="w-100"
-                    src="/images/checkout-bg.svg"
-                    alt="checkout-bg"
-                /> -->
-                <div class="checkout-section bg-soft">
-                    <div class="container py-3">
-                        <div class="row gy-3">
-
-                            <div class="col-6">
-                                <div class="text-start text-checkout-start fs-5">
-                                    total
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="text-end text-checkout-end fs-5">
-                                    € {{ partialTotal }}
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <!-- <div class="checkout-open mt-3">
+        <!-- <div class="checkout-open mt-3">
                             <h2 class="pt-3 text-white text-shadow">Checkout</h2>
                             <form
                                 action=""
@@ -219,18 +171,14 @@
                                 </button>
                             </form>
                         </div> -->
-                    </div>
-                </div>
-            </div>
 
-        </div>
+    </div>
 
-        <div v-else class="container py-5 my-5">
+    <!-- <div v-else class="container py-5 my-5">
             <div class="py-5 my-5 text-center display-1 text-uppercase fw-bold">
                 questo ristorante non esiste
             </div>
-        </div>
-    </div>
+        </div> -->
 
 </template>
 
@@ -260,7 +208,7 @@ export default {
     data() {
         return {
             restaurant: {},
-            cart:{},
+            cart: {},
             quantity: 1,
             partialTotal: 0,
             total: 0,
@@ -273,10 +221,10 @@ export default {
                 console.log(this.restaurant)
             }),
             this.cart = JSON.parse(sessionStorage.getItem("cart"));
-            this.partialTotal = JSON.parse(sessionStorage.getItem("partialTotal"));
-            this.total = JSON.parse(sessionStorage.getItem("total"));
+        this.partialTotal = JSON.parse(sessionStorage.getItem("partialTotal"));
+        this.total = JSON.parse(sessionStorage.getItem("total"));
     },
-    methods:{
+    methods: {
         // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
         showDetails(id) {
             let modal = document.getElementById("modal-" + id);
@@ -290,7 +238,7 @@ export default {
         // this function add dishes to cart
         addToCart(dish) {
             if (sessionStorage.getItem("cart") != null) {
-                if (this.cart[0].user_id != this.restaurant.id)  {
+                if (this.cart[0].user_id != this.restaurant.id) {
                     this.checkCart();
                     this.addToCart().preventDefault();
                 }
@@ -347,39 +295,42 @@ export default {
             this.partialTotal = 0;
             this.total = 0;
             this.closeModalCart();
-            
+
         },
         removeOneFromCart(dish) {
-            let cart = JSON.parse(sessionStorage.getItem("cart"));
-            let index = cart.findIndex((item) => item.id == dish.id);
-            if (index !== -1) {
-                cart[index].quantity--;
-                if (cart[index].quantity == 0) {
-                    cart.splice(index, 1);
+            if (this.cart && this.cart.length > 0) {
+                let cart = JSON.parse(sessionStorage.getItem("cart"));
+                let index = this.cart.findIndex((item) => item.id == dish.id);
+                if (index !== -1) {
+                    cart[index].quantity--;
+                    if (cart[index].quantity == 0) {
+                        cart.splice(index, 1);
+                    }
+                }
+                sessionStorage.setItem("cart", JSON.stringify(cart));
+                this.cart = JSON.parse(sessionStorage.getItem("cart"));
+                this.partialTotal = round(
+                    this.cart.reduce(
+                        (acc, dish) => acc + dish.price * dish.quantity,
+                        0
+                    ),
+                    2
+                );
+                sessionStorage.setItem(
+                    "partialTotal",
+                    JSON.stringify(this.partialTotal)
+                );
+                this.total = this.partialTotal + this.restaurant.delivery_price;
+                sessionStorage.setItem("total", JSON.stringify(this.total));
+                if (this.cart.length == 0) {
+                    sessionStorage.removeItem("cart");
+                    sessionStorage.removeItem("partialTotal");
+                    sessionStorage.removeItem("total");
+                    this.partialTotal = 0;
+                    this.total = 0;
                 }
             }
-            sessionStorage.setItem("cart", JSON.stringify(cart));
-            this.cart = JSON.parse(sessionStorage.getItem("cart"));
-            this.partialTotal = round(
-                this.cart.reduce(
-                    (acc, dish) => acc + dish.price * dish.quantity,
-                    0
-                ),
-                2
-            );
-            sessionStorage.setItem(
-                "partialTotal",
-                JSON.stringify(this.partialTotal)
-            );
-            this.total = this.partialTotal + this.restaurant.delivery_price;
-            sessionStorage.setItem("total", JSON.stringify(this.total));
-            if (this.cart.length == 0) {
-                sessionStorage.removeItem("cart");
-                sessionStorage.removeItem("partialTotal");
-                sessionStorage.removeItem("total");
-                this.partialTotal = 0;
-                this.total = 0;
-            }
+
         },
         removeAllFromCart(dish) {
             let cart = JSON.parse(sessionStorage.getItem("cart"));
@@ -422,23 +373,24 @@ export default {
     object-fit: cover;
 }
 
-.restaurant-img {
-    max-height: 220px;
-    object-fit: cover;
-}
-
-.card-img-top {
+.my-card {
     width: 100%;
     height: 200px;
 }
-
 .restaurant-img {
-    height: 220px;
+    height: 150px;
     object-fit: cover;
 }
-.img-dish-cart{
+
+.img-dish-cart {
     height: 100px;
     width: 100%;
     object-fit: cover;
+}
+
+.my-cart {
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 </style>
