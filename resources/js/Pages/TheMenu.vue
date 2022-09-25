@@ -82,7 +82,7 @@
                             <!-- title and price -->
                             <p class="text-orange">{{ dish.name }}</p>
                             <p class="ps-1 price text-nowrap">
-                                € {{ dish.price }}
+                                € {{ dish.price * dish.quantity}}
                             </p>
                         </div>
 
@@ -137,19 +137,10 @@
                 <div class="checkout-section bg-soft">
                     <div class="container py-3">
                         <div class="row gy-3">
+
                             <div class="col-6">
                                 <div class="text-start text-checkout-start fs-5">
-                                    Consegna
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="text-end fs-5 text-checkout-end">
-                                    € {{ restaurant.delivery_price }}
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="text-start text-checkout-start fs-5">
-                                    Prodotti
+                                    total
                                 </div>
                             </div>
                             <div class="col-6">
@@ -157,17 +148,7 @@
                                     € {{ partialTotal }}
                                 </div>
                             </div>
-                            <div class="total-line"></div>
-                            <div class="col-6">
-                                <div class="text-start text-checkout-start fs-2">
-                                    Totale
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="text-end text-checkout-end fs-2">
-                                    € {{ total }}
-                                </div>
-                            </div>
+                            
                         </div>
 
                         <!-- <div class="checkout-open mt-3">
@@ -292,8 +273,11 @@ export default {
                 console.log(this.restaurant)
             }),
             this.cart = JSON.parse(sessionStorage.getItem("cart"));
+            this.partialTotal = JSON.parse(sessionStorage.getItem("partialTotal"));
+            this.total = JSON.parse(sessionStorage.getItem("total"));
     },
     methods:{
+        // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
         showDetails(id) {
             let modal = document.getElementById("modal-" + id);
             modal.classList.replace("d-none", "d-flex");
@@ -302,6 +286,8 @@ export default {
             let modal = document.getElementById("modal-" + id);
             modal.classList.replace("d-flex", "d-none");
         },
+
+        // this function add dishes to cart
         addToCart(dish) {
             if (sessionStorage.getItem("cart") != null) {
                 if (this.cart[0].user_id != this.restaurant.id)  {
@@ -336,7 +322,8 @@ export default {
             this.total = this.partialTotal;
             sessionStorage.setItem("total", JSON.stringify(this.total));
         },
-        //check if the dish user_id has the same id of the restaurant, if not, show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
+        //check if the dish user_id has the same id of the restaurant, if not, 
+        //show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
         checkCart() {
             if (this.cart.length > 0) {
                 if (this.cart[0].user_id != this.restaurant.id) {
@@ -345,10 +332,13 @@ export default {
                 }
             }
         },
+
         closeModalCart() {
             let modal = document.getElementById("modal-cart");
             modal.classList.replace("d-flex", "d-none");
         },
+
+
         removeAllFromSession() {
             sessionStorage.removeItem("cart");
             sessionStorage.removeItem("partialTotal");

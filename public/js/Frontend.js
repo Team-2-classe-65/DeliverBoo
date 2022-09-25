@@ -5231,8 +5231,11 @@ function round(number, precision) {
       _this.restaurant = resp.data;
       console.log(_this.restaurant);
     }), this.cart = JSON.parse(sessionStorage.getItem("cart"));
+    this.partialTotal = JSON.parse(sessionStorage.getItem("partialTotal"));
+    this.total = JSON.parse(sessionStorage.getItem("total"));
   },
   methods: {
+    // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
     showDetails: function showDetails(id) {
       var modal = document.getElementById("modal-" + id);
       modal.classList.replace("d-none", "d-flex");
@@ -5241,6 +5244,7 @@ function round(number, precision) {
       var modal = document.getElementById("modal-" + id);
       modal.classList.replace("d-flex", "d-none");
     },
+    // this function add dishes to cart
     addToCart: function addToCart(dish) {
       if (sessionStorage.getItem("cart") != null) {
         if (this.cart[0].user_id != this.restaurant.id) {
@@ -5274,7 +5278,8 @@ function round(number, precision) {
       this.total = this.partialTotal;
       sessionStorage.setItem("total", JSON.stringify(this.total));
     },
-    //check if the dish user_id has the same id of the restaurant, if not, show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
+    //check if the dish user_id has the same id of the restaurant, if not, 
+    //show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
     checkCart: function checkCart() {
       if (this.cart.length > 0) {
         if (this.cart[0].user_id != this.restaurant.id) {
@@ -5860,7 +5865,7 @@ var render = function render() {
       staticClass: "text-orange"
     }, [_vm._v(_vm._s(dish.name))]), _vm._v(" "), _c("p", {
       staticClass: "ps-1 price text-nowrap"
-    }, [_vm._v("\n                            € " + _vm._s(dish.price) + "\n                        ")])]), _vm._v(" "), _c("div", {
+    }, [_vm._v("\n                            € " + _vm._s(dish.price * dish.quantity) + "\n                        ")])]), _vm._v(" "), _c("div", {
       staticClass: "d-flex align-items-center cart-quantity-button"
     }, [_c("a", {
       staticClass: "no-decoration",
@@ -5888,18 +5893,8 @@ var render = function render() {
   }, [_vm._m(3), _vm._v(" "), _c("div", {
     staticClass: "col-6"
   }, [_c("div", {
-    staticClass: "text-end fs-5 text-checkout-end"
-  }, [_vm._v("\n                                € " + _vm._s(_vm.restaurant.delivery_price) + "\n                            ")])]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c("div", {
-    staticClass: "col-6"
-  }, [_c("div", {
     staticClass: "text-end text-checkout-end fs-5"
-  }, [_vm._v("\n                                € " + _vm._s(_vm.partialTotal) + "\n                            ")])]), _vm._v(" "), _c("div", {
-    staticClass: "total-line"
-  }), _vm._v(" "), _vm._m(5), _vm._v(" "), _c("div", {
-    staticClass: "col-6"
-  }, [_c("div", {
-    staticClass: "text-end text-checkout-end fs-2"
-  }, [_vm._v("\n                                € " + _vm._s(_vm.total) + "\n                            ")])])])])])])]) : _c("div", {
+  }, [_vm._v("\n                                € " + _vm._s(_vm.partialTotal) + "\n                            ")])])])])])])]) : _c("div", {
     staticClass: "container py-5 my-5"
   }, [_c("div", {
     staticClass: "py-5 my-5 text-center display-1 text-uppercase fw-bold"
@@ -5947,25 +5942,7 @@ var staticRenderFns = [function () {
     staticClass: "col-6"
   }, [_c("div", {
     staticClass: "text-start text-checkout-start fs-5"
-  }, [_vm._v("\n                                Consegna\n                            ")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "col-6"
-  }, [_c("div", {
-    staticClass: "text-start text-checkout-start fs-5"
-  }, [_vm._v("\n                                Prodotti\n                            ")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "col-6"
-  }, [_c("div", {
-    staticClass: "text-start text-checkout-start fs-2"
-  }, [_vm._v("\n                                Totale\n                            ")])]);
+  }, [_vm._v("\n                                total\n                            ")])]);
 }];
 render._withStripped = true;
 
