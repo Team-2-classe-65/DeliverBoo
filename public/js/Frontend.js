@@ -5271,7 +5271,7 @@ function round(number, precision) {
         return acc + dish.price * dish.quantity;
       }, 0), 2);
       sessionStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
-      this.total = this.partialTotal + this.restaurant.delivery_price;
+      this.total = this.partialTotal;
       sessionStorage.setItem("total", JSON.stringify(this.total));
     },
     //check if the dish user_id has the same id of the restaurant, if not, show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
@@ -5877,7 +5877,32 @@ var render = function render() {
     })]), _vm._v(" "), _c("div", [_c("div", {
       staticClass: "display-num-pill-button"
     }, [_vm._v("\n                                " + _vm._s(dish.quantity) + "\n                            ")])])])])]);
-  }), 0)])], 2)])]) : _c("div", {
+  }), 0)])], 2)]), _vm._v(" "), _c("div", [_c("img", {
+    staticClass: "w-100",
+    attrs: {
+      alt: "checkout-bg"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticClass: "checkout-section bg-soft"
+  }, [_c("div", {
+    staticClass: "container py-3"
+  }, [_c("div", {
+    staticClass: "row gy-3"
+  }, [_vm._m(2), _vm._v(" "), _c("div", {
+    staticClass: "col-6"
+  }, [_c("div", {
+    staticClass: "text-end fs-5 text-checkout-end"
+  }, [_vm._v("\n                                € " + _vm._s(_vm.restaurant.delivery_price) + "\n                            ")])]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c("div", {
+    staticClass: "col-6"
+  }, [_c("div", {
+    staticClass: "text-end text-checkout-end fs-5"
+  }, [_vm._v("\n                                € " + _vm._s(_vm.partialTotal) + "\n                            ")])]), _vm._v(" "), _c("div", {
+    staticClass: "total-line"
+  }), _vm._v(" "), _vm._m(4), _vm._v(" "), _c("div", {
+    staticClass: "col-6"
+  }, [_c("div", {
+    staticClass: "text-end text-checkout-end fs-2"
+  }, [_vm._v("\n                                € " + _vm._s(_vm.total) + "\n                            ")])])])])])])]) : _c("div", {
     staticClass: "container py-5 my-5"
   }, [_c("div", {
     staticClass: "py-5 my-5 text-center display-1 text-uppercase fw-bold"
@@ -5900,6 +5925,33 @@ var staticRenderFns = [function () {
   return _c("div", {
     staticClass: "modal-body"
   }, [_c("p", [_vm._v("\n                            Per accedere ad altro ristorante bisogna\n                            svuotare il carrello.\n                        ")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "col-6"
+  }, [_c("div", {
+    staticClass: "text-start text-checkout-start fs-5"
+  }, [_vm._v("\n                                Consegna\n                            ")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "col-6"
+  }, [_c("div", {
+    staticClass: "text-start text-checkout-start fs-5"
+  }, [_vm._v("\n                                Prodotti\n                            ")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "col-6"
+  }, [_c("div", {
+    staticClass: "text-start text-checkout-start fs-2"
+  }, [_vm._v("\n                                Totale\n                            ")])]);
 }];
 render._withStripped = true;
 

@@ -113,7 +113,123 @@
                     
                 </div>
             </div>
+            <div>
+                <!--  src="/images/checkout-bg.svg"--> 
+                <img
+                    class="w-100"
+                
+                    alt="checkout-bg"
+                />
+                <div class="checkout-section bg-soft">
+                    <div class="container py-3">
+                        <div class="row gy-3">
+                            <div class="col-6">
+                                <div class="text-start text-checkout-start fs-5">
+                                    Consegna
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-end fs-5 text-checkout-end">
+                                    € {{ restaurant.delivery_price }}
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-start text-checkout-start fs-5">
+                                    Prodotti
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-end text-checkout-end fs-5">
+                                    € {{ partialTotal }}
+                                </div>
+                            </div>
+                            <div class="total-line"></div>
+                            <div class="col-6">
+                                <div class="text-start text-checkout-start fs-2">
+                                    Totale
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-end text-checkout-end fs-2">
+                                    € {{ total }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="checkout-open mt-3">
+                            <h2 class="pt-3 text-white text-shadow">Checkout</h2>
+                            <form
+                                action=""
+                                method="post"
+                                enctype="multipart/form-data"
+                            >
+                                <div class="form-group my-3">
+                                    <label class="fw-semibold text-orange fs-5 pb-1"
+                                        >Nome*</label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        class="form-control"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group my-3">
+                                    <label class="fw-semibold text-orange fs-5 pb-1"
+                                        >Cognome*</label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="lastname"
+                                        class="form-control"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group my-3">
+                                    <label class="fw-semibold text-orange fs-5 pb-1"
+                                        >Indirizzo*</label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="address"
+                                        class="form-control"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group my-3">
+                                    <label class="fw-semibold text-orange fs-5 pb-1"
+                                        >Email*</label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        class="form-control"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group my-3">
+                                    <label class="fw-semibold text-orange fs-5 pb-1"
+                                        >Numero di telefono*</label
+                                    >
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        class="form-control"
+                                        required
+                                    />
+                                </div>
+                                <div id="dropin-container"></div>
+                                <button id="submit-button" class="btn btn-primary">
+                                    Ordina
+                                </button>
+                            </form>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
         </div>
+
         <div v-else class="container py-5 my-5">
             <div class="py-5 my-5 text-center display-1 text-uppercase fw-bold">
                 questo ristorante non esiste
@@ -203,7 +319,7 @@ export default {
                 "partialTotal",
                 JSON.stringify(this.partialTotal)
             );
-            this.total = this.partialTotal + this.restaurant.delivery_price;
+            this.total = this.partialTotal;
             sessionStorage.setItem("total", JSON.stringify(this.total));
         },
         //check if the dish user_id has the same id of the restaurant, if not, show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
