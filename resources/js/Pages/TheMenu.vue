@@ -113,13 +113,27 @@
                     
                 </div>
             </div>
-            <div>
-                <!--  src="/images/checkout-bg.svg"--> 
-                <img
-                    class="w-100"
+
+            <!-- here start check-out -->
+
+            <div class="my-5 px-5">
                 
+                <div class="container d-flex justify-content-center my-5">
+                    
+                    <div class=" d-flex justify-content-end">
+                        <img class="img-thumbnail w-25" src="../../../public/img/Shopping-Cart.jpg" alt=""></img>
+                    </div>
+
+                    <h1 class="text-center">
+                        Checkout
+                    </h1>
+                     
+                </div> 
+                <!-- <img
+                    class="w-100"
+                    src="/images/checkout-bg.svg"
                     alt="checkout-bg"
-                />
+                /> -->
                 <div class="checkout-section bg-soft">
                     <div class="container py-3">
                         <div class="row gy-3">
@@ -396,7 +410,7 @@ export default {
                 "partialTotal",
                 JSON.stringify(this.partialTotal)
             );
-            this.total = this.partialTotal + this.restaurant.delivery_price;
+            this.total = this.partialTotal;
             sessionStorage.setItem("total", JSON.stringify(this.total));
             if (this.cart.length == 0) {
                 sessionStorage.removeItem("cart");
