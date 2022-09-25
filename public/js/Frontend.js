@@ -5770,26 +5770,28 @@ var render = function render() {
       tabindex: "-1"
     }
   }, [_c("div", {
-    staticClass: "modal-dialog bg-white rounded p-3"
+    staticClass: "modal-dialog"
   }, [_c("div", {
     staticClass: "modal-content"
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "modal-body bg_primary rounded-bottom p-3 fw-bold"
+  }, [_vm._m(1), _vm._v(" "), _c("div", {
     staticClass: "modal-footer"
   }, [_c("button", {
-    staticClass: "btn btn-secondary",
+    staticClass: "btn btn-success text-white",
     on: {
       click: function click($event) {
         return _vm.closeModalCart();
       }
     }
-  }, [_vm._v("\n                        Continua sulla pagina\n                    ")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-danger mt-3",
+  }, [_vm._v("\n                            Continua sulla pagina\n                        ")]), _vm._v(" "), _c("button", {
+    staticClass: "btn btn-danger ms-3 text-white",
     on: {
       click: function click($event) {
         return _vm.removeAllFromSession();
       }
     }
-  }, [_vm._v("\n                        Svuota carrello\n                    ")])])])])]), _vm._v(" "), _c("div", [_c("img", {
+  }, [_vm._v("\n                            Svuota carrello\n                        ")])])])])])]), _vm._v(" "), _c("div", [_c("img", {
     staticClass: "top-img",
     attrs: {
       src: _vm.restaurant.restaurant_img,
@@ -5903,17 +5905,17 @@ var staticRenderFns = [function () {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "modal-header"
+    staticClass: "modal-header bg_secondary rounded-top p-3"
   }, [_c("h5", {
-    staticClass: "modal-title"
-  }, [_vm._v("\n                        Hai degli elementi nel carrello\n                    ")])]);
+    staticClass: "modal-title text-danger fw-bold"
+  }, [_c("i", {
+    staticClass: "fa-solid fa-triangle-exclamation me-2"
+  }), _vm._v("Attenzione!\n                    ")])]);
 }, function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "modal-body"
-  }, [_c("p", [_vm._v("\n                        Per accedere ad altro ristorante bisogna\n                        svuotare il carrello.\n                    ")])]);
+  return _c("p", [_vm._v("Hai degli elementi nel carrello. "), _c("br"), _vm._v("\n                        Per accedere ad un altro ristorante bisogna\n                        svuotare il carrello.\n                    ")]);
 }, function () {
   var _vm = this,
       _c = _vm._self._c;
@@ -6381,44 +6383,18 @@ var staticRenderFns = [function () {
   }), _vm._v(" "), _c("span", {
     staticClass: "fw-bold text-white"
   }, [_vm._v("deliveBoo")])]), _vm._v(" "), _c("div", {
-    staticClass: "d-flex"
-  }, [_c("button", {
-    staticClass: "btn btn-light mx-3",
-    attrs: {
-      type: "button"
-    }
-  }, [_vm._v("Registrati o accedi")]), _vm._v(" "), _c("div", {
-    staticClass: "dropdown"
-  }, [_c("button", {
-    staticClass: "btn btn-light dropdown-bs-toggle",
-    attrs: {
-      type: "button",
-      id: "dropdownMenuButton",
-      "data-bs-toggle": "dropdown",
-      "aria-haspopup": "true",
-      "aria-expanded": "false"
-    }
-  }, [_vm._v("\n                        Menu\n                    ")]), _vm._v(" "), _c("div", {
-    staticClass: "dropdown-menu",
-    attrs: {
-      "aria-labelledby": "dropdownMenuButton"
-    }
+    staticClass: "d-flex align-items-bottom"
   }, [_c("a", {
-    staticClass: "dropdown-item",
+    staticClass: "btn btn-light text-decoration-none",
     attrs: {
-      href: "#"
+      href: "/login"
     }
-  }, [_vm._v("Action")]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
+  }, [_vm._v("Accedi")]), _vm._v(" "), _c("a", {
+    staticClass: "btn btn-light ms-3 text-decoration-none",
     attrs: {
-      href: "#"
+      href: "/register"
     }
-  }, [_vm._v("Another action")]), _vm._v(" "), _c("a", {
-    staticClass: "dropdown-item",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Something else here")])])])])])])]);
+  }, [_vm._v("Registrati")])])])])]);
 }];
 render._withStripped = true;
 
@@ -11761,7 +11737,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".categories-section[data-v-86dd0da4] {\n  background: rgb(255, 234, 228);\n}\n.categories-section .row .col-xs-12.col-md-4[data-v-86dd0da4] {\n  padding-left: 0;\n  padding-right: 0;\n}\n.categories-section .row .col-xs-12.col-md-4 a[data-v-86dd0da4] {\n  text-decoration: unset;\n  color: white;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4] {\n  height: 12.5rem;\n  position: relative;\n  display: block;\n  transition: 0.5s;\n  border-radius: 0.625rem;\n  overflow: hidden;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories img[data-v-86dd0da4] {\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details[data-v-86dd0da4] {\n  position: absolute;\n  font-size: 1.5625rem;\n  font-weight: 500;\n  z-index: 20;\n  bottom: 0.125rem;\n  padding: 0 0.5rem;\n  margin-bottom: 0rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details p[data-v-86dd0da4] {\n  font-size: 0.9375rem;\n  text-decoration: underline;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details .fa-arrow-right[data-v-86dd0da4] {\n  margin-left: 0.4375rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4]:hover {\n  opacity: 0.7;\n}\n.categories-section .row .col-xs-12.col-md-4 a .overlay[data-v-86dd0da4]::after {\n  content: \"\";\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  position: absolute;\n  background: linear-gradient(transparent, #525252);\n  opacity: 0.8;\n}\n.restaurant-img[data-v-86dd0da4] {\n  max-height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
+exports.push([module.i, ".categories-section[data-v-86dd0da4] {\n  background: rgb(255, 234, 228);\n}\n.categories-section .row .col-xs-12.col-md-4[data-v-86dd0da4] {\n  padding-left: 0;\n  padding-right: 0;\n}\n.categories-section .row .col-xs-12.col-md-4 a[data-v-86dd0da4] {\n  text-decoration: unset;\n  color: white;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4] {\n  height: 12.5rem;\n  position: relative;\n  display: block;\n  transition: 0.5s;\n  border-radius: 0.625rem;\n  overflow: hidden;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories img[data-v-86dd0da4] {\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details[data-v-86dd0da4] {\n  position: absolute;\n  font-size: 1.5625rem;\n  font-weight: 500;\n  z-index: 20;\n  bottom: 0.125rem;\n  padding: 0 0.5rem;\n  margin-bottom: 0rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details p[data-v-86dd0da4] {\n  font-size: 0.9375rem;\n  text-decoration: underline;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details .fa-arrow-right[data-v-86dd0da4] {\n  margin-left: 0.4375rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4]:hover {\n  opacity: 0.7;\n}\n.categories-section .row .col-xs-12.col-md-4 a .overlay[data-v-86dd0da4]::after {\n  content: \"\";\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  position: absolute;\n  background: linear-gradient(transparent, #525252);\n  opacity: 0.8;\n}\n.restaurant-img[data-v-86dd0da4] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
 
 // exports
 
