@@ -9,19 +9,9 @@
                     <img class="logo" src="img/unnamed.png" alt="deliveboo logo">
                     <span class="fw-bold text-white">deliveBoo</span>
                 </a>
-                <div class="d-flex">
-                    <button type="button" class="btn btn-light mx-3">Registrati o accedi</button>
-                    
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-bs-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Menu
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
+                <div class="d-flex align-items-bottom">
+                    <a href="/login" class="btn btn-light text-decoration-none">Accedi</a>
+                    <a href="/register" class="btn btn-light ms-3 text-decoration-none">Registrati</a>
                 </div>
             </nav>
         </div>

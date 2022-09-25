@@ -2,29 +2,31 @@
     <div>
         <div id="modal-cart" style="z-index: 5" tabindex="-1"
             class="modal-bg position-fixed top-0 bottom-0 end-0 start-0 d-none align-items-center justify-content-center px-3">
-            <div class="modal-dialog bg-white rounded p-3">
+            <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">
-                            Hai degli elementi nel carrello
+                    <div class="modal-header bg_secondary rounded-top p-3">
+                        <h5 class="modal-title text-danger fw-bold">
+                            <i class="fa-solid fa-triangle-exclamation me-2"></i>Attenzione!
                         </h5>
                     </div>
-                    <div class="modal-body">
-                        <p>
-                            Per accedere ad altro ristorante bisogna
+                    <div class="modal-body bg_primary rounded-bottom p-3 fw-bold">
+                        <p>Hai degli elementi nel carrello. <br>
+                            Per accedere ad un altro ristorante bisogna
                             svuotare il carrello.
                         </p>
-                    </div>
-                    <div class="modal-footer">
-                        <!-- button to close the modal -->
-                        <button class="btn btn-secondary" @click="closeModalCart()">
-                            Continua sulla pagina
-                        </button>
 
-                        <button class="btn btn-danger mt-3" @click="removeAllFromSession()">
-                            Svuota carrello
-                        </button>
+                        <div class="modal-footer">
+                            <!-- button to close the modal -->
+                            <button class="btn btn-success text-white" @click="closeModalCart()">
+                                Continua sulla pagina
+                            </button>
+
+                            <button class="btn btn-danger ms-3 text-white" @click="removeAllFromSession()">
+                                Svuota carrello
+                            </button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -38,7 +40,8 @@
                     <div class="col-lg-7 col-xl-8 col-12">
                         <div class="row g-3">
                             <div class="col-6 col-md-4 col-xl-3" v-for="dish in restaurant.dishes" :key="dish.id">
-                                <div class="card" style="height:300px" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100">
+                                <div class="card" style="height:300px" data-aos="zoom-in" data-aos-duration="700"
+                                    data-aos-delay="100">
                                     <img class="card-img-top restaurant-img" :src="'Storage/' + dish.dish_img"
                                         :alt="dish.name">
                                     <div class="card-body">
@@ -377,6 +380,7 @@ export default {
     width: 100%;
     height: 200px;
 }
+
 .restaurant-img {
     height: 150px;
     object-fit: cover;

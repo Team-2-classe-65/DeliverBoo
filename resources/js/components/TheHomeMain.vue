@@ -206,7 +206,7 @@ export default {
 }
 
 .restaurant-img {
-    max-height: 220px;
+    height: 220px;
     object-fit: cover;
 }
 </style>
