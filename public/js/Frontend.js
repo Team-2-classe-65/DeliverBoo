@@ -5183,18 +5183,45 @@ module.exports = {
 /*!*************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/TheMenu.vue?vue&type=script&lang=js& ***!
   \*************************************************************************************************************************************************************/
-/*! exports provided: default */
+/*! exports provided: round, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "round", function() { return round; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
+function round(number, precision) {
+  "use strict";
+
+  precision = precision ? +precision : 0;
+  var sNumber = number + "",
+      periodIndex = sNumber.indexOf("."),
+      factor = Math.pow(10, precision);
+
+  if (periodIndex === -1 || precision < 0) {
+    return Math.round(number * factor) / factor;
+  }
+
+  number = +number; // sNumber[periodIndex + precision + 1] is the last digit
+
+  if (sNumber[periodIndex + precision + 1] >= 5) {
+    // Correcting float error
+    // factor * 10 to use one decimal place beyond the precision
+    number += (number < 0 ? -1 : 1) / (factor * 10);
+  }
+
+  return +number.toFixed(precision);
+}
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      restaurant: {}
+      restaurant: {},
+      cart: {},
+      quantity: 1,
+      partialTotal: 0,
+      total: 0
     };
   },
   mounted: function mounted() {
@@ -5203,7 +5230,106 @@ __webpack_require__.r(__webpack_exports__);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/" + this.$route.params.slug).then(function (resp) {
       _this.restaurant = resp.data;
       console.log(_this.restaurant);
-    });
+    }), this.cart = JSON.parse(sessionStorage.getItem("cart"));
+  },
+  methods: {
+    addToCart: function addToCart(dish) {
+      if (sessionStorage.getItem("cart") != null) {
+        if (this.cart[0].user_id != this.restaurant.id) {
+          this.checkCart();
+          this.addToCart().preventDefault();
+        }
+      }
+
+      if (sessionStorage.getItem("cart") == null) {
+        sessionStorage.setItem("cart", JSON.stringify([]));
+      }
+
+      var cart = JSON.parse(sessionStorage.getItem("cart"));
+      var index = cart.findIndex(function (item) {
+        return item.id == dish.id;
+      });
+
+      if (index == -1) {
+        dish.quantity = 1;
+        cart.push(dish);
+      } else {
+        cart[index].quantity++;
+      }
+
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+      this.cart = JSON.parse(sessionStorage.getItem("cart"));
+      this.partialTotal = round(this.cart.reduce(function (acc, dish) {
+        return acc + dish.price * dish.quantity;
+      }, 0), 2);
+      sessionStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
+      this.total = this.partialTotal + this.restaurant.delivery_price;
+      sessionStorage.setItem("total", JSON.stringify(this.total));
+    },
+    //check if the dish user_id has the same id of the restaurant, if not, show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
+    checkCart: function checkCart() {
+      if (this.cart.length > 0) {
+        if (this.cart[0].user_id != this.restaurant.id) {
+          var modal = document.getElementById("modal-cart");
+          modal.classList.replace("d-none", "d-flex");
+        }
+      }
+    },
+    closeModalCart: function closeModalCart() {
+      var modal = document.getElementById("modal-cart");
+      modal.classList.replace("d-flex", "d-none");
+    },
+    removeAllFromSession: function removeAllFromSession() {
+      sessionStorage.removeItem("cart");
+      sessionStorage.removeItem("partialTotal");
+      sessionStorage.removeItem("total");
+      this.cart = [];
+      this.partialTotal = 0;
+      this.total = 0;
+      this.closeModalCart();
+    },
+    removeOneFromCart: function removeOneFromCart(dish) {
+      var cart = JSON.parse(sessionStorage.getItem("cart"));
+      var index = cart.findIndex(function (item) {
+        return item.id == dish.id;
+      });
+
+      if (index !== -1) {
+        cart[index].quantity--;
+
+        if (cart[index].quantity == 0) {
+          cart.splice(index, 1);
+        }
+      }
+
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+      this.cart = JSON.parse(sessionStorage.getItem("cart"));
+      this.partialTotal = round(this.cart.reduce(function (acc, dish) {
+        return acc + dish.price * dish.quantity;
+      }, 0), 2);
+      sessionStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
+      this.total = this.partialTotal + this.restaurant.delivery_price;
+      sessionStorage.setItem("total", JSON.stringify(this.total));
+    },
+    removeAllFromCart: function removeAllFromCart(dish) {
+      var cart = JSON.parse(sessionStorage.getItem("cart"));
+      var index = cart.findIndex(function (item) {
+        return item.id == dish.id;
+      });
+
+      if (index !== -1) {
+        cart.splice(index, 1);
+      }
+
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+      this.cart = JSON.parse(sessionStorage.getItem("cart"));
+      this.partialTotal = round(this.cart.reduce(function (acc, dish) {
+        return acc + dish.price * dish.quantity;
+      }, 0), 2);
+      sessionStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
+      this.total = this.partialTotal + this.restaurant.delivery_price;
+      sessionStorage.setItem("total", JSON.stringify(this.total));
+    }
   }
 });
 
@@ -45261,14 +45387,16 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************!*\
   !*** ./resources/js/Pages/TheMenu.vue ***!
   \****************************************/
-/*! exports provided: default */
+/*! exports provided: round, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TheMenu_vue_vue_type_template_id_08626c52_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TheMenu.vue?vue&type=template&id=08626c52&scoped=true& */ "./resources/js/Pages/TheMenu.vue?vue&type=template&id=08626c52&scoped=true&");
 /* harmony import */ var _TheMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TheMenu.vue?vue&type=script&lang=js& */ "./resources/js/Pages/TheMenu.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _TheMenu_vue_vue_type_style_index_0_id_08626c52_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TheMenu.vue?vue&type=style&index=0&id=08626c52&lang=scss&scoped=true& */ "./resources/js/Pages/TheMenu.vue?vue&type=style&index=0&id=08626c52&lang=scss&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "round", function() { return _TheMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["round"]; });
+
+/* harmony import */ var _TheMenu_vue_vue_type_style_index_0_id_08626c52_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TheMenu.vue?vue&type=style&index=0&id=08626c52&lang=scss&scoped=true& */ "./resources/js/Pages/TheMenu.vue?vue&type=style&index=0&id=08626c52&lang=scss&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -45300,13 +45428,15 @@ component.options.__file = "resources/js/Pages/TheMenu.vue"
 /*!*****************************************************************!*\
   !*** ./resources/js/Pages/TheMenu.vue?vue&type=script&lang=js& ***!
   \*****************************************************************/
-/*! exports provided: default */
+/*! exports provided: default, round */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TheMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./TheMenu.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/TheMenu.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TheMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "round", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TheMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["round"]; });
+
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TheMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -46062,7 +46192,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! D:\Paolo\Documenti Master Boolean\Esercizi Boolean Master\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })

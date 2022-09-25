@@ -31,10 +31,34 @@
 
 <script>
 import axios from 'axios';
+
+export function round(number, precision) {
+    "use strict";
+    precision = precision ? +precision : 0;
+    var sNumber = number + "",
+        periodIndex = sNumber.indexOf("."),
+        factor = Math.pow(10, precision);
+    if (periodIndex === -1 || precision < 0) {
+        return Math.round(number * factor) / factor;
+    }
+    number = +number;
+    // sNumber[periodIndex + precision + 1] is the last digit
+    if (sNumber[periodIndex + precision + 1] >= 5) {
+        // Correcting float error
+        // factor * 10 to use one decimal place beyond the precision
+        number += (number < 0 ? -1 : 1) / (factor * 10);
+    }
+    return +number.toFixed(precision);
+}
+
 export default {
     data() {
         return {
-            restaurant: {}
+            restaurant: {},
+            cart:{},
+            quantity: 1,
+            partialTotal: 0,
+            total: 0,
         }
     },
     mounted() {
@@ -43,7 +67,113 @@ export default {
             .then((resp) => {
                 this.restaurant = resp.data
                 console.log(this.restaurant)
-            })
+            }),
+            this.cart = JSON.parse(sessionStorage.getItem("cart"));
+    },
+    methods:{
+        addToCart(dish) {
+            if (sessionStorage.getItem("cart") != null) {
+                if (this.cart[0].user_id != this.restaurant.id)  {
+                    this.checkCart();
+                    this.addToCart().preventDefault();
+                }
+            }
+            if (sessionStorage.getItem("cart") == null) {
+                sessionStorage.setItem("cart", JSON.stringify([]));
+            }
+            let cart = JSON.parse(sessionStorage.getItem("cart"));
+            let index = cart.findIndex((item) => item.id == dish.id);
+            if (index == -1) {
+                dish.quantity = 1;
+                cart.push(dish);
+            } else {
+                cart[index].quantity++;
+            }
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+            this.cart = JSON.parse(sessionStorage.getItem("cart"));
+            this.partialTotal = round(
+                this.cart.reduce(
+                    (acc, dish) => acc + dish.price * dish.quantity,
+                    0
+                ),
+                2
+            );
+            sessionStorage.setItem(
+                "partialTotal",
+                JSON.stringify(this.partialTotal)
+            );
+            this.total = this.partialTotal + this.restaurant.delivery_price;
+            sessionStorage.setItem("total", JSON.stringify(this.total));
+        },
+        //check if the dish user_id has the same id of the restaurant, if not, show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
+        checkCart() {
+            if (this.cart.length > 0) {
+                if (this.cart[0].user_id != this.restaurant.id) {
+                    let modal = document.getElementById("modal-cart");
+                    modal.classList.replace("d-none", "d-flex");
+                }
+            }
+        },
+        closeModalCart() {
+            let modal = document.getElementById("modal-cart");
+            modal.classList.replace("d-flex", "d-none");
+        },
+        removeAllFromSession() {
+            sessionStorage.removeItem("cart");
+            sessionStorage.removeItem("partialTotal");
+            sessionStorage.removeItem("total");
+            this.cart = [];
+            this.partialTotal = 0;
+            this.total = 0;
+            this.closeModalCart();
+        },
+        removeOneFromCart(dish) {
+            let cart = JSON.parse(sessionStorage.getItem("cart"));
+            let index = cart.findIndex((item) => item.id == dish.id);
+            if (index !== -1) {
+                cart[index].quantity--;
+                if (cart[index].quantity == 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+            this.cart = JSON.parse(sessionStorage.getItem("cart"));
+            this.partialTotal = round(
+                this.cart.reduce(
+                    (acc, dish) => acc + dish.price * dish.quantity,
+                    0
+                ),
+                2
+            );
+            sessionStorage.setItem(
+                "partialTotal",
+                JSON.stringify(this.partialTotal)
+            );
+            this.total = this.partialTotal + this.restaurant.delivery_price;
+            sessionStorage.setItem("total", JSON.stringify(this.total));
+        },
+        removeAllFromCart(dish) {
+            let cart = JSON.parse(sessionStorage.getItem("cart"));
+            let index = cart.findIndex((item) => item.id == dish.id);
+            if (index !== -1) {
+                cart.splice(index, 1);
+            }
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+            this.cart = JSON.parse(sessionStorage.getItem("cart"));
+            this.partialTotal = round(
+                this.cart.reduce(
+                    (acc, dish) => acc + dish.price * dish.quantity,
+                    0
+                ),
+                2
+            );
+            sessionStorage.setItem(
+                "partialTotal",
+                JSON.stringify(this.partialTotal)
+            );
+            this.total = this.partialTotal + this.restaurant.delivery_price;
+            sessionStorage.setItem("total", JSON.stringify(this.total));
+        },
     }
 }
 </script>
