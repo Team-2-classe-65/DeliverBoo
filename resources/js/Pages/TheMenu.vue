@@ -1,5 +1,43 @@
 <template>
     <div>
+        <div
+                id="modal-cart"
+                style="z-index: 5"
+                tabindex="-1"
+                class="modal-bg position-fixed top-0 bottom-0 end-0 start-0 d-none align-items-center justify-content-center px-3"
+            >
+                <div class="modal-dialog bg-white rounded p-3">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                Hai degli elementi nel carrello
+                            </h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Per accedere ad altro ristorante bisogna
+                                svuotare il carrello.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- button to close the modal -->
+                            <button
+                                class="btn btn-secondary"
+                                @click="closeModalCart()"
+                            >
+                                Continua sulla pagina
+                            </button>
+
+                            <button
+                                class="btn btn-danger mt-3"
+                                @click="removeAllFromSession()"
+                            >
+                                Svuota carrello
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div v-if="restaurant.slug">
             <img class="top-img" :src="restaurant.restaurant_img" alt="">
             <div class="container py-5">
@@ -12,19 +50,67 @@
                                 <h5 class="card-title">{{ dish.name }}</h5>
                                 <p class="card-text mt-3">Prezzo: {{dish.price }}€</p>
                                 <div>
-                                    <span class="border border-2 border-dark rounded p-1 me-1"><i
+                                    <span class="border border-2 border-dark rounded p-1 me-1" @click="addToCart(dish)"><i
                                             class="fa-solid fa-plus"></i></span>
-                                    <span class="border border-2 border-dark rounded p-1"><i
+                                    <span class="border border-2 border-dark rounded p-1" @click="removeOneFromCart(dish)"><i
                                             class="fa-solid fa-minus"></i></span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="fs-2">Carrello</div>
-                        <div>Total Price</div>
+                <div class="border border-2 rounded">
+                    <div class="">
+                        <div
+                    v-for="dish in cart"
+                    :key="dish.id"
+                    class="row g-3"
+                >
+                    <div class="col-3">
+                        <div class="dish-image">
+                            <!-- image of the dish -->
+                            <img
+                                :src="'Storage/' + dish.dish_img"
+                                :alt="dish.name"
+                                class="img-thumbnail plate-img img-dish-cart"
+                            />
+                        </div>
                     </div>
+
+                    <div class="col-9 dish-information">
+                        <div class="dish-and-price">
+                            <!-- title and price -->
+                            <p class="text-orange">{{ dish.name }}</p>
+                            <p class="ps-1 price text-nowrap">
+                                € {{ dish.price }}
+                            </p>
+                        </div>
+
+                        <!-- cart quantity handle -->
+                        <div
+                            class="d-flex align-items-center cart-quantity-button"
+                        >
+                            <!-- bin icon -->
+                            <a
+                                class="no-decoration"
+                                href="http://"
+                                @click="removeAllFromCart(dish)"
+                                ><i class="fa-solid fa-trash no-decoration"></i
+                            ></a>
+                            <!-- add and remove item from cart  -->
+                            <div
+                               
+                            >
+                                <div class="display-num-pill-button">
+                                    {{ dish.quantity }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+                    
                 </div>
             </div>
         </div>
@@ -78,6 +164,14 @@ export default {
             this.cart = JSON.parse(sessionStorage.getItem("cart"));
     },
     methods:{
+        showDetails(id) {
+            let modal = document.getElementById("modal-" + id);
+            modal.classList.replace("d-none", "d-flex");
+        },
+        hideDetails(id) {
+            let modal = document.getElementById("modal-" + id);
+            modal.classList.replace("d-flex", "d-none");
+        },
         addToCart(dish) {
             if (sessionStorage.getItem("cart") != null) {
                 if (this.cart[0].user_id != this.restaurant.id)  {
@@ -133,6 +227,7 @@ export default {
             this.partialTotal = 0;
             this.total = 0;
             this.closeModalCart();
+            
         },
         removeOneFromCart(dish) {
             let cart = JSON.parse(sessionStorage.getItem("cart"));
@@ -158,6 +253,13 @@ export default {
             );
             this.total = this.partialTotal + this.restaurant.delivery_price;
             sessionStorage.setItem("total", JSON.stringify(this.total));
+            if (this.cart.length == 0) {
+                sessionStorage.removeItem("cart");
+                sessionStorage.removeItem("partialTotal");
+                sessionStorage.removeItem("total");
+                this.partialTotal = 0;
+                this.total = 0;
+            }
         },
         removeAllFromCart(dish) {
             let cart = JSON.parse(sessionStorage.getItem("cart"));
@@ -180,6 +282,13 @@ export default {
             );
             this.total = this.partialTotal + this.restaurant.delivery_price;
             sessionStorage.setItem("total", JSON.stringify(this.total));
+            if (this.cart.length == 0) {
+                sessionStorage.removeItem("cart");
+                sessionStorage.removeItem("partialTotal");
+                sessionStorage.removeItem("total");
+                this.partialTotal = 0;
+                this.total = 0;
+            }
         },
     }
 }
@@ -205,6 +314,11 @@ export default {
 
 .restaurant-img {
     height: 220px;
+    object-fit: cover;
+}
+.img-dish-cart{
+    height: 100px;
+    width: 100%;
     object-fit: cover;
 }
 </style>
