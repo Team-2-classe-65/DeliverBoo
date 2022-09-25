@@ -5760,7 +5760,9 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", {
+  return _c("div", {
+    staticClass: "bg-light"
+  }, [_c("div", {
     staticClass: "modal-bg position-fixed top-0 bottom-0 end-0 start-0 d-none align-items-center justify-content-center px-3",
     staticStyle: {
       "z-index": "5"
@@ -5855,7 +5857,7 @@ var render = function render() {
   }), 0)]), _vm._v(" "), _c("div", {
     staticClass: "col-lg-5 col-xl-4 col-12"
   }, [_c("div", {
-    staticClass: "border border-2 border-dark rounded pt-3 my-cart"
+    staticClass: "pt-3 my-cart border border-1"
   }, [_c("h1", {
     staticClass: "text-center text-uppercase fw-bold"
   }, [_vm._v("Il tuo carrello")]), _vm._v(" "), _vm._l(_vm.cart, function (dish) {
@@ -11680,7 +11682,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 600px;\n  overflow-x: hidden;\n  overflow-y: auto;\n}", ""]);
+exports.push([module.i, ".top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 600px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n\n/* ===== Scrollbar CSS ===== */\n/* Firefox */\n*[data-v-08626c52] {\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n}\n\n/* Chrome, Edge, and Safari */\n*[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n*[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n*[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
 
 // exports
 

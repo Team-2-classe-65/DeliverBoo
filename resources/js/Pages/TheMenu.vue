@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-light">
         <div id="modal-cart" style="z-index: 5" tabindex="-1"
             class="modal-bg position-fixed top-0 bottom-0 end-0 start-0 d-none align-items-center justify-content-center px-3">
             <div class="modal-dialog">
@@ -61,7 +61,7 @@
                     </div>
                     <!-- Carrello -->
                     <div class="col-lg-5 col-xl-4 col-12">
-                        <div class="border border-2 border-dark rounded pt-3 my-cart">
+                        <div class="pt-3 my-cart border border-1">
                             <h1 class="text-center text-uppercase fw-bold">Il tuo carrello</h1>
                             <div v-for="dish in cart" :key="dish.id" class="row my-3 px-3">
                                 <div class="col-3">
@@ -394,7 +394,30 @@ export default {
 
 .my-cart {
     max-height: 600px;
+    background-color: white;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #00ccbc #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #00ccbc;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
 }
 </style>
