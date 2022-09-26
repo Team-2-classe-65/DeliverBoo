@@ -12,7 +12,7 @@ class RestaurantController extends Controller
     {
         $restaurant = User::where("slug", $slug)->first();
 
-        $restaurant->load("dishes");
+        $restaurant->load("dishes","categories");
 
         if ($restaurant->restaurant_img) {
             $restaurant->restaurant_img = asset("storage/" . $restaurant->restaurant_img);

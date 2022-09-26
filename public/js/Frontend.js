@@ -5230,9 +5230,9 @@ function round(number, precision) {
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/" + this.$route.params.slug).then(function (resp) {
       _this.restaurant = resp.data;
       console.log(_this.restaurant);
-    }), this.cart = JSON.parse(sessionStorage.getItem("cart"));
-    this.partialTotal = JSON.parse(sessionStorage.getItem("partialTotal"));
-    this.total = JSON.parse(sessionStorage.getItem("total"));
+    }), this.cart = JSON.parse(localStorage.getItem("cart"));
+    this.partialTotal = JSON.parse(localStorage.getItem("partialTotal"));
+    this.total = JSON.parse(localStorage.getItem("total"));
   },
   methods: {
     // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
@@ -5246,18 +5246,18 @@ function round(number, precision) {
     },
     // this function add dishes to cart
     addToCart: function addToCart(dish) {
-      if (sessionStorage.getItem("cart") != null) {
+      if (localStorage.getItem("cart") != null) {
         if (this.cart[0].user_id != this.restaurant.id) {
           this.checkCart();
           this.addToCart().preventDefault();
         }
       }
 
-      if (sessionStorage.getItem("cart") == null) {
-        sessionStorage.setItem("cart", JSON.stringify([]));
+      if (localStorage.getItem("cart") == null) {
+        localStorage.setItem("cart", JSON.stringify([]));
       }
 
-      var cart = JSON.parse(sessionStorage.getItem("cart"));
+      var cart = JSON.parse(localStorage.getItem("cart"));
       var index = cart.findIndex(function (item) {
         return item.id == dish.id;
       });
@@ -5269,14 +5269,14 @@ function round(number, precision) {
         cart[index].quantity++;
       }
 
-      sessionStorage.setItem("cart", JSON.stringify(cart));
-      this.cart = JSON.parse(sessionStorage.getItem("cart"));
+      localStorage.setItem("cart", JSON.stringify(cart));
+      this.cart = JSON.parse(localStorage.getItem("cart"));
       this.partialTotal = round(this.cart.reduce(function (acc, dish) {
         return acc + dish.price * dish.quantity;
       }, 0), 2);
-      sessionStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
+      localStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
       this.total = this.partialTotal;
-      sessionStorage.setItem("total", JSON.stringify(this.total));
+      localStorage.setItem("total", JSON.stringify(this.total));
     },
     //check if the dish user_id has the same id of the restaurant, if not, 
     //show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
@@ -5293,9 +5293,9 @@ function round(number, precision) {
       modal.classList.replace("d-flex", "d-none");
     },
     removeAllFromSession: function removeAllFromSession() {
-      sessionStorage.removeItem("cart");
-      sessionStorage.removeItem("partialTotal");
-      sessionStorage.removeItem("total");
+      localStorage.removeItem("cart");
+      localStorage.removeItem("partialTotal");
+      localStorage.removeItem("total");
       this.cart = [];
       this.partialTotal = 0;
       this.total = 0;
@@ -5303,7 +5303,7 @@ function round(number, precision) {
     },
     removeOneFromCart: function removeOneFromCart(dish) {
       if (this.cart && this.cart.length > 0) {
-        var cart = JSON.parse(sessionStorage.getItem("cart"));
+        var cart = JSON.parse(localStorage.getItem("cart"));
         var index = this.cart.findIndex(function (item) {
           return item.id == dish.id;
         });
@@ -5316,26 +5316,26 @@ function round(number, precision) {
           }
         }
 
-        sessionStorage.setItem("cart", JSON.stringify(cart));
-        this.cart = JSON.parse(sessionStorage.getItem("cart"));
+        localStorage.setItem("cart", JSON.stringify(cart));
+        this.cart = JSON.parse(localStorage.getItem("cart"));
         this.partialTotal = round(this.cart.reduce(function (acc, dish) {
           return acc + dish.price * dish.quantity;
         }, 0), 2);
-        sessionStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
+        localStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
         this.total = this.partialTotal + this.restaurant.delivery_price;
-        sessionStorage.setItem("total", JSON.stringify(this.total));
+        localStorage.setItem("total", JSON.stringify(this.total));
 
         if (this.cart.length == 0) {
-          sessionStorage.removeItem("cart");
-          sessionStorage.removeItem("partialTotal");
-          sessionStorage.removeItem("total");
+          localStorage.removeItem("cart");
+          localStorage.removeItem("partialTotal");
+          localStorage.removeItem("total");
           this.partialTotal = 0;
           this.total = 0;
         }
       }
     },
     removeAllFromCart: function removeAllFromCart(dish) {
-      var cart = JSON.parse(sessionStorage.getItem("cart"));
+      var cart = JSON.parse(localStorage.getItem("cart"));
       var index = cart.findIndex(function (item) {
         return item.id == dish.id;
       });
@@ -5344,19 +5344,19 @@ function round(number, precision) {
         cart.splice(index, 1);
       }
 
-      sessionStorage.setItem("cart", JSON.stringify(cart));
-      this.cart = JSON.parse(sessionStorage.getItem("cart"));
+      localStorage.setItem("cart", JSON.stringify(cart));
+      this.cart = JSON.parse(localStorage.getItem("cart"));
       this.partialTotal = round(this.cart.reduce(function (acc, dish) {
         return acc + dish.price * dish.quantity;
       }, 0), 2);
-      sessionStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
+      localStorage.setItem("partialTotal", JSON.stringify(this.partialTotal));
       this.total = this.partialTotal;
-      sessionStorage.setItem("total", JSON.stringify(this.total));
+      localStorage.setItem("total", JSON.stringify(this.total));
 
       if (this.cart.length == 0) {
-        sessionStorage.removeItem("cart");
-        sessionStorage.removeItem("partialTotal");
-        sessionStorage.removeItem("total");
+        localStorage.removeItem("cart");
+        localStorage.removeItem("partialTotal");
+        localStorage.removeItem("total");
         this.partialTotal = 0;
         this.total = 0;
       }
@@ -5793,13 +5793,29 @@ var render = function render() {
         return _vm.removeAllFromSession();
       }
     }
-  }, [_vm._v("\n                            Svuota carrello\n                        ")])])])])])]), _vm._v(" "), _c("div", [_c("img", {
+  }, [_vm._v("\n                            Svuota carrello\n                        ")])])])])])]), _vm._v(" "), _c("div", [_c("div", {
+    staticClass: "container py-5"
+  }, [_c("div", {
+    staticClass: "row"
+  }, [_c("div", {
+    staticClass: "col-4"
+  }, [_c("img", {
     staticClass: "top-img",
     attrs: {
       src: _vm.restaurant.restaurant_img,
       alt: ""
     }
-  }), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "col-8"
+  }, [_c("h1", {
+    staticClass: "text-uppercase fw-bold"
+  }, [_vm._v(_vm._s(_vm.restaurant.name))]), _vm._v(" "), _vm._l(_vm.restaurant.categories, function (category) {
+    return _c("span", {
+      staticClass: "me-2"
+    }, [_vm._v("●" + _vm._s(category.name))]);
+  }), _vm._v(" "), _c("h5", {
+    staticClass: "my-3"
+  }, [_c("strong", [_vm._v("Email:")]), _vm._v(" " + _vm._s(_vm.restaurant.email))]), _vm._v(" "), _c("h5", [_c("strong", [_vm._v("Indirizzo:")]), _vm._v(" " + _vm._s(_vm.restaurant.address))])], 2)])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
     staticClass: "container py-5"
   }, [_c("div", {
     staticClass: "fs-2 text-uppercase fw-bold mb-3"
@@ -5808,7 +5824,7 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "col-lg-7 col-xl-8 col-12"
   }, [_c("div", {
-    staticClass: "row g-3"
+    staticClass: "row g-3 dish-list"
   }, _vm._l(_vm.restaurant.dishes, function (dish) {
     return _c("div", {
       key: dish.id,
@@ -5817,11 +5833,6 @@ var render = function render() {
       staticClass: "card",
       staticStyle: {
         height: "300px"
-      },
-      attrs: {
-        "data-aos": "zoom-in",
-        "data-aos-duration": "700",
-        "data-aos-delay": "100"
       }
     }, [_c("img", {
       staticClass: "card-img-top restaurant-img",
@@ -11682,7 +11693,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".top-img[data-v-08626c52] {\n  width: 100%;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 600px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n\n/* ===== Scrollbar CSS ===== */\n/* Firefox */\n*[data-v-08626c52] {\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n}\n\n/* Chrome, Edge, and Safari */\n*[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n*[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n*[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
+exports.push([module.i, ".top-img[data-v-08626c52] {\n  width: 100%;\n  min-height: 120px;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.dish-list[data-v-08626c52] {\n  max-height: 600px;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: transparent;\n  /* Chrome, Edge, and Safari */\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar {\n  width: 0px;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 600px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n  /* Chrome, Edge, and Safari */\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
 
 // exports
 
