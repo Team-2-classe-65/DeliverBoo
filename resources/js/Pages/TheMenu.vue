@@ -119,7 +119,7 @@
             </div>
         </div>
 
-        <!-- <div class="checkout-open mt-3">
+        <div class=" mb-3 container checkout-open mt-3">
                             <h2 class="pt-3 text-white text-shadow">Checkout</h2>
                             <form
                                 action=""
@@ -186,7 +186,7 @@
                                     Ordina
                                 </button>
                             </form>
-                        </div> -->
+                        </div>
 
     </div>
 
