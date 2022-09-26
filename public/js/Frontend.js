@@ -5221,7 +5221,12 @@ function round(number, precision) {
       cart: {},
       quantity: 1,
       partialTotal: 0,
-      total: 0
+      total: 0,
+      name: '',
+      surname: '',
+      address: '',
+      mail: '',
+      phone: ''
     };
   },
   mounted: function mounted() {
@@ -5360,6 +5365,41 @@ function round(number, precision) {
         this.partialTotal = 0;
         this.total = 0;
       }
+    },
+    purchase: function purchase() {
+      var button = document.querySelector('#submit-button');
+      braintree.dropin.create({
+        authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
+        selector: '#dropin-container'
+      }, function (err, instance) {
+        if (err) {
+          // An error in the create call is likely due to
+          // incorrect configuration values or network issues
+          return;
+        }
+
+        button.addEventListener('click', function () {
+          instance.requestPaymentMethod(function (err, payload) {
+            if (err) {
+              // An appropriate error will be shown in the UI
+              return;
+            } // Submit payload.nonce to your server
+
+          });
+        });
+      });
+    },
+    onFormSubmit: function onFormSubmit() {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/orders", {
+        user_id: this.restaurant.id,
+        name: this.name,
+        surname: this.surname,
+        address: this.address,
+        mail: this.mail,
+        phone: this.phone
+      }).then(function (resp) {
+        console.log(resp.data);
+      });
     }
   }
 });
@@ -5910,7 +5950,174 @@ var render = function render() {
     staticClass: "fs-5"
   }, [_vm._v("Total price")]), _vm._v(" "), _c("div", {
     staticClass: "fs-5"
-  }, [_vm._v(_vm._s(_vm.partialTotal) + "€")])])])], 2)])])])])]);
+  }, [_vm._v(_vm._s(_vm.partialTotal) + "€")])]), _vm._v(" "), _c("div", {
+    attrs: {
+      id: "dropin-container"
+    }
+  }), _vm._v(" "), _c("button", {
+    staticClass: "button button--small button--green",
+    attrs: {
+      id: "submit-button"
+    },
+    on: {
+      click: _vm.purchase
+    }
+  }, [_vm._v("Purchase")])])], 2)])])])]), _vm._v(" "), _c("div", {
+    staticClass: "mb-3 container checkout-open mt-3"
+  }, [_c("h2", {
+    staticClass: "pt-3 text-white text-shadow"
+  }, [_vm._v("Checkout")]), _vm._v(" "), _c("form", {
+    attrs: {
+      action: "",
+      method: "post",
+      enctype: "multipart/form-data"
+    },
+    on: {
+      submit: function submit($event) {
+        $event.preventDefault();
+        return _vm.onFormSubmit.apply(null, arguments);
+      }
+    }
+  }, [_c("div", {
+    staticClass: "form-group my-3"
+  }, [_c("label", {
+    staticClass: "fw-semibold text-orange fs-5 pb-1"
+  }, [_vm._v("Nome*")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.name,
+      expression: "name"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      type: "text",
+      name: "name",
+      required: ""
+    },
+    domProps: {
+      value: _vm.name
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.name = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group my-3"
+  }, [_c("label", {
+    staticClass: "fw-semibold text-orange fs-5 pb-1"
+  }, [_vm._v("Cognome*")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.surname,
+      expression: "surname"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      type: "text",
+      name: "surname",
+      required: ""
+    },
+    domProps: {
+      value: _vm.surname
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.surname = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group my-3"
+  }, [_c("label", {
+    staticClass: "fw-semibold text-orange fs-5 pb-1"
+  }, [_vm._v("Indirizzo*")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.address,
+      expression: "address"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      type: "text",
+      name: "address",
+      required: ""
+    },
+    domProps: {
+      value: _vm.address
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.address = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group my-3"
+  }, [_c("label", {
+    staticClass: "fw-semibold text-orange fs-5 pb-1"
+  }, [_vm._v("Email*")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.mail,
+      expression: "mail"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      type: "text",
+      name: "mail",
+      required: ""
+    },
+    domProps: {
+      value: _vm.mail
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.mail = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "form-group my-3"
+  }, [_c("label", {
+    staticClass: "fw-semibold text-orange fs-5 pb-1"
+  }, [_vm._v("Numero di telefono*")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.phone,
+      expression: "phone"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      type: "text",
+      name: "phone",
+      required: ""
+    },
+    domProps: {
+      value: _vm.phone
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.phone = $event.target.value;
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    attrs: {
+      id: "dropin-container"
+    }
+  }), _vm._v(" "), _c("button", {
+    staticClass: "btn btn-primary",
+    attrs: {
+      id: "submit-button"
+    }
+  }, [_vm._v("\n                                Ordina\n                            ")])])])]);
 };
 
 var staticRenderFns = [function () {
@@ -6003,7 +6210,7 @@ var staticRenderFns = [function () {
     }
   }, [_c("div", {
     staticClass: "team-2 fs-1 fw-bold"
-  }, [_vm._v("#A casa tua con deliverboo By Team 2")])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("#A casa tua con deliveBoo By Team 2")])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
     staticClass: "d-flex justify-content-center"
@@ -11693,7 +11900,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".top-img[data-v-08626c52] {\n  width: 100%;\n  min-height: 120px;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.dish-list[data-v-08626c52] {\n  max-height: 600px;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: transparent;\n  /* Chrome, Edge, and Safari */\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar {\n  width: 0px;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 600px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n  /* Chrome, Edge, and Safari */\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
+exports.push([module.i, ".button[data-v-08626c52] {\n  cursor: pointer;\n  font-weight: 500;\n  left: 3px;\n  line-height: inherit;\n  position: relative;\n  text-decoration: none;\n  text-align: center;\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 3px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  display: inline-block;\n}\n.button--small[data-v-08626c52] {\n  padding: 10px 20px;\n  font-size: 0.875rem;\n}\n.button--green[data-v-08626c52] {\n  outline: none;\n  background-color: #64d18a;\n  border-color: #64d18a;\n  color: white;\n  transition: all 200ms ease;\n}\n.button--green[data-v-08626c52]:hover {\n  background-color: #8bdda8;\n  color: white;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  min-height: 120px;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.dish-list[data-v-08626c52] {\n  max-height: 600px;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: transparent;\n  /* Chrome, Edge, and Safari */\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar {\n  width: 0px;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 600px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n  /* Chrome, Edge, and Safari */\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
 
 // exports
 
@@ -46317,7 +46524,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
