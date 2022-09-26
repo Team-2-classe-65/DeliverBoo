@@ -32,16 +32,29 @@
         </div>
 
         <div>
-            <img class="top-img" :src="restaurant.restaurant_img" alt="">
+            <!-- info ristorante -->
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-4">
+                        <img class="top-img" :src="restaurant.restaurant_img" alt="">
+                    </div>
+                    <div class="col-8">
+                        <h1 class="text-uppercase fw-bold">{{restaurant.name}}</h1>
+                        <span class="me-2" v-for="category in restaurant.categories">&#9679;{{category.name}}</span>
+                        <h5 class="my-3"><strong>Email:</strong> {{restaurant.email}}</h5>
+                        <h5><strong>Indirizzo:</strong> {{restaurant.address}}</h5>
+                    </div>
+                </div>
+            </div>
+            <hr>
             <div class="container py-5">
                 <div class="fs-2 text-uppercase fw-bold mb-3">Scegli i tuoi Piatti</div>
                 <div class="row g-4">
                     <!-- lista piatti -->
                     <div class="col-lg-7 col-xl-8 col-12">
-                        <div class="row g-3">
+                        <div class="row g-3 dish-list">
                             <div class="col-6 col-md-4 col-xl-3" v-for="dish in restaurant.dishes" :key="dish.id">
-                                <div class="card" style="height:300px" data-aos="zoom-in" data-aos-duration="700"
-                                    data-aos-delay="100">
+                                <div class="card" style="height:300px">
                                     <img class="card-img-top restaurant-img" :src="'Storage/' + dish.dish_img"
                                         :alt="dish.name">
                                     <div class="card-body">
@@ -223,9 +236,9 @@ export default {
                 this.restaurant = resp.data
                 console.log(this.restaurant)
             }),
-            this.cart = JSON.parse(sessionStorage.getItem("cart"));
-        this.partialTotal = JSON.parse(sessionStorage.getItem("partialTotal"));
-        this.total = JSON.parse(sessionStorage.getItem("total"));
+            this.cart = JSON.parse(localStorage.getItem("cart"));
+        this.partialTotal = JSON.parse(localStorage.getItem("partialTotal"));
+        this.total = JSON.parse(localStorage.getItem("total"));
     },
     methods: {
         // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
@@ -240,16 +253,16 @@ export default {
 
         // this function add dishes to cart
         addToCart(dish) {
-            if (sessionStorage.getItem("cart") != null) {
+            if (localStorage.getItem("cart") != null) {
                 if (this.cart[0].user_id != this.restaurant.id) {
                     this.checkCart();
                     this.addToCart().preventDefault();
                 }
             }
-            if (sessionStorage.getItem("cart") == null) {
-                sessionStorage.setItem("cart", JSON.stringify([]));
+            if (localStorage.getItem("cart") == null) {
+                localStorage.setItem("cart", JSON.stringify([]));
             }
-            let cart = JSON.parse(sessionStorage.getItem("cart"));
+            let cart = JSON.parse(localStorage.getItem("cart"));
             let index = cart.findIndex((item) => item.id == dish.id);
             if (index == -1) {
                 dish.quantity = 1;
@@ -257,8 +270,8 @@ export default {
             } else {
                 cart[index].quantity++;
             }
-            sessionStorage.setItem("cart", JSON.stringify(cart));
-            this.cart = JSON.parse(sessionStorage.getItem("cart"));
+            localStorage.setItem("cart", JSON.stringify(cart));
+            this.cart = JSON.parse(localStorage.getItem("cart"));
             this.partialTotal = round(
                 this.cart.reduce(
                     (acc, dish) => acc + dish.price * dish.quantity,
@@ -266,12 +279,12 @@ export default {
                 ),
                 2
             );
-            sessionStorage.setItem(
+            localStorage.setItem(
                 "partialTotal",
                 JSON.stringify(this.partialTotal)
             );
             this.total = this.partialTotal;
-            sessionStorage.setItem("total", JSON.stringify(this.total));
+            localStorage.setItem("total", JSON.stringify(this.total));
         },
         //check if the dish user_id has the same id of the restaurant, if not, 
         //show a popup with a button that allow to empty the cart and another button that allow to go back to the restaurant page
@@ -291,9 +304,9 @@ export default {
 
 
         removeAllFromSession() {
-            sessionStorage.removeItem("cart");
-            sessionStorage.removeItem("partialTotal");
-            sessionStorage.removeItem("total");
+            localStorage.removeItem("cart");
+            localStorage.removeItem("partialTotal");
+            localStorage.removeItem("total");
             this.cart = [];
             this.partialTotal = 0;
             this.total = 0;
@@ -302,7 +315,7 @@ export default {
         },
         removeOneFromCart(dish) {
             if (this.cart && this.cart.length > 0) {
-                let cart = JSON.parse(sessionStorage.getItem("cart"));
+                let cart = JSON.parse(localStorage.getItem("cart"));
                 let index = this.cart.findIndex((item) => item.id == dish.id);
                 if (index !== -1) {
                     cart[index].quantity--;
@@ -310,8 +323,8 @@ export default {
                         cart.splice(index, 1);
                     }
                 }
-                sessionStorage.setItem("cart", JSON.stringify(cart));
-                this.cart = JSON.parse(sessionStorage.getItem("cart"));
+                localStorage.setItem("cart", JSON.stringify(cart));
+                this.cart = JSON.parse(localStorage.getItem("cart"));
                 this.partialTotal = round(
                     this.cart.reduce(
                         (acc, dish) => acc + dish.price * dish.quantity,
@@ -319,16 +332,16 @@ export default {
                     ),
                     2
                 );
-                sessionStorage.setItem(
+                localStorage.setItem(
                     "partialTotal",
                     JSON.stringify(this.partialTotal)
                 );
                 this.total = this.partialTotal + this.restaurant.delivery_price;
-                sessionStorage.setItem("total", JSON.stringify(this.total));
+                localStorage.setItem("total", JSON.stringify(this.total));
                 if (this.cart.length == 0) {
-                    sessionStorage.removeItem("cart");
-                    sessionStorage.removeItem("partialTotal");
-                    sessionStorage.removeItem("total");
+                    localStorage.removeItem("cart");
+                    localStorage.removeItem("partialTotal");
+                    localStorage.removeItem("total");
                     this.partialTotal = 0;
                     this.total = 0;
                 }
@@ -336,13 +349,13 @@ export default {
 
         },
         removeAllFromCart(dish) {
-            let cart = JSON.parse(sessionStorage.getItem("cart"));
+            let cart = JSON.parse(localStorage.getItem("cart"));
             let index = cart.findIndex((item) => item.id == dish.id);
             if (index !== -1) {
                 cart.splice(index, 1);
             }
-            sessionStorage.setItem("cart", JSON.stringify(cart));
-            this.cart = JSON.parse(sessionStorage.getItem("cart"));
+            localStorage.setItem("cart", JSON.stringify(cart));
+            this.cart = JSON.parse(localStorage.getItem("cart"));
             this.partialTotal = round(
                 this.cart.reduce(
                     (acc, dish) => acc + dish.price * dish.quantity,
@@ -350,16 +363,16 @@ export default {
                 ),
                 2
             );
-            sessionStorage.setItem(
+            localStorage.setItem(
                 "partialTotal",
                 JSON.stringify(this.partialTotal)
             );
             this.total = this.partialTotal;
-            sessionStorage.setItem("total", JSON.stringify(this.total));
+            localStorage.setItem("total", JSON.stringify(this.total));
             if (this.cart.length == 0) {
-                sessionStorage.removeItem("cart");
-                sessionStorage.removeItem("partialTotal");
-                sessionStorage.removeItem("total");
+                localStorage.removeItem("cart");
+                localStorage.removeItem("partialTotal");
+                localStorage.removeItem("total");
                 this.partialTotal = 0;
                 this.total = 0;
             }
@@ -372,8 +385,33 @@ export default {
 <style lang="scss" scoped>
 .top-img {
     width: 100%;
+    min-height: 120px;
     max-height: 300px;
     object-fit: cover;
+    border-radius: 10px;
+}
+
+.dish-list {
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: auto;
+    scrollbar-color: transparent;
+
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #00ccbc;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+    }
 }
 
 .my-card {
@@ -397,27 +435,22 @@ export default {
     background-color: white;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
     scrollbar-width: auto;
     scrollbar-color: #00ccbc #ffffff;
-}
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 16px;
-}
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
 
-*::-webkit-scrollbar-track {
-    background: #ffffff;
-}
+    &::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
 
-*::-webkit-scrollbar-thumb {
-    background-color: #00ccbc;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
+    &::-webkit-scrollbar-thumb {
+        background-color: #00ccbc;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+    }
 }
 </style>
