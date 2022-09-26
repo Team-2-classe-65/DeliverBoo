@@ -14,7 +14,10 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <script src="{{ asset("js/frontend.js") }}" defer></script>
-        <!-- Styles -->
+        
+
+        {{-- braintree --}}
+        <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
     </head>
     <body>
         <div id="app"></div> 
