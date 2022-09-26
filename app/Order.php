@@ -13,4 +13,8 @@ class Order extends Model
     public function dishes() {
         return $this->belongsToMany("App\Dish");
     }
+
+    protected $fillable = [
+        "name", "surname", "address", "mail", "phone"
+    ];
 }

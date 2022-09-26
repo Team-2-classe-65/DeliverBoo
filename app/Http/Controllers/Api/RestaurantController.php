@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -21,5 +22,27 @@ class RestaurantController extends Controller
         }
 
         return response()->json($restaurant);
+    }
+
+    public function orders(Request $request){
+
+        $data = $request->validate([
+            "name" =>"required|",
+            "surname" => "required|",
+            "address" => "required|",
+            "mail" => "required|",
+            "phone" => "required|",
+        ]);
+
+        $order = Order::create([
+            "user_id",
+            "name" => $data["name"],
+            "surname" => $data["surname"],
+            "address" => $data["address"],
+            "mail" => $data["mail"],
+            "phone" => $data["phone"],
+        ]);
+
+        return response()->json($order);
     }
 }

@@ -128,6 +128,7 @@
                                 action=""
                                 method="post"
                                 enctype="multipart/form-data"
+                                @submit.prevent="onFormSubmit"
                             >
                                 <div class="form-group my-3">
                                     <label class="fw-semibold text-orange fs-5 pb-1"
@@ -138,6 +139,7 @@
                                         name="name"
                                         class="form-control"
                                         required
+                                        v-model="name"
                                     />
                                 </div>
                                 <div class="form-group my-3">
@@ -146,9 +148,11 @@
                                     >
                                     <input
                                         type="text"
-                                        name="lastname"
+                                        name="surname"
                                         class="form-control"
                                         required
+                                        v-model="surname"
+
                                     />
                                 </div>
                                 <div class="form-group my-3">
@@ -160,6 +164,8 @@
                                         name="address"
                                         class="form-control"
                                         required
+                                        v-model="address"
+
                                     />
                                 </div>
                                 <div class="form-group my-3">
@@ -168,9 +174,11 @@
                                     >
                                     <input
                                         type="text"
-                                        name="email"
+                                        name="mail"
                                         class="form-control"
                                         required
+                                        v-model="mail"
+
                                     />
                                 </div>
                                 <div class="form-group my-3">
@@ -182,6 +190,8 @@
                                         name="phone"
                                         class="form-control"
                                         required
+                                        v-model="phone"
+
                                     />
                                 </div>
                                 <div id="dropin-container"></div>
@@ -236,6 +246,13 @@ export default {
             quantity: 1,
             partialTotal: 0,
             total: 0,
+            name:'',
+            surname:'',
+            address:'',
+            mail:'',
+            phone:'',
+            
+
         }
     },
     mounted() {
@@ -409,7 +426,20 @@ export default {
                     });
                 })
                 });
-            }
+            },
+            onFormSubmit(){
+                axios.post("/api/orders", {
+                    user_id: this.restaurant.id,
+                    name: this.name,
+                    surname: this.surname,
+                    address:this.address,
+                    mail: this.mail,
+                    phone: this.phone,
+                }).
+                    then(resp =>{
+                        console.log(resp.data)
+                    })
+            },
     
     }
 }

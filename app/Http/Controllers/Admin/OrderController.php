@@ -40,4 +40,25 @@ class OrderController extends Controller
         $order->update($data);
         return redirect()->route("admin.orders.edit", $order->id);
     }
+
+    // public function store(Request $request){
+
+    //     $data = $request->validate([
+    //         "name" =>["name"],
+    //         "lastname" => "required|",
+    //         "address" => "required|",
+    //         "email" => "required|",
+    //         "phone" => "required|",
+    //     ]);
+
+    //     $order = Order::create([
+    //         "name" => $data["name"],
+    //         "lastname" => $data["lastname"],
+    //         "address" => $data["address"],
+    //         "email" => $data["email"],
+    //         "phone" => $data["phone"],
+    //     ]);
+    // }
+
+
 }
