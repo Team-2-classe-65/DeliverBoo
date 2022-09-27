@@ -13,7 +13,7 @@ class DishController extends Controller
 {
     private function findBySlug($slug)
     {
-        $dish = Dish::where("slug", $slug)->first();
+        $dish = Dish::where("slug", $slug)->withTrashed()->first();
 
         if (!$dish) {
             abort(404);
@@ -169,8 +169,14 @@ class DishController extends Controller
     public function destroy($slug)
     {
         $dish = $this->findBySlug($slug);
-        Storage::delete($dish->dish_img);
-        $dish->delete();
+
+        if($dish->trashed()) {
+            $dish->forceDelete();
+            Storage::delete($dish->dish_img);
+        } else {
+            $dish->delete();
+        }
+        
         return redirect()->route("admin.dishes.index")->with('deleted', 'Piatto ' . $dish->name . ' eliminato correttamente');
     }
 }

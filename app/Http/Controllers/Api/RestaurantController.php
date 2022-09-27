@@ -32,15 +32,20 @@ class RestaurantController extends Controller
             "address" => "required|",
             "mail" => "required|",
             "phone" => "required|",
+            "user_id" => "required|",
+            "code" => "required|",
+            "total_price" => "required|",
         ]);
 
         $order = Order::create([
-            "user_id",
+            "user_id" => $data["user_id"],
             "name" => $data["name"],
             "surname" => $data["surname"],
             "address" => $data["address"],
             "mail" => $data["mail"],
             "phone" => $data["phone"],
+            "code" => $data["code"],
+            "total_price" => $data["total_price"],
         ]);
 
         return response()->json($order);
