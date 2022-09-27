@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
             <div class="col" data-aos="fade-right">
-                <div class="team-2 fs-1 fw-bold">#A casa tua con deliverboo By Team 2</div>
+                <div class="team-2 fs-1 fw-bold">#A casa tua con deliveBoo By Team 2</div>
             </div>
             <div class="col">
                 <div class="d-flex justify-content-center">

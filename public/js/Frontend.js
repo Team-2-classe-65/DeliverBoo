@@ -5413,6 +5413,21 @@ function round(number, precision) {
           });
         });
       });
+<<<<<<< HEAD
+=======
+    },
+    onFormSubmit: function onFormSubmit() {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/orders", {
+        user_id: this.restaurant.id,
+        name: this.name,
+        surname: this.surname,
+        address: this.address,
+        mail: this.mail,
+        phone: this.phone
+      }).then(function (resp) {
+        console.log(resp.data);
+      });
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     }
   }
 });
@@ -5957,6 +5972,7 @@ var render = function render() {
     staticClass: "fs-5"
   }, [_vm._v("Total price")]), _vm._v(" "), _c("div", {
     staticClass: "fs-5"
+<<<<<<< HEAD
   }, [_vm._v(_vm._s(_vm.partialTotal) + "€")])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-success text-center w-100 fw-bold text-white",
     attrs: {
@@ -5983,22 +5999,37 @@ var render = function render() {
   }, [_c("h2", {
     staticClass: "pt-3 text-shadow text-uppercase"
   }, [_vm._v("Metodo di pagamento")]), _vm._v(" "), _c("div", {
+=======
+  }, [_vm._v(_vm._s(_vm.partialTotal) + "€")])]), _vm._v(" "), _c("div", {
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     attrs: {
       id: "dropin-container"
     }
   }), _vm._v(" "), _c("button", {
+<<<<<<< HEAD
     staticClass: "button button--small button--green w-100",
+=======
+    staticClass: "button button--small button--green",
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     attrs: {
       id: "submit-button"
     },
     on: {
       click: _vm.purchase
     }
+<<<<<<< HEAD
   }, [_vm._v("Inserisci la tua carta")]), _vm._v(" "), _c("div", {
     staticClass: "mb-3 container checkout-open mt-3"
   }, [_c("h2", {
     staticClass: "pt-3 text-shadow text-uppercase"
   }, [_vm._v("Dati personali")]), _vm._v(" "), _c("form", {
+=======
+  }, [_vm._v("Purchase")])])], 2)])])])]), _vm._v(" "), _c("div", {
+    staticClass: "mb-3 container checkout-open mt-3"
+  }, [_c("h2", {
+    staticClass: "pt-3 text-white text-shadow"
+  }, [_vm._v("Checkout")]), _vm._v(" "), _c("form", {
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     attrs: {
       action: "",
       method: "post",
@@ -6014,7 +6045,11 @@ var render = function render() {
     staticClass: "form-group my-3"
   }, [_c("label", {
     staticClass: "fw-semibold text-orange fs-5 pb-1"
+<<<<<<< HEAD
   }, [_vm._v("Nome")]), _vm._v(" "), _c("input", {
+=======
+  }, [_vm._v("Nome*")]), _vm._v(" "), _c("input", {
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6040,7 +6075,11 @@ var render = function render() {
     staticClass: "form-group my-3"
   }, [_c("label", {
     staticClass: "fw-semibold text-orange fs-5 pb-1"
+<<<<<<< HEAD
   }, [_vm._v("Cognome")]), _vm._v(" "), _c("input", {
+=======
+  }, [_vm._v("Cognome*")]), _vm._v(" "), _c("input", {
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6066,7 +6105,11 @@ var render = function render() {
     staticClass: "form-group my-3"
   }, [_c("label", {
     staticClass: "fw-semibold text-orange fs-5 pb-1"
+<<<<<<< HEAD
   }, [_vm._v("Indirizzo")]), _vm._v(" "), _c("input", {
+=======
+  }, [_vm._v("Indirizzo*")]), _vm._v(" "), _c("input", {
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6092,7 +6135,11 @@ var render = function render() {
     staticClass: "form-group my-3"
   }, [_c("label", {
     staticClass: "fw-semibold text-orange fs-5 pb-1"
+<<<<<<< HEAD
   }, [_vm._v("Indirizzo e-mail")]), _vm._v(" "), _c("input", {
+=======
+  }, [_vm._v("Email*")]), _vm._v(" "), _c("input", {
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6118,7 +6165,11 @@ var render = function render() {
     staticClass: "form-group my-3"
   }, [_c("label", {
     staticClass: "fw-semibold text-orange fs-5 pb-1"
+<<<<<<< HEAD
   }, [_vm._v("Numero di\n                                                            telefono")]), _vm._v(" "), _c("input", {
+=======
+  }, [_vm._v("Numero di telefono*")]), _vm._v(" "), _c("input", {
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6145,11 +6196,19 @@ var render = function render() {
       id: "dropin-container"
     }
   }), _vm._v(" "), _c("button", {
+<<<<<<< HEAD
     staticClass: "btn btn-warning",
     attrs: {
       id: "submit-button"
     }
   }, [_vm._v("\n                                                        Conferma pagamento\n                                                    ")])])])])])])])])], 2)])])])])]);
+=======
+    staticClass: "btn btn-primary",
+    attrs: {
+      id: "submit-button"
+    }
+  }, [_vm._v("\n                                Ordina\n                            ")])])])]);
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
 };
 
 var staticRenderFns = [function () {
@@ -6261,7 +6320,7 @@ var staticRenderFns = [function () {
     }
   }, [_c("div", {
     staticClass: "team-2 fs-1 fw-bold"
-  }, [_vm._v("#A casa tua con deliverboo By Team 2")])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("#A casa tua con deliveBoo By Team 2")])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
     staticClass: "d-flex justify-content-center"
@@ -11951,7 +12010,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, ".button[data-v-08626c52] {\n  cursor: pointer;\n  font-weight: 500;\n  left: 3px;\n  line-height: inherit;\n  position: relative;\n  text-decoration: none;\n  text-align: center;\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 3px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  display: inline-block;\n}\n.button--small[data-v-08626c52] {\n  padding: 10px 20px;\n  font-size: 0.875rem;\n}\n.button--green[data-v-08626c52] {\n  outline: none;\n  background-color: #64d18a;\n  border-color: #64d18a;\n  color: white;\n  transition: all 200ms ease;\n}\n.button--green[data-v-08626c52]:hover {\n  background-color: #8bdda8;\n  color: white;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  min-height: 120px;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.dish-list[data-v-08626c52] {\n  max-height: 640px;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: transparent;\n  /* Chrome, Edge, and Safari */\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar {\n  width: 0px;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 400px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n  /* Chrome, Edge, and Safari */\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
+=======
+exports.push([module.i, ".button[data-v-08626c52] {\n  cursor: pointer;\n  font-weight: 500;\n  left: 3px;\n  line-height: inherit;\n  position: relative;\n  text-decoration: none;\n  text-align: center;\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 3px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  display: inline-block;\n}\n.button--small[data-v-08626c52] {\n  padding: 10px 20px;\n  font-size: 0.875rem;\n}\n.button--green[data-v-08626c52] {\n  outline: none;\n  background-color: #64d18a;\n  border-color: #64d18a;\n  color: white;\n  transition: all 200ms ease;\n}\n.button--green[data-v-08626c52]:hover {\n  background-color: #8bdda8;\n  color: white;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  min-height: 120px;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.dish-list[data-v-08626c52] {\n  max-height: 600px;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: transparent;\n  /* Chrome, Edge, and Safari */\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar {\n  width: 0px;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 600px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n  /* Chrome, Edge, and Safari */\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
+>>>>>>> b730ff3e802d31723eb1eae856f3edd6e6a27675
 
 // exports
 
@@ -46575,7 +46638,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
