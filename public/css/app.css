@@ -12632,6 +12632,16 @@ fieldset:disabled .btn {
   }
 }
 
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.title-order {
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .main-container {
   display: flex;
 }
