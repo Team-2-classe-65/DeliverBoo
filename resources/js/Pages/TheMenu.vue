@@ -267,7 +267,7 @@ export default {
                 address: this.address,
                 mail: this.mail,
                 phone: this.phone,
-                code: this.makeCode(15),
+                code: this.makeCode(3) + '-' + this.makeCode(7) + '-' + this.makeCode(7),
                 total_price: this.partialTotal,
             }).
                 then(resp => {
