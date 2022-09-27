@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
             <div class="col" data-aos="fade-right">
-                <div class="team-2 fs-1 fw-bold">#A casa tua con deliveBoo By Team 2</div>
+                <div class="team-2 fs-2 fw-bold">#A casa tua con deliveBoo By Team 2</div>
             </div>
             <div class="col">
                 <div class="d-flex justify-content-center">
@@ -49,9 +49,12 @@
         position: relative;
         transform: rotate(-4deg);
         top: 300px;
+        min-width: 50px;
+        max-width: 500px;
     }
+    
     .bg-home {
-        min-width: 200px;
+        min-width: 100px;
         max-height: 400px;
     }
 </style>
