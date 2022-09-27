@@ -15,6 +15,6 @@ class Order extends Model
     }
 
     protected $fillable = [
-        "name", "surname", "address", "mail", "phone"
+        "user_id","name", "surname", "address", "mail","phone","code","total_price"
     ];
 }

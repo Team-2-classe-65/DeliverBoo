@@ -104,109 +104,94 @@
                             </div>
                             <hr>
                             <!-- Checkout -->
-                            <div class="mt-4">
+                            <div class="mt-4 p-3">
                                 <h1 class="text-center">
                                     <i class="fa-solid fa-cart-shopping me-3"></i>Checkout
                                 </h1>
-                                <div class="d-flex align-items-center justify-content-between p-3">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div class="fs-5">Total price</div>
                                     <div class="fs-5">{{ partialTotal }}€</div>
                                 </div>
 
-                                <div id="dropin-container"></div>
-                                    <button id="submit-button" class="button button--small button--green" @click="purchase">Purchase</button>
+                                <button type="button" class="btn btn-success text-center w-100 fw-bold text-white"
+                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Vai al pagamento
+                                </button>
+                                <!-- Payment modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title text-uppercase" id="staticBackdropLabel">
+                                                    Inserisci i tuoi dati
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h2 class="pt-3 text-shadow text-uppercase">Metodo di pagamento</h2>
+                                                <div id="dropin-container">
+                                                </div>
+                                                <button id="submit-button"
+                                                    class="button button--small button--green w-100"
+                                                    @click="purchase">Inserisci la tua carta</button>
+
+                                                <div class=" mb-3 container checkout-open mt-3">
+                                                    <h2 class="pt-3 text-shadow text-uppercase">Dati personali</h2>
+                                                    <form action="" method="post" enctype="multipart/form-data"
+                                                        @submit.prevent="onFormSubmit">
+                                                        <div class="form-group my-3">
+                                                            <label
+                                                                class="fw-semibold text-orange fs-5 pb-1">Nome</label>
+                                                            <input type="text" name="name" class="form-control" required
+                                                                v-model="name" />
+                                                        </div>
+                                                        <div class="form-group my-3">
+                                                            <label
+                                                                class="fw-semibold text-orange fs-5 pb-1">Cognome</label>
+                                                            <input type="text" name="surname" class="form-control"
+                                                                required v-model="surname" />
+                                                        </div>
+                                                        <div class="form-group my-3">
+                                                            <label
+                                                                class="fw-semibold text-orange fs-5 pb-1">Indirizzo</label>
+                                                            <input type="text" name="address" class="form-control"
+                                                                required v-model="address" />
+                                                        </div>
+                                                        <div class="form-group my-3">
+                                                            <label
+                                                                class="fw-semibold text-orange fs-5 pb-1">Indirizzo e-mail</label>
+                                                            <input type="text" name="mail" class="form-control" required
+                                                                v-model="mail" />
+                                                        </div>
+                                                        <div class="form-group my-3">
+                                                            <label class="fw-semibold text-orange fs-5 pb-1">Numero di
+                                                                telefono</label>
+                                                            <input type="text" name="phone" class="form-control"
+                                                                required v-model="phone" />
+                                                        </div>
+                                                        <div id="dropin-container"></div>
+                                                        <button id="submit-button" class="btn btn-warning">
+                                                            Conferma pagamento
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class=" mb-3 container checkout-open mt-3">
-                            <h2 class="pt-3 text-white text-shadow">Checkout</h2>
-                            <form
-                                action=""
-                                method="post"
-                                enctype="multipart/form-data"
-                                @submit.prevent="onFormSubmit"
-                            >
-                                <div class="form-group my-3">
-                                    <label class="fw-semibold text-orange fs-5 pb-1"
-                                        >Nome*</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        class="form-control"
-                                        required
-                                        v-model="name"
-                                    />
-                                </div>
-                                <div class="form-group my-3">
-                                    <label class="fw-semibold text-orange fs-5 pb-1"
-                                        >Cognome*</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="surname"
-                                        class="form-control"
-                                        required
-                                        v-model="surname"
-
-                                    />
-                                </div>
-                                <div class="form-group my-3">
-                                    <label class="fw-semibold text-orange fs-5 pb-1"
-                                        >Indirizzo*</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="address"
-                                        class="form-control"
-                                        required
-                                        v-model="address"
-
-                                    />
-                                </div>
-                                <div class="form-group my-3">
-                                    <label class="fw-semibold text-orange fs-5 pb-1"
-                                        >Email*</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="mail"
-                                        class="form-control"
-                                        required
-                                        v-model="mail"
-
-                                    />
-                                </div>
-                                <div class="form-group my-3">
-                                    <label class="fw-semibold text-orange fs-5 pb-1"
-                                        >Numero di telefono*</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="phone"
-                                        class="form-control"
-                                        required
-                                        v-model="phone"
-
-                                    />
-                                </div>
-                                <div id="dropin-container"></div>
-                                <button id="submit-button" class="btn btn-primary">
-                                    Ordina
-                                </button>
-                            </form>
-                        </div>
-
-
     </div>
 
 
 
-    
+
 
     <!-- <div v-else class="container py-5 my-5">
             <div class="py-5 my-5 text-center display-1 text-uppercase fw-bold">
@@ -246,13 +231,11 @@ export default {
             quantity: 1,
             partialTotal: 0,
             total: 0,
-            name:'',
-            surname:'',
-            address:'',
-            mail:'',
-            phone:'',
-            
-
+            name: '',
+            surname: '',
+            address: '',
+            mail: '',
+            phone: '',
         }
     },
     mounted() {
@@ -266,6 +249,31 @@ export default {
         this.total = JSON.parse(localStorage.getItem("total"));
     },
     methods: {
+        makeCode(length) {
+            let result = '';
+            let characters = '0123456789';
+            let charactersLength = characters.length;
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() *
+                    charactersLength));
+            }
+            return result;
+        },
+        onFormSubmit() {
+            axios.post("/api/orders", {
+                user_id: this.restaurant.id,
+                name: this.name,
+                surname: this.surname,
+                address: this.address,
+                mail: this.mail,
+                phone: this.phone,
+                code: this.makeCode(15),
+                total_price: this.partialTotal,
+            }).
+                then(resp => {
+                    console.log(resp.data)
+                })
+        },
         // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
         showDetails(id) {
             let modal = document.getElementById("modal-" + id);
@@ -402,13 +410,13 @@ export default {
                 this.total = 0;
             }
         },
-            purchase(){
-                var button = document.querySelector('#submit-button');
+        purchase() {
+            var button = document.querySelector('#submit-button');
 
-                braintree.dropin.create({
+            braintree.dropin.create({
                 authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
                 selector: '#dropin-container'
-                }, function (err, instance) {
+            }, function (err, instance) {
                 if (err) {
                     // An error in the create call is likely due to
                     // incorrect configuration values or network issues
@@ -417,69 +425,56 @@ export default {
 
                 button.addEventListener('click', function () {
                     instance.requestPaymentMethod(function (err, payload) {
-                    if (err) {
-                        // An appropriate error will be shown in the UI
-                        return;
-                    }
+                        if (err) {
+                            // An appropriate error will be shown in the UI
+                            return;
+                        }
 
-                    // Submit payload.nonce to your server
+                        // Submit payload.nonce to your server
                     });
                 })
-                });
-            },
-            onFormSubmit(){
-                axios.post("/api/orders", {
-                    user_id: this.restaurant.id,
-                    name: this.name,
-                    surname: this.surname,
-                    address:this.address,
-                    mail: this.mail,
-                    phone: this.phone,
-                }).
-                    then(resp =>{
-                        console.log(resp.data)
-                    })
-            },
-    
+            });
+        },
     }
 }
 </script>
 
 
 <style lang="scss" scoped>
-    .button {
-  cursor: pointer;
-  font-weight: 500;
-  left: 3px;
-  line-height: inherit;
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 3px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: inline-block;
+.button {
+    cursor: pointer;
+    font-weight: 500;
+    left: 3px;
+    line-height: inherit;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
 }
 
 .button--small {
-  padding: 10px 20px;
-  font-size: 0.875rem;
+    padding: 10px 20px;
+    font-size: 0.875rem;
 }
 
 .button--green {
-  outline: none;
-  background-color: #64d18a;
-  border-color: #64d18a;
-  color: white;
-  transition: all 200ms ease;
+    outline: none;
+    background-color: #64d18a;
+    border-color: #64d18a;
+    color: white;
+    transition: all 200ms ease;
+
+    &:hover {
+        background-color: #8bdda8;
+        color: white;
+    }
 }
 
-.button--green:hover {
-  background-color: #8bdda8;
-  color: white;
-}
 .top-img {
     width: 100%;
     min-height: 120px;
@@ -489,7 +484,7 @@ export default {
 }
 
 .dish-list {
-    max-height: 600px;
+    max-height: 640px;
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: auto;
@@ -528,7 +523,7 @@ export default {
 }
 
 .my-cart {
-    max-height: 600px;
+    max-height: 400px;
     background-color: white;
     overflow-x: hidden;
     overflow-y: auto;
