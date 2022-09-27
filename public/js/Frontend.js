@@ -5263,6 +5263,7 @@ function round(number, precision) {
         total_price: this.partialTotal
       }).then(function (resp) {
         console.log(resp.data);
+        return;
       });
     },
     // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
@@ -5862,7 +5863,9 @@ var render = function render() {
     }, [_vm._v("●" + _vm._s(category.name))]);
   }), _vm._v(" "), _c("h5", {
     staticClass: "my-3"
-  }, [_c("strong", [_vm._v("Email:")]), _vm._v(" " + _vm._s(_vm.restaurant.email))]), _vm._v(" "), _c("h5", [_c("strong", [_vm._v("Indirizzo:")]), _vm._v(" " + _vm._s(_vm.restaurant.address))])], 2)])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+  }, [_c("strong", [_vm._v("Email:")]), _vm._v(" " + _vm._s(_vm.restaurant.email))]), _vm._v(" "), _c("h5", {
+    staticClass: "my-3"
+  }, [_c("strong", [_vm._v("Telefono:")]), _vm._v(" " + _vm._s(_vm.restaurant.phone))]), _vm._v(" "), _c("h5", [_c("strong", [_vm._v("Indirizzo:")]), _vm._v(" " + _vm._s(_vm.restaurant.address))])], 2)])]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
     staticClass: "container py-5"
   }, [_c("div", {
     staticClass: "fs-2 text-uppercase fw-bold mb-3"
@@ -46575,7 +46578,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
