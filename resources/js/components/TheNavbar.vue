@@ -25,7 +25,6 @@
         data(){
             return{
                 name:"TheNavbar",
-                userSearch:'',
             }
         },
         methods:{

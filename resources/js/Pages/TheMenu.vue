@@ -109,7 +109,7 @@
                                 <h1 class="text-center">
                                     <i class="fa-solid fa-cart-shopping me-3"></i>Checkout
                                 </h1>
-                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-flex align-items-center justify-content-between my-3">
                                     <div class="fs-5">Total price</div>
                                     <div class="fs-5">{{ partialTotal }}€</div>
                                 </div>
@@ -272,8 +272,7 @@ export default {
                 total_price: this.partialTotal,
             }).
                 then(resp => {
-                    console.log(resp.data)
-                    return 
+                    window.location.href = "http://127.0.0.1:8000/success"
                 })
         },
         // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi

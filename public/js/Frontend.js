@@ -5262,8 +5262,7 @@ function round(number, precision) {
         code: this.makeCode(3) + '-' + this.makeCode(7) + '-' + this.makeCode(7),
         total_price: this.partialTotal
       }).then(function (resp) {
-        console.log(resp.data);
-        return;
+        window.location.href = "http://127.0.0.1:8000/success";
       });
     },
     // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
@@ -5699,8 +5698,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      name: "TheNavbar",
-      userSearch: ''
+      name: "TheNavbar"
     };
   },
   methods: {}
@@ -5955,7 +5953,7 @@ var render = function render() {
   }), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
     staticClass: "mt-4 p-3"
   }, [_vm._m(2), _vm._v(" "), _c("div", {
-    staticClass: "d-flex align-items-center justify-content-between mb-3"
+    staticClass: "d-flex align-items-center justify-content-between my-3"
   }, [_c("div", {
     staticClass: "fs-5"
   }, [_vm._v("Total price")]), _vm._v(" "), _c("div", {
@@ -46484,7 +46482,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pages_PageNotFound_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pages/PageNotFound.vue */ "./resources/js/Pages/PageNotFound.vue");
 /* harmony import */ var _Pages_TheMenu_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Pages/TheMenu.vue */ "./resources/js/Pages/TheMenu.vue");
 
- // import per la pagina delle categorie di Anna
 
 
 var routes = [{
