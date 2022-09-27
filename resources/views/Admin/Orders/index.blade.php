@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       <div class="col-12">
         <div class="d-flex justify-content-between align-items-center">
-          <h1>Tutti gli ordini</h1>
+            <h1 class="title-order" >Tutti gli ordini</h1>
         </div>
         <table class="table">
           <thead>
