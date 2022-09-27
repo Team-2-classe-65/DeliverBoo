@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/success', function () {
+    return view('success');
+});
+
 Auth::routes();
 
 Route::middleware("auth")
