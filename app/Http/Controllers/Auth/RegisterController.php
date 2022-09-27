@@ -57,6 +57,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'address' => ['required', 'string', 'min:5'],
+            'phone' => ['required', 'digits_between:8,12'],
             'vat' => ['required', 'digits:11'],
             'restaurant_img'=>['required', 'image']
         ]);
@@ -76,6 +77,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'address' => $data['address'],
+            'phone' => $data['phone'],
             'slug'=>Str::slug($data['name']),
             'vat' => $data['vat'],
             'restaurant_img'=>Storage::put('/restaurant_images', $data['restaurant_img'])
