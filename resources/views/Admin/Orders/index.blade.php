@@ -10,8 +10,8 @@
         <table class="table">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>user_id</th>
+              {{-- <th>ID</th>
+              <th>user_id</th> --}}
               <th>code</th>
               <th>name</th>
               <th>surname</th>
@@ -25,9 +25,10 @@
           </thead>
           <tbody>
             @foreach ($orders as $order)
+            @if ($order->user->id === Auth::user()->id)
               <tr>
-                <td>{{ $order->id }}</td>
-                <td>{{ $order->user_id }}</td>
+                {{-- <td>{{ $order->id }}</td>
+                <td>{{ $order->user_id }}</td> --}}
                 <td>{{ $order->code }}</td>
                 <td>{{ $order->name }}</td>
                 <td>{{ $order->surname }}</td>
@@ -37,6 +38,7 @@
                 <td>{{ $order->total_price }}</td>
                 <td>{{$order->created_at}}</td>
               </tr>
+            @endif
             @endforeach
           </tbody>
         </table>
