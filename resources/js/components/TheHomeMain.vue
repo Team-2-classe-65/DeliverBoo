@@ -159,6 +159,7 @@ export default {
                     transition: 0.5s;
                     border-radius: .625rem;
                     overflow: hidden;
+                    margin-right: 15px;
 
                     img {
                         height: 100%;

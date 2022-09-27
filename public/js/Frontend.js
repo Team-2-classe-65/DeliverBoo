@@ -6260,7 +6260,7 @@ var staticRenderFns = [function () {
       "data-aos": "fade-right"
     }
   }, [_c("div", {
-    staticClass: "team-2 fs-1 fw-bold"
+    staticClass: "team-2 fs-2 fw-bold"
   }, [_vm._v("#A casa tua con deliveBoo By Team 2")])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("div", {
@@ -12008,7 +12008,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".categories-section[data-v-86dd0da4] {\n  background: rgb(255, 234, 228);\n}\n.categories-section .row .col-xs-12.col-md-4[data-v-86dd0da4] {\n  padding-left: 0;\n  padding-right: 0;\n}\n.categories-section .row .col-xs-12.col-md-4 a[data-v-86dd0da4] {\n  text-decoration: unset;\n  color: white;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4] {\n  height: 12.5rem;\n  position: relative;\n  display: block;\n  transition: 0.5s;\n  border-radius: 0.625rem;\n  overflow: hidden;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories img[data-v-86dd0da4] {\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details[data-v-86dd0da4] {\n  position: absolute;\n  font-size: 1.5625rem;\n  font-weight: 500;\n  z-index: 20;\n  bottom: 0.125rem;\n  padding: 0 0.5rem;\n  margin-bottom: 0rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details p[data-v-86dd0da4] {\n  font-size: 0.9375rem;\n  text-decoration: underline;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details .fa-arrow-right[data-v-86dd0da4] {\n  margin-left: 0.4375rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4]:hover {\n  opacity: 0.7;\n}\n.categories-section .row .col-xs-12.col-md-4 a .overlay[data-v-86dd0da4]::after {\n  content: \"\";\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  position: absolute;\n  background: linear-gradient(transparent, #525252);\n  opacity: 0.8;\n}\n.restaurant-img[data-v-86dd0da4] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
+exports.push([module.i, ".categories-section[data-v-86dd0da4] {\n  background: rgb(255, 234, 228);\n}\n.categories-section .row .col-xs-12.col-md-4[data-v-86dd0da4] {\n  padding-left: 0;\n  padding-right: 0;\n}\n.categories-section .row .col-xs-12.col-md-4 a[data-v-86dd0da4] {\n  text-decoration: unset;\n  color: white;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4] {\n  height: 12.5rem;\n  position: relative;\n  display: block;\n  transition: 0.5s;\n  border-radius: 0.625rem;\n  overflow: hidden;\n  margin-right: 15px;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories img[data-v-86dd0da4] {\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details[data-v-86dd0da4] {\n  position: absolute;\n  font-size: 1.5625rem;\n  font-weight: 500;\n  z-index: 20;\n  bottom: 0.125rem;\n  padding: 0 0.5rem;\n  margin-bottom: 0rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details p[data-v-86dd0da4] {\n  font-size: 0.9375rem;\n  text-decoration: underline;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details .fa-arrow-right[data-v-86dd0da4] {\n  margin-left: 0.4375rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4]:hover {\n  opacity: 0.7;\n}\n.categories-section .row .col-xs-12.col-md-4 a .overlay[data-v-86dd0da4]::after {\n  content: \"\";\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  position: absolute;\n  background: linear-gradient(transparent, #525252);\n  opacity: 0.8;\n}\n.restaurant-img[data-v-86dd0da4] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
 
 // exports
 
@@ -12046,7 +12046,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.nav-section {\n    position: relative;\n    background-color: #D0EB99;\n    z-index: -1;\n}\n.nav-section::before {\ncontent: \"\";\nwidth: 100%;\nheight: 280px;\nposition: absolute;\nright: 0;\nbackground-color: #00ccbc;\ntransform: skewY(-4deg);\ntransform-origin: left;\n}\n.team-2 {\n    position: relative;\n    transform: rotate(-4deg);\n    top: 300px;\n}\n.bg-home {\n    min-width: 200px;\n    max-height: 400px;\n}\n", ""]);
+exports.push([module.i, "\n.nav-section {\n    position: relative;\n    background-color: #D0EB99;\n    z-index: -1;\n}\n.nav-section::before {\ncontent: \"\";\nwidth: 100%;\nheight: 280px;\nposition: absolute;\nright: 0;\nbackground-color: #00ccbc;\ntransform: skewY(-4deg);\ntransform-origin: left;\n}\n.team-2 {\n    position: relative;\n    transform: rotate(-4deg);\n    top: 300px;\n    min-width: 50px;\n    max-width: 500px;\n}\n.bg-home {\n    min-width: 100px;\n    max-height: 400px;\n}\n", ""]);
 
 // exports
 
@@ -46575,7 +46575,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
