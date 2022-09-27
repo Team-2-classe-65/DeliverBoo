@@ -272,6 +272,7 @@ export default {
             }).
                 then(resp => {
                     console.log(resp.data)
+                    return 
                 })
         },
         // queste due funzioni danno errore se cerchiamo di selezionare dei piatti diversi da ristoranti diversi
