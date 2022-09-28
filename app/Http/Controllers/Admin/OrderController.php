@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\NewOrdersMail;
 use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
     public function index() 
     {
         $orders= Order::all();
-
         return view("admin.orders.index", compact("orders"));
     }
 

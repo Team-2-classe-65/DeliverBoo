@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\NewOrdersMail;
 use App\Order;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class RestaurantController extends Controller
 {
@@ -47,7 +49,6 @@ class RestaurantController extends Controller
             "code" => $data["code"],
             "total_price" => $data["total_price"],
         ]);
-
-        return response()->json($order);
+        return response()->json($order);  
     }
 }
