@@ -145,32 +145,32 @@
                                                         <div class="form-group my-3">
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Nome</label>
-                                                            <input type="text" name="name" class="form-control" required
+                                                            <input type="text" name="name" class="form-control" required minlength="1" maxlength="25"
                                                                 v-model="name" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Cognome</label>
                                                             <input type="text" name="surname" class="form-control"
-                                                                required v-model="surname" />
+                                                                required minlength="1" maxlength="25" v-model="surname" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Indirizzo</label>
                                                             <input type="text" name="address" class="form-control"
-                                                                required v-model="address" />
+                                                                required minlength="5" maxlength="70" v-model="address" />
                                                         </div>
                                                         <div class="form-group my-3">
-                                                            <label
-                                                                class="fw-semibold text-orange fs-5 pb-1">Indirizzo e-mail</label>
-                                                            <input type="text" name="mail" class="form-control" required
-                                                                v-model="mail" />
+                                                            <label class="fw-semibold text-orange fs-5 pb-1">Indirizzo
+                                                                e-mail</label>
+                                                            <input type="email" name="mail" class="form-control" required
+                                                            maxlength="255" v-model="mail" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label class="fw-semibold text-orange fs-5 pb-1">Numero di
                                                                 telefono</label>
-                                                            <input type="text" name="phone" class="form-control"
-                                                                required v-model="phone" />
+                                                            <input type="tel" name="phone" class="form-control"
+                                                                required pattern="[0-9]{10}" v-model="phone" />
                                                         </div>
                                                         <div id="dropin-container"></div>
                                                         <button id="submit-button" class="btn btn-warning">
@@ -272,6 +272,7 @@ export default {
                 total_price: this.partialTotal,
             }).
                 then(resp => {
+                    this.removeAllFromSession();
                     window.location.href = "http://127.0.0.1:8000/success"
                 })
         },
