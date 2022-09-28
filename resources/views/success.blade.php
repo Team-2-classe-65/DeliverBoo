@@ -32,11 +32,11 @@
                             @auth
                                 <a href="{{ url('/admin') }}" class="btn btn-light text-decoration-none">Admin</a>
                             @else
-                                <a href="{{ route('login') }}" class="btn btn-light text-decoration-none">Accedi</a>
+                                <a href="{{ route('login') }}" class="btn btn-light text-decoration-none">Accedi al tuo ristorante</a>
 
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}"
-                                        class="btn btn-light ms-3 text-decoration-none">Registrati</a>
+                                        class="btn btn-light ms-3 text-decoration-none">Registra un nuovo ristorante</a>
                                 @endif
                             @endauth
                         </div>

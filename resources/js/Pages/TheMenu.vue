@@ -55,19 +55,19 @@
                     <div class="col-lg-7 col-xl-8 col-12">
                         <div class="row g-3 dish-list">
                             <div class="col-6 col-md-4 col-xl-3" v-for="dish in restaurant.dishes" :key="dish.id">
-                                <div class="card" style="height:300px">
+                                <div class="card" style="height:350px">
                                     <img class="card-img-top restaurant-img" :src="'Storage/' + dish.dish_img"
-                                        :alt="dish.name">
-                                    <div class="card-body">
+                                        :alt="dish.name" style="min-height:150px">
+                                    <div class="card-body overflow-auto">
                                         <h5 class="card-title">{{ dish.name }}</h5>
-                                        <p class="card-text mt-3">Prezzo: {{dish.price }}€</p>
-                                        <div>
-                                            <span class="border border-2 border-dark rounded p-1 me-1"
-                                                @click="addToCart(dish)"><i class="fa-solid fa-plus"></i></span>
-                                            <span class="border border-2 border-dark rounded p-1"
-                                                @click="removeOneFromCart(dish)"><i
-                                                    class="fa-solid fa-minus"></i></span>
-                                        </div>
+                                        <p class="card-text mt-3"><strong>Prezzo:</strong> {{dish.price }}€</p>
+                                        <p class="card-text mt-3"><strong>Descrizione:</strong> {{dish.description}}</p>
+                                    </div>
+                                    <div class="p-3">
+                                        <span class="border border-2 border-dark rounded p-1 me-1"
+                                            @click="addToCart(dish)"><i class="fa-solid fa-plus"></i></span>
+                                        <span class="border border-2 border-dark rounded p-1"
+                                            @click="removeOneFromCart(dish)"><i class="fa-solid fa-minus"></i></span>
                                     </div>
                                 </div>
                             </div>
@@ -145,32 +145,34 @@
                                                         <div class="form-group my-3">
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Nome</label>
-                                                            <input type="text" name="name" class="form-control" required minlength="1" maxlength="25"
-                                                                v-model="name" />
+                                                            <input type="text" name="name" class="form-control" required
+                                                                minlength="1" maxlength="25" v-model="name" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Cognome</label>
                                                             <input type="text" name="surname" class="form-control"
-                                                                required minlength="1" maxlength="25" v-model="surname" />
+                                                                required minlength="1" maxlength="25"
+                                                                v-model="surname" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Indirizzo</label>
                                                             <input type="text" name="address" class="form-control"
-                                                                required minlength="5" maxlength="70" v-model="address" />
+                                                                required minlength="5" maxlength="70"
+                                                                v-model="address" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label class="fw-semibold text-orange fs-5 pb-1">Indirizzo
                                                                 e-mail</label>
-                                                            <input type="email" name="mail" class="form-control" required
-                                                            maxlength="255" v-model="mail" />
+                                                            <input type="email" name="mail" class="form-control"
+                                                                required maxlength="255" v-model="mail" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label class="fw-semibold text-orange fs-5 pb-1">Numero di
                                                                 telefono</label>
-                                                            <input type="tel" name="phone" class="form-control"
-                                                                required pattern="[0-9]{10}" v-model="phone" />
+                                                            <input type="tel" name="phone" class="form-control" required
+                                                                pattern="[0-9]{10}" v-model="phone" />
                                                         </div>
                                                         <div id="dropin-container"></div>
                                                         <button id="submit-button" class="btn btn-warning">
@@ -543,6 +545,22 @@ export default {
 
     &::-webkit-scrollbar-thumb {
         background-color: #00ccbc;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+    }
+}
+
+.card-body {
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #D0EB99;
         border-radius: 10px;
         border: 3px solid #ffffff;
     }

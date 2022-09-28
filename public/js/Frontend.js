@@ -5252,6 +5252,8 @@ function round(number, precision) {
       return result;
     },
     onFormSubmit: function onFormSubmit() {
+      var _this2 = this;
+
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/orders", {
         user_id: this.restaurant.id,
         name: this.name,
@@ -5262,6 +5264,8 @@ function round(number, precision) {
         code: this.makeCode(3) + '-' + this.makeCode(7) + '-' + this.makeCode(7),
         total_price: this.partialTotal
       }).then(function (resp) {
+        _this2.removeAllFromSession();
+
         window.location.href = "http://127.0.0.1:8000/success";
       });
     },
@@ -5880,21 +5884,28 @@ var render = function render() {
     }, [_c("div", {
       staticClass: "card",
       staticStyle: {
-        height: "300px"
+        height: "350px"
       }
     }, [_c("img", {
       staticClass: "card-img-top restaurant-img",
+      staticStyle: {
+        "min-height": "150px"
+      },
       attrs: {
         src: "Storage/" + dish.dish_img,
         alt: dish.name
       }
     }), _vm._v(" "), _c("div", {
-      staticClass: "card-body"
+      staticClass: "card-body overflow-auto"
     }, [_c("h5", {
       staticClass: "card-title"
     }, [_vm._v(_vm._s(dish.name))]), _vm._v(" "), _c("p", {
       staticClass: "card-text mt-3"
-    }, [_vm._v("Prezzo: " + _vm._s(dish.price) + "€")]), _vm._v(" "), _c("div", [_c("span", {
+    }, [_c("strong", [_vm._v("Prezzo:")]), _vm._v(" " + _vm._s(dish.price) + "€")]), _vm._v(" "), _c("p", {
+      staticClass: "card-text mt-3"
+    }, [_c("strong", [_vm._v("Descrizione:")]), _vm._v(" " + _vm._s(dish.description))])]), _vm._v(" "), _c("div", {
+      staticClass: "p-3"
+    }, [_c("span", {
       staticClass: "border border-2 border-dark rounded p-1 me-1",
       on: {
         click: function click($event) {
@@ -5912,7 +5923,7 @@ var render = function render() {
       }
     }, [_c("i", {
       staticClass: "fa-solid fa-minus"
-    })])])])])]);
+    })])])])]);
   }), 0)]), _vm._v(" "), _c("div", {
     staticClass: "col-lg-5 col-xl-4 col-12"
   }, [_c("div", {
@@ -6026,7 +6037,9 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "name",
-      required: ""
+      required: "",
+      minlength: "1",
+      maxlength: "25"
     },
     domProps: {
       value: _vm.name
@@ -6052,7 +6065,9 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "surname",
-      required: ""
+      required: "",
+      minlength: "1",
+      maxlength: "25"
     },
     domProps: {
       value: _vm.surname
@@ -6078,7 +6093,9 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "address",
-      required: ""
+      required: "",
+      minlength: "5",
+      maxlength: "70"
     },
     domProps: {
       value: _vm.address
@@ -6093,7 +6110,7 @@ var render = function render() {
     staticClass: "form-group my-3"
   }, [_c("label", {
     staticClass: "fw-semibold text-orange fs-5 pb-1"
-  }, [_vm._v("Indirizzo e-mail")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Indirizzo\n                                                            e-mail")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6102,9 +6119,10 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      type: "text",
+      type: "email",
       name: "mail",
-      required: ""
+      required: "",
+      maxlength: "255"
     },
     domProps: {
       value: _vm.mail
@@ -6128,9 +6146,10 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      type: "text",
+      type: "tel",
       name: "phone",
-      required: ""
+      required: "",
+      pattern: "[0-9]{10}"
     },
     domProps: {
       value: _vm.phone
@@ -6661,12 +6680,12 @@ var staticRenderFns = [function () {
     attrs: {
       href: "/login"
     }
-  }, [_vm._v("Accedi")]), _vm._v(" "), _c("a", {
+  }, [_vm._v("Accedi al tuo ristorante")]), _vm._v(" "), _c("a", {
     staticClass: "btn btn-light ms-3 text-decoration-none",
     attrs: {
       href: "/register"
     }
-  }, [_vm._v("Registrati")])])])])]);
+  }, [_vm._v("Registra un nuovo ristorante")])])])])]);
 }];
 render._withStripped = true;
 
@@ -11952,7 +11971,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".button[data-v-08626c52] {\n  cursor: pointer;\n  font-weight: 500;\n  left: 3px;\n  line-height: inherit;\n  position: relative;\n  text-decoration: none;\n  text-align: center;\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 3px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  display: inline-block;\n}\n.button--small[data-v-08626c52] {\n  padding: 10px 20px;\n  font-size: 0.875rem;\n}\n.button--green[data-v-08626c52] {\n  outline: none;\n  background-color: #64d18a;\n  border-color: #64d18a;\n  color: white;\n  transition: all 200ms ease;\n}\n.button--green[data-v-08626c52]:hover {\n  background-color: #8bdda8;\n  color: white;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  min-height: 120px;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.dish-list[data-v-08626c52] {\n  max-height: 640px;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: transparent;\n  /* Chrome, Edge, and Safari */\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar {\n  width: 0px;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 400px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n  /* Chrome, Edge, and Safari */\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
+exports.push([module.i, ".button[data-v-08626c52] {\n  cursor: pointer;\n  font-weight: 500;\n  left: 3px;\n  line-height: inherit;\n  position: relative;\n  text-decoration: none;\n  text-align: center;\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 3px;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  display: inline-block;\n}\n.button--small[data-v-08626c52] {\n  padding: 10px 20px;\n  font-size: 0.875rem;\n}\n.button--green[data-v-08626c52] {\n  outline: none;\n  background-color: #64d18a;\n  border-color: #64d18a;\n  color: white;\n  transition: all 200ms ease;\n}\n.button--green[data-v-08626c52]:hover {\n  background-color: #8bdda8;\n  color: white;\n}\n.top-img[data-v-08626c52] {\n  width: 100%;\n  min-height: 120px;\n  max-height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.dish-list[data-v-08626c52] {\n  max-height: 640px;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: transparent;\n  /* Chrome, Edge, and Safari */\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar {\n  width: 0px;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.dish-list[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}\n.my-card[data-v-08626c52] {\n  width: 100%;\n  height: 200px;\n}\n.restaurant-img[data-v-08626c52] {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.img-dish-cart[data-v-08626c52] {\n  height: 100px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my-cart[data-v-08626c52] {\n  max-height: 400px;\n  background-color: white;\n  overflow-x: hidden;\n  overflow-y: auto;\n  scrollbar-width: auto;\n  scrollbar-color: #00ccbc #ffffff;\n  /* Chrome, Edge, and Safari */\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.my-cart[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #00ccbc;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}\n.card-body[data-v-08626c52]::-webkit-scrollbar {\n  width: 16px;\n}\n.card-body[data-v-08626c52]::-webkit-scrollbar-track {\n  background: #ffffff;\n}\n.card-body[data-v-08626c52]::-webkit-scrollbar-thumb {\n  background-color: #D0EB99;\n  border-radius: 10px;\n  border: 3px solid #ffffff;\n}", ""]);
 
 // exports
 
