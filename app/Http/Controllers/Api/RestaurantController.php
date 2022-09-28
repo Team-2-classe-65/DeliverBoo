@@ -29,14 +29,14 @@ class RestaurantController extends Controller
     public function orders(Request $request){
 
         $data = $request->validate([
-            "name" =>"required|",
-            "surname" => "required|",
-            "address" => "required|",
-            "mail" => "required|",
-            "phone" => "required|",
-            "user_id" => "required|",
-            "code" => "required|",
-            "total_price" => "required|",
+            "name" =>"required|string|max:25|min:1",
+            "surname" => "required|string|max:25|min:1",
+            "address" => "required|max:70|min:5",
+            "mail" => "required|email|max:255",
+            "phone" => "required|digits_between:8,12",
+            "user_id" => "required",
+            "code" => "required",
+            "total_price" => "required",
         ]);
 
         $order = Order::create([

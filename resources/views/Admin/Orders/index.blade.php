@@ -20,7 +20,6 @@
               <th>phone</th>
               <th>total_price</th>
               <th>created_at</th>
-
             </tr>
           </thead>
           <tbody>
@@ -36,7 +35,7 @@
                 <td>{{ $order->address }}</td>
                 <td>{{ $order->phone }}</td>
                 <td>{{ $order->total_price }}</td>
-                <td>{{$order->created_at}}</td>
+                <td>{{ $order->created_at }}</td>
               </tr>
             @endif
             @endforeach
