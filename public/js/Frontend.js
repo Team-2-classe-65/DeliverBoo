@@ -6661,7 +6661,7 @@ var staticRenderFns = [function () {
     attrs: {
       href: "/login"
     }
-  }, [_vm._v("Accedi alla pagina del tuo ristorante")]), _vm._v(" "), _c("a", {
+  }, [_vm._v("Accedi al tuo ristorante")]), _vm._v(" "), _c("a", {
     staticClass: "btn btn-light ms-3 text-decoration-none",
     attrs: {
       href: "/register"

@@ -10,7 +10,7 @@
                     <span class="fw-bold text-white">deliveBoo</span>
                 </a>
                 <div class="d-flex align-items-bottom">
-                    <a href="/login" class="btn btn-light text-decoration-none">Accedi alla pagina del tuo ristorante</a>
+                    <a href="/login" class="btn btn-light text-decoration-none">Accedi al tuo ristorante</a>
                     <a href="/register" class="btn btn-light ms-3 text-decoration-none">Registra il tuo ristorante</a>
                 </div>
             </nav>
