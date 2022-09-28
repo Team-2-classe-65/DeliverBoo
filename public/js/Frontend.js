@@ -5252,6 +5252,8 @@ function round(number, precision) {
       return result;
     },
     onFormSubmit: function onFormSubmit() {
+      var _this2 = this;
+
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/orders", {
         user_id: this.restaurant.id,
         name: this.name,
@@ -5262,6 +5264,8 @@ function round(number, precision) {
         code: this.makeCode(3) + '-' + this.makeCode(7) + '-' + this.makeCode(7),
         total_price: this.partialTotal
       }).then(function (resp) {
+        _this2.removeAllFromSession();
+
         window.location.href = "http://127.0.0.1:8000/success";
       });
     },
@@ -6026,7 +6030,9 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "name",
-      required: ""
+      required: "",
+      minlength: "1",
+      maxlength: "25"
     },
     domProps: {
       value: _vm.name
@@ -6052,7 +6058,9 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "surname",
-      required: ""
+      required: "",
+      minlength: "1",
+      maxlength: "25"
     },
     domProps: {
       value: _vm.surname
@@ -6078,7 +6086,9 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "address",
-      required: ""
+      required: "",
+      minlength: "5",
+      maxlength: "70"
     },
     domProps: {
       value: _vm.address
@@ -6093,7 +6103,7 @@ var render = function render() {
     staticClass: "form-group my-3"
   }, [_c("label", {
     staticClass: "fw-semibold text-orange fs-5 pb-1"
-  }, [_vm._v("Indirizzo e-mail")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Indirizzo\n                                                            e-mail")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6102,9 +6112,10 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      type: "text",
+      type: "email",
       name: "mail",
-      required: ""
+      required: "",
+      maxlength: "255"
     },
     domProps: {
       value: _vm.mail
@@ -6128,9 +6139,10 @@ var render = function render() {
     }],
     staticClass: "form-control",
     attrs: {
-      type: "text",
+      type: "tel",
       name: "phone",
-      required: ""
+      required: "",
+      pattern: "[0-9]{10}"
     },
     domProps: {
       value: _vm.phone
