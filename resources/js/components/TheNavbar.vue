@@ -14,9 +14,6 @@
                     <a href="/login" class="btn btn-light text-decoration-none">Accedi al Tuo ristorante</a>
                     <a href="/register" class="btn btn-light ms-3 text-decoration-none">Registra un nuovo ristorante</a>
 
-                    <a href="/login" class="btn btn-light text-decoration-none">Accedi al tuo ristorante</a>
-                    <a href="/register" class="btn btn-light ms-3 text-decoration-none">Registra il tuo ristorante</a>
-
                 </div>
             </nav>
         </div>
