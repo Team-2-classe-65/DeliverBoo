@@ -6661,12 +6661,12 @@ var staticRenderFns = [function () {
     attrs: {
       href: "/login"
     }
-  }, [_vm._v("Accedi")]), _vm._v(" "), _c("a", {
+  }, [_vm._v("Accedi alla pagina del tuo ristorante")]), _vm._v(" "), _c("a", {
     staticClass: "btn btn-light ms-3 text-decoration-none",
     attrs: {
       href: "/register"
     }
-  }, [_vm._v("Registrati")])])])])]);
+  }, [_vm._v("Registra il tuo ristorante")])])])])]);
 }];
 render._withStripped = true;
 
@@ -46575,7 +46575,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Hybri\Documents\Boolean\Esercizi\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Boolean\Deliverboo\resources\js\frontend.js */"./resources/js/frontend.js");
 
 
 /***/ })
