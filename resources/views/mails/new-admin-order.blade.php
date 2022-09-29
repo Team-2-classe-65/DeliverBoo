@@ -1,7 +1,7 @@
 @component('mail::message')
-    Gentile <strong>{{ $order->name }} {{$order->surname}}</strong>,
+    Congratulazioni <strong>{{ $order->user->name }} !</strong>,
 
-    Siamo lieti di dirti che abbiamo ricevuto il tuo ordine!
+    Hai ricevuto un nuovo ordine!
 
     Ecco i dettagli del tuo ordine:
 
@@ -13,6 +13,6 @@
 
     Importo Totale: {{$order->total_price}} € 
 
-    Cordiali saluti, 
+    Cordiali saluti,
     Deliveboo Team 2
 @endcomponent

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Mail\NewOrdersMail;
+use App\Mail\AdminOrderMail;
 use App\Order;
 use App\User;
 use Illuminate\Http\Request;
@@ -50,6 +51,8 @@ class RestaurantController extends Controller
             "total_price" => $data["total_price"],
         ]);
 
+        
+        Mail::to($order->user->email)->send(new AdminOrderMail($order));
         Mail::to($order->mail)->send(new NewOrdersMail($order));
         
         return response()->json($order);  
