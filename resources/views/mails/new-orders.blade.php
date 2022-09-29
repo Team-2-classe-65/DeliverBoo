@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h1>Il tuo ordine è stato creato correttamente</h1>
-    </div>
-</body>
-</html>
+@component('mail::message')
+    Gentile <strong>{{ $order->name }} {{$order->surname}}</strong>,
+
+    Siamo lieti di dirti che abbiamo ricevuto il tuo ordine!
+
+    Ecco i dettagli del tuo ordine:
+
+    N° ordine: {{$order->code}} 
+
+    Nome:{{ $order->name }}
+
+    Cognome: {{$order->surname}} 
+
+    Importo Totale: {{$order->total_price}} € 
+
+    Cordiali saluti,<br>
+    Deliveboo Team 2
+@endcomponent
