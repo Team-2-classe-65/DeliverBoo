@@ -10,15 +10,17 @@ use Illuminate\Queue\SerializesModels;
 class NewOrdersMail extends Mailable
 {
     use Queueable, SerializesModels;
+    
 
+    public $order;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($_order)
     {
-        //
+        $this->order=$_order;
     }
 
     /**
@@ -28,6 +30,8 @@ class NewOrdersMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.new-orders');
+        return $this->markdown('mails.new-orders', [
+            "order"=> $this->order
+        ])->subject("Il tuo ordine n° " . $this->order->code . " è stato ricevuto");
     }
 }

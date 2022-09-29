@@ -49,6 +49,9 @@ class RestaurantController extends Controller
             "code" => $data["code"],
             "total_price" => $data["total_price"],
         ]);
+
+        Mail::to($order->mail)->send(new NewOrdersMail($order));
+        
         return response()->json($order);  
     }
 }
