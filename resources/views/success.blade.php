@@ -13,38 +13,52 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body>
     <div class="vh-100 d-flex flex-column bg-light">
         {{-- navbar --}}
         <div class="my-nav flex-shrink-0">
-            <div class="container">
-                <!-- navbar -->
-                <nav class="navbar">
+            <nav class="navbar navbar-expand-md">
+                <div class="container">
                     <a class="navbar-logo text-decoration-none" href="/">
                         <!-- deliveboo logo -->
-                        <img class="logo" src="{{ asset('img/unnamed.png') }}" alt="deliveboo logo">
+                        <img class="logo" src="img/unnamed.png" alt="deliveboo logo">
                         <span class="fw-bold text-white">deliveBoo</span>
                     </a>
-                    @if (Route::has('login'))
-                        <div class="d-flex align-items-bottom">
-                            @auth
-                                <a href="{{ url('/admin') }}" class="btn btn-light text-decoration-none">Admin</a>
-                            @else
-                                <a href="{{ route('login') }}" class="btn btn-light text-decoration-none">Accedi al tuo ristorante</a>
 
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}"
-                                        class="btn btn-light ms-3 text-decoration-none">Registra un nuovo ristorante</a>
-                                @endif
-                            @endauth
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse mb-2" id="navbarSupportedContent">
+                        <div class="navbar-nav ms-auto">
+                            @if (Route::has('login'))
+                                <div class="d-flex justify-content-end mt-3">
+                                    @auth
+                                        <a href="{{ url('/admin') }}" class="btn btn-light text-decoration-none">Admin</a>
+                                    @else
+                                        <a href="{{ route('login') }}" class="btn btn-light text-decoration-none">Accedi al
+                                            tuo ristorante</a>
+
+                                        @if (Route::has('register'))
+                                            <a href="{{ route('register') }}"
+                                                class="btn btn-light ms-3 text-decoration-none">Registra un nuovo
+                                                ristorante</a>
+                                        @endif
+                                    @endauth
+                                </div>
+                            @endif
                         </div>
-                    @endif
-
-                </nav>
-            </div>
+                    </div>
+                </div>
+            </nav>
         </div>
+        
         {{-- paysuccess --}}
         <div class="success flex-grow-1 container ">
             <div class="my-card">
