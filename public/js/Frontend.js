@@ -5698,14 +5698,23 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// import { searchCategories } from '../store';
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "TheNavbar",
   data: function data() {
     return {
-      name: "TheNavbar"
+      user: null
     };
   },
-  methods: {}
+  mounted: function mounted() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user").then(function (resp) {
+      _this.user = resp.data;
+    });
+  }
 });
 
 /***/ }),
@@ -6647,20 +6656,44 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("div", {
+    staticClass: "my-nav"
+  }, [_c("nav", {
+    staticClass: "navbar navbar-expand-md"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "collapse navbar-collapse",
+    attrs: {
+      id: "navbarSupportedContent"
+    }
+  }, [_c("div", {
+    staticClass: "navbar-nav ms-auto"
+  }, [_c("div", {
+    staticClass: "d-flex justify-content-end mt-3"
+  }, [_vm.user ? _c("div", [_c("a", {
+    staticClass: "btn btn-light text-decoration-none",
+    attrs: {
+      href: "/admin"
+    }
+  }, [_vm._v("Admin")])]) : _c("div", [_c("a", {
+    staticClass: "btn btn-light text-decoration-none",
+    attrs: {
+      href: "/login"
+    }
+  }, [_vm._v("Accedi al tuo ristorante")]), _vm._v(" "), _c("a", {
+    staticClass: "btn btn-light ms-3 text-decoration-none",
+    attrs: {
+      href: "/register"
+    }
+  }, [_vm._v("Registra un nuovo\n                                ristorante")])])])])])])])]);
 };
 
 var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "my-nav"
-  }, [_c("div", {
-    staticClass: "container"
-  }, [_c("nav", {
-    staticClass: "navbar"
-  }, [_c("a", {
+  return _c("a", {
     staticClass: "navbar-logo text-decoration-none",
     attrs: {
       href: "/"
@@ -6673,19 +6706,24 @@ var staticRenderFns = [function () {
     }
   }), _vm._v(" "), _c("span", {
     staticClass: "fw-bold text-white"
-  }, [_vm._v("deliveBoo")])]), _vm._v(" "), _c("div", {
-    staticClass: "d-flex align-items-bottom"
-  }, [_c("a", {
-    staticClass: "btn btn-light text-decoration-none",
+  }, [_vm._v("deliveBoo")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("button", {
+    staticClass: "navbar-toggler",
     attrs: {
-      href: "/login"
+      type: "button",
+      "data-bs-toggle": "collapse",
+      "data-bs-target": "#navbarSupportedContent",
+      "aria-controls": "navbarSupportedContent",
+      "aria-expanded": "false",
+      "aria-label": ""
     }
-  }, [_vm._v("Accedi al tuo ristorante")]), _vm._v(" "), _c("a", {
-    staticClass: "btn btn-light ms-3 text-decoration-none",
-    attrs: {
-      href: "/register"
-    }
-  }, [_vm._v("Registra un nuovo ristorante")])])])])]);
+  }, [_c("span", {
+    staticClass: "navbar-toggler-icon"
+  })]);
 }];
 render._withStripped = true;
 
@@ -12104,7 +12142,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container {\n    min-width: 300px;\n}\n.logo {\n    width: 50px;\n    height: 50px;\n}\n.my-nav {\n    background-color: #00CCBC;\n}\n.search-title {\n    color: #440263;\n}\n.search-btn {\n    background-color: #00CCBC;\n}\n.signin {\n    color: #00CCBC;\n}\n.search {\n    height: 170px;\n    min-width: 300px;\n}\n.form-control {\n    min-width: 100px;\n    margin-right: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.container {\r\n    min-width: 300px;\n}\n.logo {\r\n    width: 50px;\r\n    height: 50px;\n}\n.my-nav {\r\n    background-color: #00CCBC;\n}\n.search-title {\r\n    color: #440263;\n}\n.search-btn {\r\n    background-color: #00CCBC;\n}\n.signin {\r\n    color: #00CCBC;\n}\n.search {\r\n    height: 170px;\r\n    min-width: 300px;\n}\n.form-control {\r\n    min-width: 100px;\r\n    margin-right: 10px;\n}\r\n", ""]);
 
 // exports
 
