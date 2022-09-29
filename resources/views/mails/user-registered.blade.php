@@ -9,6 +9,6 @@
     Accedi
   @endcomponent
 
-  Cordiali saluti,<br>
+  Cordiali saluti, 
   Deliveboo Team 2
 @endcomponent

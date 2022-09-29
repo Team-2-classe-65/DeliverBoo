@@ -6625,7 +6625,7 @@ var staticRenderFns = [function () {
     staticClass: "col pb-4"
   }, [_c("h2", {
     staticClass: "text-center"
-  }, [_vm._v("Le categorie dei ristoranti più amati")])])]);
+  }, [_vm._v("Scegli il tipo di cucina che preferisci")])])]);
 }];
 render._withStripped = true;
 
