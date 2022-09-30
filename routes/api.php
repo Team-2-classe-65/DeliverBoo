@@ -26,4 +26,4 @@ Route::get('/filtered/{category}', 'Api\HomeController@filtered');
 
 Route::get("/{id}", "Api\RestaurantController@show");
 
-Route::post("/{id}", "Api\RestaurantController@orders");
+Route::post("/orders", "Api\RestaurantController@orders");
