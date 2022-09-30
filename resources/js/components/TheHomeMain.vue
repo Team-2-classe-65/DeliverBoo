@@ -224,6 +224,11 @@ export default {
         }
     }
 }
+.cardActive{
+    border: 5px solid #00CCBC;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 10px 5px #00CCBC
+}
 
 .restaurant-img {
     height: 220px;
