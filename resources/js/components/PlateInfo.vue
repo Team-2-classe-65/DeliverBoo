@@ -68,7 +68,7 @@
       
         methods: {
           startSlide: function() {
-            this.timer = setInterval(this.next, 10000);
+            this.timer = setInterval(this.next, 20000);
           },
       
       

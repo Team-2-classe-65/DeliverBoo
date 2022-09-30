@@ -42,7 +42,7 @@
                         <h1 class="text-uppercase fw-bold">{{restaurant.name}}</h1>
                         <span class="me-2" v-for="category in restaurant.categories">&#9679;{{category.name}}</span>
                         <h5 class="my-3"><strong>Email:</strong> {{restaurant.email}}</h5>
-                        <h5 class="my-3"><strong>Telefono:</strong> {{restaurant.phone}}</h5>
+                        <h5 class="my-3"><strong>Telefono:</strong> {{ restaurant.phone }}</h5>
                         <h5><strong>Indirizzo:</strong> {{restaurant.address}}</h5>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                                                         <div class="form-group my-3">
                                                             <label class="fw-semibold text-orange fs-5 pb-1">Numero di
                                                                 telefono</label>
-                                                            <input type="tel" name="phone" class="form-control" required
+                                                            <input type="text" name="phone" class="form-control" required
                                                                 pattern="[0-9]{10}" v-model="phone" />
                                                         </div>
                                                         <div id="dropin-container"></div>

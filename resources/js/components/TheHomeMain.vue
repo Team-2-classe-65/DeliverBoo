@@ -8,11 +8,18 @@
                     </div>
                 </div>
                 <div class="row">
+                    
+
+
                     <div class="col-xs-12 pb-4 col-md-4 pb-md-3 ps-3" @click='setCategory(category)'
-                        :class="selectedCategory == category.name ? 'cardActive' : ''" v-for="category in categories"
+                        v-for="category in categories"
                         :key="category.id">
+
+                        
+
                         <a href="#restaurants-section">
-                            <div class="card-categories overlay">
+                            <div :class="selectedCategory == category.name ? 'cardActive' : '' " class="card-categories overlay">
+                                
                                 <img class="w-100" v-if="category.img" :src="category.img">
                                 <img v-else src="img/placeholder.jpg">
                                 <div class="restaurant-details">
@@ -31,6 +38,17 @@
                 <div class="fw-bold text-uppercase mb-3">
                     <h2 v-if='onSearch==false && clicked==false'></h2>
                     <h2 v-if='onSearch==false && clicked==true'>Tutti i nostri ristoranti</h2>
+
+                    <!-- da vedere insieme oggi pomeriggio -->
+                    <!-- <div v-if="filteredCategory > 0 && onSearch==false" v-for="category in restaurants.categories" :key="category.id"> Hai scelto di vedere: {{category.name}}</div> -->
+                    <!-- <div v-for="category in categories">
+
+                        <span v-if="onSearch == false && clicked == true">
+                            &#9679;Hai scelto la categoria: <span class="text-success">{{category.name}}</span>
+                        </span>
+                    </div> -->
+                    
+
                     <h2 v-if='onSearch==true'>Non ci sono ristoranti per questa categoria</h2>
                 </div>
 
@@ -71,7 +89,8 @@ export default {
             categories: [],
             filteredRestaurant: [],
             onSearch: false,
-            clicked: false
+            clicked: false,
+            name:'',
         }
     },
     methods: {
