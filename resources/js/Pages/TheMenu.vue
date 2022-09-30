@@ -146,33 +146,33 @@
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Nome</label>
                                                             <input type="text" name="name" class="form-control" required
-                                                                minlength="1" maxlength="25" v-model="name" />
+                                                                minlength="1" maxlength="25" v-model="client.name" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Cognome</label>
                                                             <input type="text" name="surname" class="form-control"
                                                                 required minlength="1" maxlength="25"
-                                                                v-model="surname" />
+                                                                v-model="client.surname" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label
                                                                 class="fw-semibold text-orange fs-5 pb-1">Indirizzo</label>
                                                             <input type="text" name="address" class="form-control"
                                                                 required minlength="5" maxlength="70"
-                                                                v-model="address" />
+                                                                v-model="client.address" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label class="fw-semibold text-orange fs-5 pb-1">Indirizzo
                                                                 e-mail</label>
                                                             <input type="email" name="mail" class="form-control"
-                                                                required maxlength="255" v-model="mail" />
+                                                                required maxlength="255" v-model="client.mail" />
                                                         </div>
                                                         <div class="form-group my-3">
                                                             <label class="fw-semibold text-orange fs-5 pb-1">Numero di
                                                                 telefono</label>
-                                                            <input type="text" name="phone" class="form-control" required
-                                                                pattern="[0-9]{10}" v-model="phone" />
+                                                            <input type="text" name="phone" class="form-control"
+                                                                required pattern="[0-9]{10}" v-model="client.phone" />
                                                         </div>
                                                         <div id="dropin-container"></div>
                                                         <button id="submit-button" class="btn btn-warning">
@@ -234,11 +234,13 @@ export default {
             quantity: 1,
             partialTotal: 0,
             total: 0,
-            name: '',
-            surname: '',
-            address: '',
-            mail: '',
-            phone: '',
+            client: {
+                name: "",
+                surname: "",
+                mail: "",
+                phone: "",
+                address: "",
+            },
         }
     },
     mounted() {
@@ -263,17 +265,27 @@ export default {
             return result;
         },
         onFormSubmit() {
-            axios.post("/api/orders", {
-                user_id: this.restaurant.id,
-                name: this.name,
-                surname: this.surname,
-                address: this.address,
-                mail: this.mail,
-                phone: this.phone,
+            let order_client = {
+                name: this.client.name,
+                surname: this.client.surname,
+                address: this.client.address,
+                phone: this.client.phone,
+                mail: this.client.mail,
                 code: this.makeCode(3) + '-' + this.makeCode(7) + '-' + this.makeCode(7),
-                total_price: this.partialTotal,
-            }).
-                then(resp => {
+                total_price: this.total,
+                user_id: this.restaurant.id,
+            };
+            
+            let dishes = [];
+            this.cart.forEach((dish) => {
+                dishes.push({
+                    quantity: dish.quantity,
+                    subtotal: round(dish.price * dish.quantity, 2),
+                    dish_id: dish.id,
+                });
+            });
+            axios.post("/api/orders", { dishes: dishes, ...order_client })
+                .then(resp => {
                     this.removeAllFromSession();
                     window.location.href = "http://127.0.0.1:8000/success"
                 })

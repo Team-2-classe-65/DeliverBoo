@@ -28,8 +28,9 @@ class RestaurantController extends Controller
     }
 
     public function orders(Request $request){
-
-        $data = $request->validate([
+    
+        //validate data and fill
+        $validatedOrderData = $request->validate([
             "name" =>"required|string|max:25|min:1",
             "surname" => "required|string|max:25|min:1",
             "address" => "required|max:70|min:5",
@@ -40,21 +41,24 @@ class RestaurantController extends Controller
             "total_price" => "required",
         ]);
 
-        $order = Order::create([
-            "user_id" => $data["user_id"],
-            "name" => $data["name"],
-            "surname" => $data["surname"],
-            "address" => $data["address"],
-            "mail" => $data["mail"],
-            "phone" => $data["phone"],
-            "code" => $data["code"],
-            "total_price" => $data["total_price"],
-        ]);
 
+        $newOrder = new Order();
+        $newOrder->fill($validatedOrderData);
+        $newOrder->save();
+
+        if (is_array($request->dishes) || is_object($request->dishes)) {
+            foreach ($request->dishes as $dish) {
+                $newOrder->dishes()->attach($dish['dish_id'], ['quantity' => $dish['quantity'], 'subtotal' => $dish['subtotal']]);
+            }
+        } else
+        {
+            echo "Unfortunately, an error occured.";
+        }
+
+        //mail section
+        Mail::to($newOrder->mail)->send(new NewOrdersMail($newOrder));
+        $restaurant = User::find($newOrder->user_id);
+        Mail::to($restaurant->email)->send(new AdminOrderMail($newOrder));
         
-        Mail::to($order->user->email)->send(new AdminOrderMail($order));
-        Mail::to($order->mail)->send(new NewOrdersMail($order));
-        
-        return response()->json($order);  
     }
 }

@@ -5191,6 +5191,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "round", function() { return round; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 function round(number, precision) {
   "use strict";
@@ -5222,11 +5228,13 @@ function round(number, precision) {
       quantity: 1,
       partialTotal: 0,
       total: 0,
-      name: '',
-      surname: '',
-      address: '',
-      mail: '',
-      phone: ''
+      client: {
+        name: "",
+        surname: "",
+        mail: "",
+        phone: "",
+        address: ""
+      }
     };
   },
   mounted: function mounted() {
@@ -5254,16 +5262,27 @@ function round(number, precision) {
     onFormSubmit: function onFormSubmit() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/orders", {
-        user_id: this.restaurant.id,
-        name: this.name,
-        surname: this.surname,
-        address: this.address,
-        mail: this.mail,
-        phone: this.phone,
+      var order_client = {
+        name: this.client.name,
+        surname: this.client.surname,
+        address: this.client.address,
+        phone: this.client.phone,
+        mail: this.client.mail,
         code: this.makeCode(3) + '-' + this.makeCode(7) + '-' + this.makeCode(7),
-        total_price: this.partialTotal
-      }).then(function (resp) {
+        total_price: this.total,
+        user_id: this.restaurant.id
+      };
+      var dishes = [];
+      this.cart.forEach(function (dish) {
+        dishes.push({
+          quantity: dish.quantity,
+          subtotal: round(dish.price * dish.quantity, 2),
+          dish_id: dish.id
+        });
+      });
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/orders", _objectSpread({
+        dishes: dishes
+      }, order_client)).then(function (resp) {
         _this2.removeAllFromSession();
 
         window.location.href = "http://127.0.0.1:8000/success";
@@ -5497,7 +5516,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     startSlide: function startSlide() {
-      this.timer = setInterval(this.next, 10000);
+      this.timer = setInterval(this.next, 20000);
     },
     next: function next() {
       this.currentIndex += 1;
@@ -5627,7 +5646,8 @@ __webpack_require__.r(__webpack_exports__);
       categories: [],
       filteredRestaurant: [],
       onSearch: false,
-      clicked: false
+      clicked: false,
+      name: ''
     };
   },
   methods: {
@@ -6039,8 +6059,8 @@ var render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.name,
-      expression: "name"
+      value: _vm.client.name,
+      expression: "client.name"
     }],
     staticClass: "form-control",
     attrs: {
@@ -6051,12 +6071,13 @@ var render = function render() {
       maxlength: "25"
     },
     domProps: {
-      value: _vm.name
+      value: _vm.client.name
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.name = $event.target.value;
+
+        _vm.$set(_vm.client, "name", $event.target.value);
       }
     }
   })]), _vm._v(" "), _c("div", {
@@ -6067,8 +6088,8 @@ var render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.surname,
-      expression: "surname"
+      value: _vm.client.surname,
+      expression: "client.surname"
     }],
     staticClass: "form-control",
     attrs: {
@@ -6079,12 +6100,13 @@ var render = function render() {
       maxlength: "25"
     },
     domProps: {
-      value: _vm.surname
+      value: _vm.client.surname
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.surname = $event.target.value;
+
+        _vm.$set(_vm.client, "surname", $event.target.value);
       }
     }
   })]), _vm._v(" "), _c("div", {
@@ -6095,8 +6117,8 @@ var render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.address,
-      expression: "address"
+      value: _vm.client.address,
+      expression: "client.address"
     }],
     staticClass: "form-control",
     attrs: {
@@ -6107,12 +6129,13 @@ var render = function render() {
       maxlength: "70"
     },
     domProps: {
-      value: _vm.address
+      value: _vm.client.address
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.address = $event.target.value;
+
+        _vm.$set(_vm.client, "address", $event.target.value);
       }
     }
   })]), _vm._v(" "), _c("div", {
@@ -6123,8 +6146,8 @@ var render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.mail,
-      expression: "mail"
+      value: _vm.client.mail,
+      expression: "client.mail"
     }],
     staticClass: "form-control",
     attrs: {
@@ -6134,12 +6157,13 @@ var render = function render() {
       maxlength: "255"
     },
     domProps: {
-      value: _vm.mail
+      value: _vm.client.mail
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.mail = $event.target.value;
+
+        _vm.$set(_vm.client, "mail", $event.target.value);
       }
     }
   })]), _vm._v(" "), _c("div", {
@@ -6150,23 +6174,24 @@ var render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.phone,
-      expression: "phone"
+      value: _vm.client.phone,
+      expression: "client.phone"
     }],
     staticClass: "form-control",
     attrs: {
-      type: "tel",
+      type: "text",
       name: "phone",
       required: "",
       pattern: "[0-9]{10}"
     },
     domProps: {
-      value: _vm.phone
+      value: _vm.client.phone
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.phone = $event.target.value;
+
+        _vm.$set(_vm.client, "phone", $event.target.value);
       }
     }
   })]), _vm._v(" "), _c("div", {
@@ -6544,7 +6569,6 @@ var render = function render() {
     return _c("div", {
       key: category.id,
       staticClass: "col-xs-12 pb-4 col-md-4 pb-md-3 ps-3",
-      "class": _vm.selectedCategory == category.name ? "cardActive" : "",
       on: {
         click: function click($event) {
           return _vm.setCategory(category);
@@ -6555,7 +6579,8 @@ var render = function render() {
         href: "#restaurants-section"
       }
     }, [_c("div", {
-      staticClass: "card-categories overlay"
+      staticClass: "card-categories overlay",
+      "class": _vm.selectedCategory == category.name ? "cardActive" : ""
     }, [category.img ? _c("img", {
       staticClass: "w-100",
       attrs: {
@@ -6580,7 +6605,9 @@ var render = function render() {
     staticClass: "container"
   }, [_c("div", {
     staticClass: "fw-bold text-uppercase mb-3"
-  }, [_vm.onSearch == false && _vm.clicked == false ? _c("h2") : _vm._e(), _vm._v(" "), _vm.onSearch == false && _vm.clicked == true ? _c("h2", [_vm._v("Tutti i nostri ristoranti")]) : _vm._e(), _vm._v(" "), _vm.onSearch == true ? _c("h2", [_vm._v("Non ci sono ristoranti per questa categoria")]) : _vm._e()]), _vm._v(" "), _c("div", {
+  }, [_vm.onSearch == false && _vm.clicked == false ? _c("h2") : _vm._e(), _vm._v(" "), _vm.onSearch == false && _vm.clicked == true ? _c("h2", [_vm._v("Tutti i nostri ristoranti con categoria "), _c("span", {
+    staticClass: "text-success"
+  }, [_vm._v(_vm._s(_vm.selectedCategory))])]) : _vm._e(), _vm._v(" "), _vm.onSearch == true ? _c("h2", [_vm._v("Non ci sono ristoranti per questa categoria")]) : _vm._e()]), _vm._v(" "), _c("div", {
     staticClass: "restaurant-container"
   }, [_c("div", {
     staticClass: "row g-4"
@@ -12066,7 +12093,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".categories-section[data-v-86dd0da4] {\n  background: rgb(255, 234, 228);\n}\n.categories-section .row .col-xs-12.col-md-4[data-v-86dd0da4] {\n  padding-left: 0;\n  padding-right: 0;\n}\n.categories-section .row .col-xs-12.col-md-4 a[data-v-86dd0da4] {\n  text-decoration: unset;\n  color: white;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4] {\n  height: 12.5rem;\n  position: relative;\n  display: block;\n  transition: 0.5s;\n  border-radius: 0.625rem;\n  overflow: hidden;\n  margin-right: 15px;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories img[data-v-86dd0da4] {\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details[data-v-86dd0da4] {\n  position: absolute;\n  font-size: 1.5625rem;\n  font-weight: 500;\n  z-index: 20;\n  bottom: 0.125rem;\n  padding: 0 0.5rem;\n  margin-bottom: 0rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details p[data-v-86dd0da4] {\n  font-size: 0.9375rem;\n  text-decoration: underline;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details .fa-arrow-right[data-v-86dd0da4] {\n  margin-left: 0.4375rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4]:hover {\n  opacity: 0.7;\n}\n.categories-section .row .col-xs-12.col-md-4 a .overlay[data-v-86dd0da4]::after {\n  content: \"\";\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  position: absolute;\n  background: linear-gradient(transparent, #525252);\n  opacity: 0.8;\n}\n.restaurant-img[data-v-86dd0da4] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
+exports.push([module.i, ".categories-section[data-v-86dd0da4] {\n  background: rgb(255, 234, 228);\n}\n.categories-section .row .col-xs-12.col-md-4[data-v-86dd0da4] {\n  padding-left: 0;\n  padding-right: 0;\n}\n.categories-section .row .col-xs-12.col-md-4 a[data-v-86dd0da4] {\n  text-decoration: unset;\n  color: white;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4] {\n  height: 12.5rem;\n  position: relative;\n  display: block;\n  transition: 0.5s;\n  border-radius: 0.625rem;\n  overflow: hidden;\n  margin-right: 15px;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories img[data-v-86dd0da4] {\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details[data-v-86dd0da4] {\n  position: absolute;\n  font-size: 1.5625rem;\n  font-weight: 500;\n  z-index: 20;\n  bottom: 0.125rem;\n  padding: 0 0.5rem;\n  margin-bottom: 0rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details p[data-v-86dd0da4] {\n  font-size: 0.9375rem;\n  text-decoration: underline;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories .restaurant-details .fa-arrow-right[data-v-86dd0da4] {\n  margin-left: 0.4375rem;\n}\n.categories-section .row .col-xs-12.col-md-4 a .card-categories[data-v-86dd0da4]:hover {\n  opacity: 0.7;\n}\n.categories-section .row .col-xs-12.col-md-4 a .overlay[data-v-86dd0da4]::after {\n  content: \"\";\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  position: absolute;\n  background: linear-gradient(transparent, #525252);\n  opacity: 0.8;\n}\n.cardActive[data-v-86dd0da4] {\n  border: 5px solid #00CCBC;\n  border-radius: 1rem;\n  box-shadow: 1px 2px 10px 5px #00CCBC;\n}\n.restaurant-img[data-v-86dd0da4] {\n  height: 220px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}", ""]);
 
 // exports
 
