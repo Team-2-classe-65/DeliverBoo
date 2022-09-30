@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="fw-bold text-uppercase mb-3">
                     <h2 v-if='onSearch==false && clicked==false'></h2>
-                    <h2 v-if='onSearch==false && clicked==true'>Tutti i nostri ristoranti</h2>
+                    <h2 v-if='onSearch==false && clicked==true'>Tutti i nostri ristoranti della categoria {{selectedCategory}}</h2>
 
                     <!-- da vedere insieme oggi pomeriggio -->
                     <!-- <div v-if="filteredCategory > 0 && onSearch==false" v-for="category in restaurants.categories" :key="category.id"> Hai scelto di vedere: {{category.name}}</div> -->
