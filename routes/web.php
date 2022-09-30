@@ -31,6 +31,8 @@ Route::middleware("auth")
 ->group(function() {
     Route::get('/', "HomeController@index")->name("home");
     Route::resource("dishes", "DishController");
+    Route::get('/trash' , "DishController@trash")->name("dishes.trash");
+    Route::get('/restore/{slug}' , "DishController@restore")->name("dishes.restore");
     Route::get('/orders' , "OrderController@index")->name("orders.index");
 });
 

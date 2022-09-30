@@ -173,10 +173,29 @@ class DishController extends Controller
         if($dish->trashed()) {
             $dish->forceDelete();
             Storage::delete($dish->dish_img);
+
+            return redirect()->route("admin.dishes.trash")->with('deleted', 'Piatto ' . $dish->name . ' eliminato definitivamente');
         } else {
             $dish->delete();
+
+            return redirect()->route("admin.dishes.index")->with('deleted', 'Piatto ' . $dish->name . ' eliminato correttamente');
         }
         
-        return redirect()->route("admin.dishes.index")->with('deleted', 'Piatto ' . $dish->name . ' eliminato correttamente');
+    }
+
+    public function restore($slug)
+    {
+        $dish = $this->findBySlug($slug);
+
+            $dish->restore();
+        
+        return redirect()->route("admin.dishes.index")->with('restored', 'Piatto ' . $dish->name . ' ripristinato correttamente');
+    }
+
+    public function trash()
+    {
+        $dishes = Dish::orderBy("deleted_at", "desc")->onlyTrashed()->get();
+        
+        return view("admin.dishes.trash", compact("dishes"));
     }
 }
