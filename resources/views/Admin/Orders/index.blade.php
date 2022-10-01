@@ -12,19 +12,19 @@
             <tr>
               {{-- <th>ID</th>
               <th>user_id</th> --}}
-              <th>code</th>
-              <th>name</th>
-              <th>surname</th>
-              <th>mail</th>
-              <th>address</th>
-              <th>phone</th>
-              <th>total_price</th>
-              <th>created_at</th>
+              <th>codice</th>
+              <th>nome</th>
+              <th>cognome</th>
+              <th>email</th>
+              <th>indirizzo</th>
+              <th>telefono</th>
+              <th>prezzo totale</th>
+              <th>Dettagli ordine</th>
+              <th>data ordine</th>
             </tr>
           </thead>
           <tbody>
             @foreach ($orders as $order)
-            @if ($order->user->id === Auth::user()->id)
               <tr>
                 {{-- <td>{{ $order->id }}</td>
                 <td>{{ $order->user_id }}</td> --}}
@@ -34,13 +34,23 @@
                 <td>{{ $order->mail }}</td>
                 <td>{{ $order->address }}</td>
                 <td>{{ $order->phone }}</td>
-                <td>{{ $order->total_price }}</td>
+                <td>{{ $order->total_price }} €</td>
+                
+                <td>
+                  @foreach($order->dishes as $dish)
+                  <div class="mb-3">
+                    {{ $dish->name }}: {{$dish->price}} €
+                  </div>
+                  @endforeach
+                </td>
+                
                 <td>{{ $order->created_at }}</td>
               </tr>
-            @endif
             @endforeach
           </tbody>
         </table>
+
+        {{$orders->links()}}
       </div>
     </div>
   </div>

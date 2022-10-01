@@ -40,10 +40,9 @@ class DishController extends Controller
             } else {
                 $toReturn = $slug;
             }
-        } while($slug_exist);
+        } while ($slug_exist);
 
         return $toReturn;
-
     }
     /**
      * Display a listing of the resource.
@@ -52,8 +51,8 @@ class DishController extends Controller
      */
     public function index()
     {
-        $dishes = Dish::all();
-        
+        $user_id = Auth::user()->id;
+        $dishes = Dish::orderBy("created_at", "desc")->where('user_id', $user_id)->paginate(9);
         return view("admin.dishes.index", compact("dishes"));
     }
 
@@ -91,7 +90,7 @@ class DishController extends Controller
 
         $dish->save();
 
-        return redirect()->route("admin.dishes.show", $dish->slug)->with('message',"Piatto creato con successo");
+        return redirect()->route("admin.dishes.show", $dish->slug)->with('message', "Piatto creato con successo");
     }
 
     /**
@@ -138,10 +137,10 @@ class DishController extends Controller
 
         $dish = $this->findBySlug($slug);
 
-        if(key_exists("dish_img", $validatedData)) {
+        if (key_exists("dish_img", $validatedData)) {
             //se esiste già un immagine per quel post
             //devo eliminare prima quella vecchia
-            if($dish->dish_img) {
+            if ($dish->dish_img) {
                 Storage::delete($dish->dish_img);
             }
 
@@ -151,7 +150,7 @@ class DishController extends Controller
         }
 
         if ($validatedData["name"] !== $dish->name) {
-            
+
             $dish->slug = $this->generateSlug($validatedData["name"]);
         }
 
@@ -170,7 +169,7 @@ class DishController extends Controller
     {
         $dish = $this->findBySlug($slug);
 
-        if($dish->trashed()) {
+        if ($dish->trashed()) {
             $dish->forceDelete();
             Storage::delete($dish->dish_img);
 
@@ -180,22 +179,22 @@ class DishController extends Controller
 
             return redirect()->route("admin.dishes.index")->with('deleted', 'Piatto ' . $dish->name . ' eliminato correttamente');
         }
-        
     }
 
     public function restore($slug)
     {
         $dish = $this->findBySlug($slug);
 
-            $dish->restore();
-        
+        $dish->restore();
+
         return redirect()->route("admin.dishes.index")->with('restored', 'Piatto ' . $dish->name . ' ripristinato correttamente');
     }
 
     public function trash()
     {
-        $dishes = Dish::orderBy("deleted_at", "desc")->onlyTrashed()->get();
-        
+        $user_id = Auth::user()->id;
+        $dishes = Dish::orderBy("created_at", "desc")->where('user_id', $user_id)->onlyTrashed()->paginate(9);
+
         return view("admin.dishes.trash", compact("dishes"));
     }
 }
