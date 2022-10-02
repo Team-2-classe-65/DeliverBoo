@@ -99,7 +99,7 @@
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body fw-bold">
-                                            Sei sicuro di voler eliminare definitivamente questo elemento? 
+                                            Sei sicuro di voler eliminare definitivamente questo elemento?
                                             Ricorda che non potrai più recuperarlo in seguito
                                         </div>
                                         <div class="modal-footer">
@@ -141,10 +141,20 @@
             </div>
         </div>
     @else
-        <div class="container">
-            <span class="d-flex justify-content-center pt-5 w-100">
-                <img src="https://c.tenor.com/J7ZL_Cryy-0AAAAd/checco-zalone-checco.gif" alt="">
-            </span>
+        <div class="ms-3 mt-3">
+            <a href="{{ route('admin.dishes.index') }}" class="btn btn-primary text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-activity">
+                    <line x1="20" y1="12" x2="4" y2="12"></line>
+                    <polyline points="10 18 4 12 10 6"></polyline>
+                </svg> <span class="d-none d-md-inline">Torna ai piatti</span>
+            </a>
+        </div>
+        <div class="container h-100">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="fs-2 fw-bold text-uppercase">Ops! siamo spiacenti ma non puoi accedere a questa pagina</div>
+            </div>
         </div>
     @endif
 @endsection
