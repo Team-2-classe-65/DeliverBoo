@@ -27,7 +27,7 @@
 
                 <div class="row">
                     @foreach ($dishes as $dish)
-                            <div class="col-6 col-sm-4 g-3">
+                            <div class="col-12 col-s-6 col-sm-4 g-3">
                                 <a href="{{ route('admin.dishes.show', ['dish' => $dish->slug]) }}" class="text-uppercase">
                                     <div class="card position-realtive x overflow-hidden" style="height: 150px">
                                         <img src="{{ asset('storage/' . $dish->dish_img) }}" alt=""

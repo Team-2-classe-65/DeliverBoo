@@ -563,6 +563,11 @@ export default {
 }
 
 .card-body {
+
+    
+    scrollbar-width: auto;
+    scrollbar-color: #D0EB99 #ffffff;
+    
     &::-webkit-scrollbar {
         width: 16px;
     }
