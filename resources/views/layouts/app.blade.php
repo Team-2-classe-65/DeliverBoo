@@ -32,8 +32,8 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm sticky-top flex-shrink-0"
             style="background: linear-gradient(to right, #00CCBC, #D0EB99)">
             <div class="container-fluid">
-                <a class="navbar-brand text-uppercase ms-4 fw-bold" href="{{ route('home') }}">
-                    Torna alla Home Pubblica <i class="fa-solid fa-house ms-2"></i>
+                <a class="navbar-brand text-uppercase ms-4 fw-bold" href="/">
+                    <span class="d-none d-sm-inline">Torna alla Home Pubblica</span> <i class="fa-solid fa-house ms-2"></i>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

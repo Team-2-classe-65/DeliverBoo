@@ -55,14 +55,19 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('admin.dishes.edit', ['dish' => $dish->slug]) }}" class="btn btn-warning">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="feather feather-activity">
-                            <polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon>
-                            <line x1="3" y1="22" x2="21" y2="22"></line>
-                        </svg> Modifica
-                    </a>
+                    @if ($dish->trashed())
+                        <a href="{{ url('admin/restore/' . $dish->slug) }}" class="btn btn-info">
+                            <i class="fa-solid fa-lg fa-recycle align-middle"></i> Ripristina</a>
+                    @else
+                        <a href="{{ route('admin.dishes.edit', ['dish' => $dish->slug]) }}" class="btn btn-warning">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-activity">
+                                <polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon>
+                                <line x1="3" y1="22" x2="21" y2="22"></line>
+                            </svg> Modifica
+                        </a>
+                    @endif
                     <form class="d-inline-block" action="{{ route('admin.dishes.destroy', ['dish' => $dish->slug]) }}"
                         method="post">
                         @csrf
@@ -81,42 +86,75 @@
                             Elimina
                         </button>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content bg_primary">
-                                    <div class="modal-header bg_secondary">
-                                        <h5 class="modal-title text-danger" id="staticBackdropLabel"><i
-                                                class="fa-solid fa-triangle-exclamation me-2"></i>Attenzione!</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body fw-bold">
-                                        Sei sicuro di voler cancellare questo elemento?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-success text-white"
-                                            data-bs-dismiss="modal">Chiudi</button>
-                                        <button type="submit" class="btn btn-danger text-white">Conferma</button>
+                        @if ($dish->trashed())
+                            <!-- Modal piatto cestinato -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content bg_primary">
+                                        <div class="modal-header bg_secondary">
+                                            <h5 class="modal-title text-danger" id="staticBackdropLabel"><i
+                                                    class="fa-solid fa-triangle-exclamation me-2"></i>Attenzione!</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body fw-bold">
+                                            Sei sicuro di voler eliminare definitivamente questo elemento?
+                                            Ricorda che non potrai più recuperarlo in seguito
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success text-white"
+                                                data-bs-dismiss="modal">Chiudi</button>
+                                            <button type="submit" class="btn btn-danger text-white">Conferma</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @else
+                            <!-- Modal piatto esistente -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content bg_primary">
+                                        <div class="modal-header bg_secondary">
+                                            <h5 class="modal-title text-danger" id="staticBackdropLabel"><i
+                                                    class="fa-solid fa-triangle-exclamation me-2"></i>Attenzione!</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body fw-bold">
+                                            Sei sicuro di voler cancellare questo elemento? Potrai comunque recuperarlo
+                                            successivamente dalla sezione cestino
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success text-white"
+                                                data-bs-dismiss="modal">Chiudi</button>
+                                            <button type="submit" class="btn btn-danger text-white">Conferma</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                     </form>
                 </div>
             </div>
         </div>
     @else
-        <div class="container">
-            {{-- <h1 class="text-center text-danger px-5">
-           NON SI SCRIVE ITALIA IN VANO VICHINGO 
-        </h1> --}}
-
-            <span class="d-flex justify-content-center pt-5 w-100">
-                <img src="https://c.tenor.com/J7ZL_Cryy-0AAAAd/checco-zalone-checco.gif" alt="">
-            </span>
-
+        <div class="ms-3 mt-3">
+            <a href="{{ route('admin.dishes.index') }}" class="btn btn-primary text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-activity">
+                    <line x1="20" y1="12" x2="4" y2="12"></line>
+                    <polyline points="10 18 4 12 10 6"></polyline>
+                </svg> <span class="d-none d-md-inline">Torna ai piatti</span>
+            </a>
+        </div>
+        <div class="container h-100">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="fs-2 fw-bold text-uppercase">Ops! siamo spiacenti ma non puoi accedere a questa pagina</div>
+            </div>
         </div>
     @endif
 @endsection

@@ -102,6 +102,25 @@
                                 </div>
                             </div>
 
+                            {{-- phone --}}
+
+                            <div class="form-group row mb-3">
+                                <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('phone') }}
+                                    <span class="ms-2 text-secondary"><i class="fa-solid fa-phone"></i></span> </label>
+
+                                <div class="col-md-6">
+                                    <input id="phone" type="text"
+                                        class="form-control @error('phone') is-invalid @enderror" name="phone"
+                                        value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+
+                                    @error('phone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
                             {{-- vat --}}
 
                             <div class="form-group row mb-3">
@@ -123,14 +142,15 @@
 
                             {{-- image --}}
                             <div class="form-group row mb-3">
-                                <label for="restaurant_img_file" class="col-md-4 col-form-label text-md-right">{{ __('Restaurant Image') }}
+                                <label for="restaurant_img_file"
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Restaurant Image') }}
                                     <span class="ms-2 text_secondary"><i class="fa-solid fa-image"></i></span> </label>
                                 </label>
-                                
+
                                 <div class="col-md-6">
                                     <input type="file" name="restaurant_img"
-                                        class="form-control @error('restaurant_img') is-invalid @enderror" id="restaurant_img_file"
-                                        value="{{ old('restaurant_img') }}">
+                                        class="form-control @error('restaurant_img') is-invalid @enderror"
+                                        id="restaurant_img_file" value="{{ old('restaurant_img') }}">
                                 </div>
                                 @error('restaurant_img')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -140,7 +160,8 @@
                             {{-- categories --}}
 
                             <div class="form-group margin row mb-3">
-                                <label for="categories" class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}
+                                <label for="categories"
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Categories') }}
                                     <span class="ms-2 text-info"><i class="fa-solid fa-cat"></i></span> </label>
                                 </label>
 
@@ -156,7 +177,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                            
+
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary text-light">

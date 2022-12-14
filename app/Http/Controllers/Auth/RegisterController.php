@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Auth;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Mail\NewUserRegistered;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -56,6 +59,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'address' => ['required', 'string', 'min:5'],
+            'phone' => ['required', 'digits_between:8,12'],
             'vat' => ['required', 'digits:11'],
             'restaurant_img'=>['required', 'image']
         ]);
@@ -75,11 +79,16 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'address' => $data['address'],
+            'phone' => $data['phone'],
+            'slug'=>Str::slug($data['name']),
             'vat' => $data['vat'],
             'restaurant_img'=>Storage::put('/restaurant_images', $data['restaurant_img'])
         ]);
 
         $user->categories()->attach($data['categories']);
+
+        Mail::to($user->email)->send(new NewUserRegistered($user));
+        
         return $user;
     }
 

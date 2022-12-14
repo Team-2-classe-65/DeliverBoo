@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/success', function () {
+    return view('success');
+});
+
 Auth::routes();
 
 Route::middleware("auth")
@@ -27,10 +31,13 @@ Route::middleware("auth")
 ->group(function() {
     Route::get('/', "HomeController@index")->name("home");
     Route::resource("dishes", "DishController");
+    Route::get('/trash' , "DishController@trash")->name("dishes.trash");
+    Route::get('/restore/{slug}' , "DishController@restore")->name("dishes.restore");
+    Route::get('/orders' , "OrderController@index")->name("orders.index");
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::get('{any?}', function () {
-    return view('frontend');
-})->where("any", "*");
+    return view('welcome');
+})->where("any", ".*");

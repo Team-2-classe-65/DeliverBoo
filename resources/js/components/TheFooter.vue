@@ -1,6 +1,6 @@
 <template>
     <div class="section-footer">
-        <div class="container py-4">
+        <div class="container pt-4">
             <div class="row">
                 <div class="col-xs-12 col-md-4 pb-4">
                     <div class="col-footer">
@@ -115,17 +115,17 @@ export default {
                 ],
                 contacts: [
                     {
-                        name: "Anna Tassone",
-                        git: "https://github.com/Anna93803",
-                        iconGit: "fa-brands fa-github",
-                        linkedin: "https://www.linkedin.com/in/anna-tassone/",
-                        iconLinkedin: "fa-brands fa-linkedin"
-                    },
-                    {
                         name: "Paolo Pugliese",
                         git: "https://github.com/paolopu91",
                         iconGit: "fa-brands fa-github",
                         linkedin: "https://www.linkedin.com/in/paolo-pugliese-a3027a171/",
+                        iconLinkedin: "fa-brands fa-linkedin"
+                    },
+                    {
+                        name: "Stefano Saccocci",
+                        git: "https://github.com/StefanoSax93",
+                        iconGit: "fa-brands fa-github",
+                        linkedin: "https://www.linkedin.com/in/stefano-saccocci-a67164200/",
                         iconLinkedin: "fa-brands fa-linkedin"
                     },
                     {
@@ -136,10 +136,10 @@ export default {
                         iconLinkedin: "fa-brands fa-linkedin"
                     },
                     {
-                        name: "Stefano Saccocci",
-                        git: "https://github.com/StefanoSax93",
+                        name: "Anna Tassone",
+                        git: "",
                         iconGit: "fa-brands fa-github",
-                        linkedin: "https://www.linkedin.com/in/stefano-saccocci-a67164200/",
+                        linkedin: "",
                         iconLinkedin: "fa-brands fa-linkedin"
                     },
                 ],

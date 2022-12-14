@@ -29,12 +29,14 @@
             </div>
             <div class="col-12 col-sm-6">
                 <a href="" class="text-uppercase">
-                    <div class="card position-realtive h-100 x overflow-hidden">
-                        <img src="{{ asset('img/orders.jpg') }}" alt="" class="w-100 rounded">
-                        <h2>
-                            Ordini
-                        </h2>
-                    </div>
+                    <a href="{{ route('admin.orders.index') }}" class="text-uppercase">
+                        <div class="card position-realtive h-100 x overflow-hidden">
+                                <img src="{{ asset('img/orders.jpg') }}" alt="" class="w-100 rounded">
+                                <h2>
+                                    Ordini
+                                </h2>
+                        </div>
+                    </a>
                 </a>
             </div>
 

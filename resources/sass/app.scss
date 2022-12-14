@@ -4,11 +4,24 @@
 // Variables
 @import 'variables';
 
+// Success Page
+@import 'success';
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 //FontAwesome
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+* {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.title-order {
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
 .main-container {
     display: flex;
@@ -73,13 +86,14 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 }
-.person-digger{ 
+
+.person-digger {
     background: -webkit-linear-gradient(-45deg, rgb(2, 175, 25) 5%, rgb(255, 255, 255) 95%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;     
+    -webkit-text-fill-color: transparent;
 }
 
 .bg_primary {
@@ -107,5 +121,5 @@
     .sidebar {
         width: 90px;
     }
-    
+
 }
